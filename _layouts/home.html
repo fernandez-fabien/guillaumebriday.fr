@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Articles</h1>
+
+  {{ content }}
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+
+        {{ post.excerpt }}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
+      {% else %}
+        <span class="previous">Previous</span>
+      {% endif %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
+      {% else %}
+        <span class="next ">Next</span>
+      {% endif %}
+    </div>
+  {% endif %}
+
+</div>
