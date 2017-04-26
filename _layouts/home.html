@@ -26,15 +26,13 @@ layout: default
   {% if paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="previous">Previous</a>
-      {% else %}
-        <span class="previous">Previous</span>
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="page_previous">Précédent</a>
       {% endif %}
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+      <span class="page_number ">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+
       {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next</a>
-      {% else %}
-        <span class="next ">Next</span>
+        <a href="{{ paginator.next_page_path | relative_url }}" class="page_next">Suivant</a>
       {% endif %}
     </div>
   {% endif %}
