@@ -36,8 +36,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
 google_analytics: UA-54003772-2
-disqus:
-  shortname: https-blog-guillaumebriday-fr
 sass:
   style: compressed
   sass_dir: _sass
