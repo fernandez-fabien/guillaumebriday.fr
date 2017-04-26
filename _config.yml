@@ -40,3 +40,5 @@ sass:
   style: compressed
   sass_dir: _sass
 lang: fr
+minima:
+  date_format: "%d/%m/%Y"
