@@ -3,13 +3,15 @@ layout: post
 title:  "Comment j'utilise Git ? Mes astuces et bonnes pratiques !"
 categories: Tutoriel
 ---
-{% include toc.html %}
-
 Depuis quelques temps, j'ai en tête de faire un article pour expliquer comment je fonctionne avec git, quelles sont les commandes que j'utilise et pourquoi.
 
 Quand j'ai commencé à utiliser git, j'ai souvent trouvé des tutoriels pour le fonctionnement interne, quelles étaient les différentes commandes mais rarement on me montrait quelles étaient les "bonnes pratiques", dans quelles situations je devais utiliser quelles commandes. C'est pourtant plus à ce genre de question que j'aurais voulu avoir une réponse et je vais essayer ici d'y répondre maintenant que j'utilise git au quotidien.
 
 Alors aujourd'hui je vais essayer de répondre aux cas les plus communs que j'ai pu rencontrer jusqu'ici en espérant pouvoir donner une ou deux astuces.
+
+Sommaire :
+
+{% include toc.html %}
 
 La configuration de votre git est importante, elle va permettre, entre autre, de définir votre identité dans vos commits, de choisir l'éditeur utilisé par git et j'en passe.
 
