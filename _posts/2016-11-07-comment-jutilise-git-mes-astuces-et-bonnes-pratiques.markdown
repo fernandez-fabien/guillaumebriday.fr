@@ -1337,6 +1337,34 @@ $ git push origin master
 
 Nous avons ajouté le lien du dépôt original à notre projet local. A chaque fois qu'une merge request est accepté nous allons devoir mettre à jour notre dépôt local, une fois que nous sommes à jour en local, nous pouvons pousser librement les modifications vers notre fork, appelé ici `origin`.
 
+## Statistiques
+
+Il peut être intéressant de sortir quelques statistiques rapidement sans avoir à installer tel ou tel outils. Avant de commencer, tout les filtres que l'on a vu dans `filtrer son historique` son valable ici également et peuvent être combinés. La commande la plus simple est shortlog :
+
+```bash
+$ git shortlog # Affiche le nombre et la liste des messages des commits par auteur
+$ git shortlog -s # Affiche juste le nombre de commits par auteur
+$ git shortlog -s -n [ou -sn] # Affiche le nombre de commits de manière décroissante par auteur
+```
+
+Un flag très important est `--no-merges`, il permet de ne pas prendre en compte les commits de merge dans les statistiques. Pour prendre un exemple complet :
+
+```bash
+$ git shortlog --no-merges --author="Guillaume" --grep="Fix" # Affiche le nombre et les messages de commits contenant "Fix" pour l'auteur "Guillaume"
+```
+
+N'hésitez pas à combiner les flags pour être plus précis. On peut également faire des statistiques beaucoup plus poussés pour voir le nombre de lignes modifiées :
+
+```bash
+$ git log --shortstat --author="Guillaume" --no-merges | grep -E "fil(e|es) changed" | awk '{files+=$1; inserted+=$4; deleted+=$6; delta+=$4-$6; ratio=deleted/inserted} END {printf "Commit stats:\n- Files changed (total)..  %s\n- Lines added (total)....  %s\n- Lines deleted (total)..  %s\n- Total lines (delta)....  %s\n- Add./Del. ratio (1:n)..  1 : %s\n", files, inserted, deleted, delta, ratio }' -
+Commit stats:
+- Files changed (total)..  162
+- Lines added (total)....  9746
+- Lines deleted (total)..  2154
+- Total lines (delta)....  7592
+- Add./Del. ratio (1:n)..  1 : 0,221014
+```
+
 ## Conclusion
 J'espère avoir été le plus clair possible et le plus complet. Le but n'est pas de présenter chaque ligne de commande mais avoir une bonne base pour être à l'aise sur un projet, avoir des commandes en tête et des méthodes pour résoudre des problèmes que l'on rencontre souvent.
 
