@@ -23,6 +23,9 @@ url: "https://blog.guillaumebriday.fr" # the base hostname & protocol for your s
 twitter_username: guillaumebriday
 github_username: guillaumebriday
 instagram_username: guillaumebriday
+amazon_tag: guillaumebrid-21
+paypal: guillaumebriday
+linkedin: guillaumebriday
 
 # Build settings
 markdown: kramdown

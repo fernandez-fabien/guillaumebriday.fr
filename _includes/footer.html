@@ -43,6 +43,24 @@
             {% include icon-instagram.html username=site.instagram_username %}
           </li>
           {% endif %}
+
+          {% if site.linkedin %}
+          <li>
+            {% include icon-linkedin.html username=site.linkedin %}
+          </li>
+          {% endif %}
+
+          {% if site.amazon_tag %}
+          <li>
+            {% include icon-amazon.html tag=site.amazon_tag %}
+          </li>
+          {% endif %}
+
+          {% if site.paypal %}
+          <li>
+            {% include icon-paypal.html username=site.paypal %}
+          </li>
+          {% endif %}
         </ul>
       </div>
 
