@@ -18,7 +18,7 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
 
-        {{ post.excerpt }}
+        {{ post.excerpt | strip_html }}
       </li>
     {% endfor %}
   </ul>
