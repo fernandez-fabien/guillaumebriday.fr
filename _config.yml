@@ -35,6 +35,7 @@ gems:
   - jekyll-feed
   - jekyll-paginate
   - octopress-minify-html
+  - liquid_pluralize
 exclude:
   - Gemfile
   - Gemfile.lock
