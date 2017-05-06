@@ -31,6 +31,7 @@ linkedin: guillaumebriday
 markdown: kramdown
 theme: minima
 paginate: 15
+comments_form: true
 gems:
   - jekyll-feed
   - jekyll-paginate
