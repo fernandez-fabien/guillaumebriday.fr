@@ -1,0 +1,35 @@
+{% capture commentid %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+
+{% if site.data[commentid] or site.comments_form %}
+  <h2 id="comments" class="comments-title">{% include icon-bubbles.svg %} {{ site.data[commentid] | size | pluralize: "commentaire" }}</h2>
+
+  {% include comments_form.html %}
+
+  <div class="comments">
+    {% for comment in site.data[commentid] %}
+      <div id="comment-{{ comment.id }}" class="comment-body">
+          <div class="comment-meta">
+            <div class="comment-author">
+              {% if comment.author-url %}
+                <a href="{{ comment.author-url }}" target="_blank">
+              {% endif %}
+                {{ comment.author }}
+              {% if comment.author-url %}
+                </a>
+              {% endif %}
+            </div>
+
+            <div class="comment-date">
+              <a href="#comment-{{ comment.id }}">
+                <time datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: "Le %d/%m/%Y à %H:%M" }}</time>
+              </a>
+            </div>
+          </div>
+
+          <div class="comment-content">
+            {{ comment.content | liquify | markdownify }}
+          </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
