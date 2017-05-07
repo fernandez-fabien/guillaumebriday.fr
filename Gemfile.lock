@@ -37,6 +37,8 @@ GEM
     json (2.1.0)
     kramdown (1.13.2)
     liquid (3.0.6)
+    liquid_pluralize (1.0.2)
+      liquid (>= 2.6, < 4.0)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -73,6 +75,7 @@ DEPENDENCIES
   jekyll (= 3.3.1)
   jekyll-feed (~> 0.6)
   jekyll-paginate
+  liquid_pluralize
   minima (~> 2.0)
   octopress-minify-html
 

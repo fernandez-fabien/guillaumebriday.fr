@@ -1,0 +1,133 @@
+- id: 1
+  author: Lulu
+  date: 2017-02-18 02:15:01+00:00
+  content: |
+    Bonnet merci pour votre article.. cependant comment faire pour communiquer avec le player de la livebox et d'autres périphériques car il y a un prie tre les adresse IP qui ne sont pas sur la même plage!
+
+    Merci
+
+- id: 2
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-02-21 18:05:55+00:00
+  content: |
+    Bonjour, je ne suis pas sûr d’avoir compris votre question, pouvez-vous détailler ? Merci 🙂
+
+- id: 3
+  author: Arnaud
+  date: 2017-02-28 10:45:59+00:00
+  content: |
+    Bonjour Guillaume, merci pour cet article qui est très bien expliqué. Juste une petite question concernant le player TV Orange. Ou faut il le brancher pour conserver le flux IPTV et VOD. Sur un port LAN du rt1900ac ou sur un port LAN de la LiveBox ?
+
+    Merci de ton aide.
+
+- id: 4
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-03-08 23:33:27+00:00
+  content: |
+    Merci pour ton retour :) J'ai essayé qu'une seule fois et de mémoire ça marche très bien directement sur le Synology. A tester pour être sûr, si tu peux nous confirmer ça, ce serait top !
+
+- id: 5
+  author: Paul
+  date: 2017-03-08 18:00:43+00:00
+  content: |
+    Bonjour Guillaume,
+
+    Merci et bravo pour la qualité de ton article ! Après plusieurs recherches, tu es le seul à avoir écrit un article sur le sujet.
+    J'avais une petite question, sachant que le trafic entrant est redirigé de la Livebox vers le RT1900ac, qu'en est-il du trafic sortant ?
+    Dois-je faire mes règles NAT/PAT sur le routeur synology, la livebox, ou les deux ?
+
+    As-tu rencontré des soucis particuliers ?
+
+    Merci de ton retour et encore bravo pour ton travail !
+
+- id: 6
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-03-08 23:31:02+00:00
+  content: |
+    Bonjour Paul,
+
+    Merci pour ton retour ! Alors pour ce qui est des flux sortants le principe est exactement le même, une fois ton routeur dans la DMZ, tu n'as plus rien à faire, tous les échanges qui tu fais via ton Synology seront redirigés sur la livebox puis vers internet. Aucune règle NAT/PAT à configurer et je n'ai, avec cette configuration, eu aucun souci.
+
+    Si tu as d'autres questions n'hésite pas :)
+
+- id: 7
+  author: Jordan
+  date: 2017-03-10 23:08:14+00:00
+  content: |
+    Rencontres-tu une baisse de débit.
+
+    Car moi ayant presque 1Gbits de bande passante, je passe à 200Mbits en gardant ma LiveBox.
+
+- id: 8
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-03-11 13:00:06+00:00
+  content: |
+    Bonjour, les speedtests en étant sur la Livebox directement ou en passant par le Synology sont significativement les mêmes donc aucun problème pour moi à ce niveau là.
+
+- id: 9
+  author: Paul
+  date: 2017-03-15 17:20:20+00:00
+  content: |
+    Parfait ! Merci beaucoup pour ton retour.
+
+    As-tu mis en place le LoadBalancing + Failover ?
+
+    Je l'installe ce soir, je te ferais un retour après quelques jours d'utilisation si tu veux. :)
+
+    Bonne journée !
+
+- id: 10
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-03-18 14:36:48+00:00
+  content: |
+    Aucun des deux, je n'en ai pas le besoin. Je suis tout seul (ou presque) à me servir de mon réseau et du NAS. Je sature ma connexion bien trop occasionnellement pour mettre le LoadBalancing en place.
+
+    Et pour le Failover, je n'ai qu'une connexion qui ne coupe que très rarement (voire jamais) et au pire, je relance la Livebox et c'est reparti. :)
+
+    Ah oui ce serait top ! Avec plaisir, merci à toi.
+
+- id: 11
+  author: trotroyanas
+  author-url: http://www.deco-recup.com
+  date: 2017-03-27 22:33:34+00:00
+  content: |
+    Bonsoir Guillaume,
+
+    Merci de cet article je suis exactement dans cette configuration.
+    Seulement après avoir fait tout ce que tu as dit, Routeur Syno dans la DMZ de la LiveBox, ajout de règles de transfert de ports du router vers mon nas, rien n'y fait, de l'extérieur c'est tjrs choux blanc.
+    Chose étrange il me change bien mon adresse en https ? 8000-> vers 8001 et 5000 -> 5001 pour mon nas mais rien derriere une page d'erreur pour ces 2, et pour mon sftp j'ai le droit à un message "le service que vous demandez ne repond pas.
+
+    Veuillez contacter votre service client" je sais meme pas d'ou il sort ce message.. testé de mon tel en 4g
+    Une idée ?
+
+    Merci d'avance
+    cH.
+
+- id: 12
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-04-07 17:42:01+00:00
+  content: |
+    Salut, tu as essayé en accès direct pour savoir si le problème venait vraiment de ta configuration ? :)
+
+- id: 13
+  author: Guy
+  date: 2017-04-06 19:39:54+00:00
+  content: |
+    Bonjour Guillaume,
+
+    Merci pour votre article que j'ai suivi pour configurer mon routeur placé derriere une LiveBox 4
+    Tout fonctionne (j'ai de nombreux matériels en câblés et en Wifi), à l'exception de la TV Orange sur la Livebox 4 Player
+    Comment cela se fait il ?
+    J'avais entendu parler de Vlan/Muxid/ 835 et (838 à 841) à configurer. Comment et ou les configurer ?
+
+    Merci d'avance
+
+    Cordialement
+
+    Guy
