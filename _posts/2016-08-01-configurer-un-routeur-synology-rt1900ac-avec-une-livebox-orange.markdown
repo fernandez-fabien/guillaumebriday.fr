@@ -26,7 +26,7 @@ Je souhaite que la livebox gère le moins de chose possible, mais malheureusemen
 
 Je souhaite avoir des adresses organisées par routeur, pour faire simple, la livebox aura l'adresse `192.168.1.1` et la plage d'adresses ip du DHCP sera de `192.168.1.10` à `192.168.1.150` et oui effectivement rien n'empêchera de connecter un appareil sur un port de la livebox pour accéder au réseau.
 
-Nous allons donc simplement brancher le port WAN du Synology à un port LAN de la livebox. Dans l'interface de la livebox, il va falloir attribuer un bail statique au routeur sur l'adresse de votre choix. Une fois fait, nous allons créer une [DMZ](https://fr.wikipedia.org/wiki/Zone_d%C3%A9militaris%C3%A9e_(informatique)) sur la même ip que le RT1900ac. La DMZ va nous permettre de redigirer tous les flux entrants vers le routeur directement donc tout sera gérer sur le routeur Synology. Exactement ce qu'on voulait !
+Nous allons donc simplement brancher le port WAN du Synology à un port LAN de la livebox. Dans l'interface de la livebox, il va falloir attribuer un bail statique au routeur sur l'adresse de votre choix. Une fois fait, nous allons créer une [DMZ](https://fr.wikipedia.org/wiki/Zone_d%C3%A9militaris%C3%A9e_(informatique)) sur la même ip que le RT1900ac. La DMZ va nous permettre de redigirer tous les flux entrants vers le routeur directement donc tout sera géré sur le routeur Synology. Exactement ce qu'on voulait !
 
 Je supprime également tout ce qui est gestion DDNS et pare-feu, je coupe le Wi-Fi et je remets la configuration par défaut du NAT/PAT.
 
