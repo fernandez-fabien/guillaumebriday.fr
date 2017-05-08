@@ -42,6 +42,7 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
 google_analytics: UA-54003772-2
 sass:
   style: compressed
