@@ -2,7 +2,7 @@
 layout: post
 title: "Configurer un routeur Synology RT1900ac avec une Livebox Orange"
 categories: Presentation Tutoriel
-thumbnail: "/assets/images/2016/07/rt1900ac-livebox.png"
+thumbnail: "/assets/images/2016/07/rt1900ac-livebox.jpg"
 ---
 J'ai reçu, en fin de semaine, le premier routeur de Synology, le fameux [RT1900ac](https://amzn.to/2a96R85). Je ne vais pas aujourd'hui en faire un test ou un récapitulatif de ce que j'en pense, mais pour faire rapide je le trouve fantastique malgré ses petits défauts de jeunesse simplement perfectible avec des mises à jours donc je ne suis pas inquiet, il en ait toujours à ses débuts. L'interface est loin devant par rapport à la concurrence et les fonctionnalités ne manques pas.
 
@@ -38,7 +38,7 @@ Dans l'onglet `Internet > Connection` pensez bien à mettre le `Set as default g
 
 C'est dans `Local Network` que la configuration va être vraiment importante. Pour la plage d'adresses ip, j'ai choisi de faire dans la continuité de la livebox donc `192.168.2.1/24`. Tous les appareils sur le Synology auront des adresses du format `192.168.2.x` et les appareils du réseau invité auront `192.168.3.x`, c'est simple à retenir et tout le monde est bien organisé dans un ordre logique.
 
-![local-network-rt1900ac](/assets/images/2016/07/local-network-rt1900ac.png)
+![local-network-rt1900ac](/assets/images/2016/07/local-network-rt1900ac.jpg)
 
 Dans l'onglet `DHCP Reservation` , vous pouvez attribuer des adresses statiques pour vos appareils connectés, très important si vous avez besoin d'accéder à un appareil depuis l'extérieur comme nous allons le voir. Le plus simple est de sélectionner un appareil dans l'onglet `DHCP Clients` et d'utiliser le bouton `Add to address reservation` plutôt que d'entrer les informations à la main. Cliquez ensuite sur `save` et au prochain renouvellement de bail l'adresse sera alors celle réservée pour l'appareil concerné.
 

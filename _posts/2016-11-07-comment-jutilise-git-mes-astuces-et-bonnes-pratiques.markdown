@@ -113,7 +113,7 @@ Petite astuce au passage, vous pouvez créer et vous rendre directement sur une 
 $ git checkout -b [nom_branche]
 ```
 
-Beaucoup d'équipes et de projets open-source adoptent la méthodologie [Gitflow](https://leanpub.com/site_images/git-flow/git-flow-nvie.png). Gitflow propose un workflow d'utilisation de git, une séparation des branches et des fonctionnalités. Très pratique pour travailler à plusieurs, elle permet de normaliser l'utilisation des branches. Je vous invite grandement à jeter un coup d'oeil sur son fonctionnement.
+Beaucoup d'équipes et de projets open-source adoptent la méthodologie [Gitflow](https://leanpub.com/site_images/git-flow/git-flow-nvie.jpg). Gitflow propose un workflow d'utilisation de git, une séparation des branches et des fonctionnalités. Très pratique pour travailler à plusieurs, elle permet de normaliser l'utilisation des branches. Je vous invite grandement à jeter un coup d'oeil sur son fonctionnement.
 
 Si votre fonctionnalité est conséquente, n'hésitez pas à splitter votre fonctionnalité en plusieurs branches, cela facilitera la relecture pour un potentiel collaborateur et ainsi accélèrera la mise en production de votre travail.
 
