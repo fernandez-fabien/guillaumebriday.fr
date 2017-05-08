@@ -32,6 +32,7 @@ markdown: kramdown
 theme: minima
 paginate: 15
 comments_form: true
+permalink: /:title
 gems:
   - jekyll-feed
   - jekyll-paginate
