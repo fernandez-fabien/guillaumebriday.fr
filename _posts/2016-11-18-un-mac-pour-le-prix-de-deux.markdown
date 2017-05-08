@@ -2,7 +2,7 @@
 layout: post
 title: "Un Mac pour le prix de deux."
 categories: Billet
-thumbnail: "/assets/images/2016/11/mbpr-2016-thunderbolt.png"
+thumbnail: "/assets/images/2016/11/mbpr-2016-thunderbolt.jpg"
 ---
 Et voilà, on y arrive. Mon premier billet d'humeur. Si vous suivez un tant soit peu l'actualité high-tech, vous n'êtes pas sans savoir qu'Apple a présentée ses nouveaux MacBook Pro avec la Touch Bar. On ne va pas se mentir, ces MacBook Pro me donnent envie, vraiment. Et pourtant, j'ai déjà un iMac 5K accompagné d'un MacBook Pro Retina 13". On m'explique encore à chaque fois pourquoi je fais une GRAVE ERREUR quand je dis que je veux tout vendre pour ne prendre que ce dernier MacBook Pro 15".
 
