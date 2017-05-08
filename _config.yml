@@ -36,6 +36,7 @@ permalink: /:title
 gems:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-sitemap
   - octopress-minify-html
   - liquid_pluralize
 exclude:
