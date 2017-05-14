@@ -31,6 +31,7 @@ linkedin: guillaumebriday
 markdown: kramdown
 theme: minima
 paginate: 15
+paginate_path: "/page/:num/"
 comments_form: true
 permalink: /:title
 gems:
