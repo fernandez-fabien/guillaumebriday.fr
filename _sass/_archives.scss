@@ -1,0 +1,23 @@
+.archives-list {
+  list-style: none;
+
+  h3 {
+    margin: 1em 0 .2em 0;
+    font-size: 2em;
+    font-weight: 700;
+  }
+
+  li {
+    margin-left: 20px;
+  }
+
+  a {
+    margin-left: 10px;
+  }
+
+  time {
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+  }
+}
