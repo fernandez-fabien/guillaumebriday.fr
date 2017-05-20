@@ -20,4 +20,12 @@
     width: 60px;
     text-align: right;
   }
+
+  @include media-query($on-palm) {
+    margin-left: 0;
+
+    li {
+      margin-left: 0;
+    }
+  }
 }
