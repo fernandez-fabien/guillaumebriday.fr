@@ -17,9 +17,9 @@ layout: default
 
   <div class="post-content" itemprop="articleBody">
     {% if page.thumbnail %}
-      <p>
-        <img src="{{ page.thumbnail }}" alt="{{ page.title }}">
-      </p>
+    {% include image.html
+                img = page.thumbnail
+                title = page.title %}
     {% endif %}
 
     {{ content }}

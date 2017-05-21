@@ -248,3 +248,19 @@
     }
   }
 }
+
+.image-container{
+  a {
+    display: block;
+    text-align: center;
+  }
+}
+
+.image-caption {
+  display: block;
+  margin-top: 5px;
+
+  font-style: italic;
+  text-align: center;
+  color: $grey-color;
+}

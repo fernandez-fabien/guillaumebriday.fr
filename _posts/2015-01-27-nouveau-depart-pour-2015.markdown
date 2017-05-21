@@ -12,7 +12,9 @@ Je profite de ce changement d'année pour relancer l'activité du blog, car quan
 
 J'en ai profité pour faire un changement assez radical sur le thème de ce site, j'en parlerai, là aussi, plus en détail dans un article pour expliquer correctement toutes les nouveautés. Sinon je vous invite à me suivre dès maintenant sur [Instagram](https://instagram.com/guillaumebriday) car j'ai maintenant de quoi vous faire plein de photos sympa ! Vous remarquerez d'ailleurs que mes six dernières photos instagram apparaissent en bas de la page, j'hésite encore à mettre celle de Flickr, je me déciderai plus tard, ce n'est pas le plus pertinant. [Twitter](https://twitter.com/guillaumebriday) est toujours de la partie même si je poste peu j'ai toujours mon flux twitter sous les yeux, ce qui me fait perdre un temps dingue d'ailleurs... Donc pour ceux qui veulent me contacter facilement, le plus simple sera là-bas.
 
-![On The Road](/assets/images/2015/02/on-the-road.jpg)
+{% include image.html
+            img = "2015/02/on-the-road.jpg"
+            title = "On The Road" %}
 
 Voilà pas grand-chose de plus à dire, sachant que tout viendra dans des articles à part pour chacun des sujets abordés rapidement ici et d'autres bien entendu.
 

@@ -25,7 +25,9 @@ Il existe pour chacun de ces services des versions bureau de ceux-ci, ce qui rev
 
 Pour ma part, je préfère la première méthode car je ne sais généralement pas à l'avance si la personne avec qui je partage quelque chose possède un compte dropbox en particulier, et je n'ai pas spécialement envie de lui demander d'en faire un juste pour ça... Une fois votre petit logiciel installé sur le système de votre choix, un dossier (ici Dropbox) s'est créé, on a mis un dossier de "Photos à partager" avec nos photos dedans et on en est là.
 
-![Partage Dropbox](/assets/images/2014/09/partage-dropbox.jpg)
+{% include image.html
+            img = "2014/09/partage-dropbox.jpg"
+            title = "Partage Dropbox" %}
 
 Un simple "clic-droit" puis "Partager le lien" vous permettra de partager votre dossier, créer un lien et de le mettre dans votre presse-papier habituel, plus qu'à le coller dans votre mail et le tour est joué. Si vous n'avez pas l'option dans le menu contextuel, vous y aurez toujours accès directement sur le site internet.
 
