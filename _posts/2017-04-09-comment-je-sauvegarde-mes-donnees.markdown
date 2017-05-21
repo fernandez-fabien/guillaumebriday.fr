@@ -15,7 +15,10 @@ Bon assez d'explications sur le comment du pourquoi, passons aux détails !
 
 ## Schéma récapitulatif
 
-![backup-schema](/assets/images/2017/04/backup-schema.png)
+{% include image.html
+            img = "2017/04/backup-schema.png"
+            title = "Schéma de mon système de sauvegarde" %}
+
 
 Une image vaut mille mots et permet d'avoir une vision assez globale de comment tout cela fonctionne. Voyons tout ça l'un après l'autre.
 
@@ -29,7 +32,7 @@ Tous mes fichiers sont sauvegardés dessus sans exceptions, soit en accès direc
 
 ## Time Machine
 
-élément très important également, le fameux Time Machine. Outil disponible uniquement sur macOS (l'équivalent existe désormais sur Windows sous le nom de File History). Il me permet de faire une sauvegarde incrémentale de l'ensemble de mon MacBook Pro sur le NAS. Très pratique pour remonter à un état antérieur d'un fichier ou d'un dossier et de pouvoir restaurer mon Mac en cas de souci ou de changement de machine. Je limite la sauvegarde à 1 To ce qui est largement suffisant pour mes besoins et pour remonter assez loin dans le passé.
+Élément très important également, le fameux Time Machine. Outil disponible uniquement sur macOS (l'équivalent existe désormais sur Windows sous le nom de File History). Il me permet de faire une sauvegarde incrémentale de l'ensemble de mon MacBook Pro sur le NAS. Très pratique pour remonter à un état antérieur d'un fichier ou d'un dossier et de pouvoir restaurer mon Mac en cas de souci ou de changement de machine. Je limite la sauvegarde à 1 To ce qui est largement suffisant pour mes besoins et pour remonter assez loin dans le passé.
 
 En plus d'une sauvegarde sur le NAS, j'utilise Time Machine sur un disque dur externe une fois toutes les 2 semaines environ.
 

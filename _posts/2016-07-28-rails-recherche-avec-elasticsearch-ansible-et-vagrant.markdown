@@ -2,7 +2,7 @@
 layout: post
 title: "Rails : Recherche avec ElasticSearch, Ansible et Vagrant"
 categories: Tutoriel Web Rails
-thumbnail: "/assets/images/2016/07/rails-es-ansible-vagrant.jpg"
+thumbnail: "2016/07/rails-es-ansible-vagrant.jpg"
 ---
 Aujourd'hui nous allons voir plusieurs notions de mise en place serveur avec un exemple concret : Utiliser [ElasticSearch](https://www.elastic.co/guide/index.html) avec Ruby On Rails. Je ne vais pas montrer comment fonctionne ElasticSearch (ES) mais comment l'installer sur une machine virtuelle avec Vagrant et Ansible pour s'en servir sur une application Rails.
 
@@ -157,7 +157,9 @@ $ vagrant up
 
 Si tout s'est déroulé correctement, vous devriez avoir quelque chose qui ressemble à ça :
 
-![ending-vagrant](/assets/images/2016/07/ending-vagrant.jpg)
+{% include image.html
+            img = "2016/07/ending-vagrant.jpg"
+            title = "Résultat de la commande vagrant up" %}
 
 La machine virtuelle se lance en tâche de fond, rien ne s'ouvre ou ne bloque l'invite de commande. Vous pouvez voir le statut de vos box :
 
@@ -200,10 +202,15 @@ Et cela pour chaque model pour lequel on souhaitera utiliser ElasticSearch...
 
 Attention toutefois, ES renvoie un objet `Elasticsearch` et pas `Article` comme on pourrait s'y attendre, il renvoie simplement les informations de son index. Si vous souhaitez forcer le chargement depuis la base de données, vous pouvez utiliser les `records`, ES fera alors un `where in (:ids)` et vous aurez des `Article` dans notre cas.
 
-![es-model](/assets/images/2016/07/es-model.jpg)
+{% include image.html
+            img = "2016/07/es-model.jpg"
+            title = "Recherche sans utiliser l'attribut records"
+            caption = "Recherche sans utiliser l'attribut records" %}
 
-![En utilisant ](/assets/images/2016/07/es-records.jpg)
-*En utilisant "records"*
+{% include image.html
+            img = "2016/07/es-model.jpg"
+            title = "Recherche en utilisant l'attribut records"
+            caption = "Recherche en utilisant l'attribut records" %}
 
 Utiliser la méthode `records` permettra, comme n'importe quelle `ActiveRecord::Relation`, d'être chainable pour modifier la requête :
 
@@ -215,10 +222,14 @@ $ Article.search('second').records.order(title: :desc)
 
 Ta-da ! Nous avons une recherche fonctionnelle ! Je vous publie l'ensemble de l'application sur [ce dépôt Github](https://github.com/guillaumebriday/Rails-elasticsearch-vagrant-ansible-demo), n'hésitez pas à le corriger ou le commenter.
 
-![Tous les articles](/assets/images/2016/07/rails-es-all.jpg)
-*Tous les articles*
+{% include image.html
+            img = "2016/07/rails-es-all.jpg"
+            title = "Liste de tous les articles"
+            caption = "Liste de tous les articles" %}
 
-![Avec une recherche](/assets/images/2016/07/rails-es-search.jpg)
-*Avec une recherche*
+{% include image.html
+            img = "2016/07/rails-es-search.jpg"
+            title = "Liste des articles correspondant à une recherche"
+            caption = "Liste des articles correspondant à une recherche" %}
 
 Merci !

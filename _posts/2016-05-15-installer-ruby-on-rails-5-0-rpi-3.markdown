@@ -2,7 +2,7 @@
 layout: post
 title: "Installer Ruby On Rails 5.0 sur un RPi 3"
 categories: Tutoriel Web Rails
-thumbnail: "/assets/images/2016/05/rails-plus-rpi.jpg"
+thumbnail: "2016/05/rails-plus-rpi.jpg"
 ---
 Comme vous avez pu le voir dans le titre aujourd'hui nous allons parler de Linux, et plus particulièrement de Ruby et Ruby On Rails (RoR). Je vais utiliser ici un [RPi 3 modèle B](https://fr.farnell.com/raspberry-pi/raspberrypi-modb-1gb/raspberry-pi-3-model-b/dp/2525225). Je le trouve surtout très pratique, contrairement à ses prédécesseurs, car il embarque directement un module Wi-Fi que je vais utiliser tout le temps. Ce tutoriel est réalisé un Mac et malheureusement je n'ai aucune idée de comment faire sur Windows 🤷‍♂️.
 
@@ -24,11 +24,15 @@ Repérez le disk sur lequel est votre carte SD, cela peut-être par exemple `dis
 
 Je vais prendre 2 comme exemple, pensez bien à adapter selon votre cas.
 
-![diskutil-list](/assets/images/2016/05/diskutil-list.jpg)
-*En ligne de commande*
+{% include image.html
+            img = "2016/05/diskutil-list.jpg"
+            title = "Diskutil en ligne de commande"
+            caption = "Diskutil en ligne de commande" %}
 
-![Mais vous pouvez aussi le voir dans l'utilitaire de disque, en bas à droite](/assets/images/2016/05/diskutil-gui.jpg)
-*Mais vous pouvez aussi le voir dans l'utilitaire de disque, en bas à droite*
+{% include image.html
+            img = "2016/05/diskutil-gui.jpg"
+            title = "Diskutil dans l'utilitaire de disque"
+            caption = "Diskutil dans l'utilitaire de disque" %}
 
 Démontez alors la partition de votre carte SD avec :
 
@@ -46,8 +50,10 @@ N'oubliez pas de remplacer 2 par votre numéro, c'est important !
 
 Pour cette étape, il n'y a aucune barre de progression ou d'indication sur le bon fonctionnement, mais s'il ne gueule pas trop dans le terminal, c'est que tout devrait bien se passer. Pour ma part la copie a mis un peu plus de 90 secondes pour se finaliser. Vous trouverez [ici](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) la document officielle, pour réaliser ces étapes, plus complète mais en anglais.
 
-![Le résultat après ces 3 étapes](/assets/images/2016/05/diskutil-unmount.jpg)
-*Le résultat après ces 3 étapes*
+{% include image.html
+            img = "2016/05/diskutil-unmount.jpg"
+            title = "Le résultat après ces 3 étapes"
+            caption = "Le résultat après ces 3 étapes" %}
 
 à ce moment là, vous devriez pouvoir brancher votre RPi à votre réseau local. Pour la configuration, je vous conseille d'utiliser un cable ethernet pour se passer de la connexion au Wi-Fi dans un premier temps.
 
@@ -63,8 +69,10 @@ $ ssh pi@192.168.1.21
 
 Le mot de passe est : `raspberry`
 
-![Je suis bien connecté sur le RPi 3](/assets/images/2016/05/rpi-ssh.jpg)
-*Je suis bien connecté sur le RPi 3*
+{% include image.html
+            img = "2016/05/rpi-ssh.jpg"
+            title = "Je suis bien connecté sur le RPi 3"
+            caption = "Je suis bien connecté sur le RPi 3" %}
 
 La première chose à faire est de changer le mot de passe, c'est très important sachant qu'il est créé par défaut et donc n'importe qui connaissant votre adresse pourrait s'y connecter en SSH lui aussi, pas top voire dangereux...
 
@@ -74,7 +82,9 @@ Pour cela, entrez cette commande puis choisissez un nouveau mot de passe :
 $ passwd
 ```
 
-![rpi-passwd](/assets/images/2016/05/rpi-passwd.jpg)
+{% include image.html
+            img = "2016/05/rpi-passwd.jpg"
+            title = "Je suis bien connecté sur le RPi 3" %}
 
 Une fois terminé, vous pouvez commencer par mettre vos dépendances à jour :
 
@@ -94,11 +104,15 @@ S'il vous demande de télécharger des signatures, faites-le.
 
 Une fois que le téléchargement et la compilation commencés, vous pouvez aller faire autre chose, vous promener, faire votre sport, visiter un autre pays, ce que vous voulez, ce sera [toujours moins long](http://31.media.tumblr.com/e21d7475a8a19ec504cb5c771898f98d/tumblr_navr43GgzW1qf9mevo1_r1_500.gif) ! :-p
 
-![ruby-compiling](/assets/images/2016/05/ruby-compiling.jpg)
+{% include image.html
+            img = "2016/05/ruby-compiling.jpg"
+            title = "Compilation de Ruby" %}
 
 Et voilà, [enfin fini](https://www.youtube.com/watch?v=hzYWzNTB8m0) pour ma part, mais attention vous allez peut-être devoir réouvrir un shell pour voir les modifications effectives ! En effet, on peut avoir de mauvaises surprises...
 
-![ruby-version-comparaison](/assets/images/2016/05/ruby-version-comparaison.jpg)
+{% include image.html
+            img = "2016/05/ruby-version-comparaison.jpg"
+            title = "Comparaison version de Ruby" %}
 
 ## Installer Rails 5.0
 
@@ -137,7 +151,9 @@ $ rails s -p3000 -b192.168.1.21
 
 Et [boum](https://cdn.meme.am/instances/66662480.jpg) ! Tout est fonctionnel !
 
-![rails-mac](/assets/images/2016/05/rails-mac.jpg)
+{% include image.html
+            img = "2016/05/rails-mac.jpg"
+            title = "Page d'accueil de Rails sur Chrome" %}
 
 ## Pour aller plus loin
 
@@ -149,7 +165,9 @@ Accédez ensuite à votre routeur depuis son adresse publique ou bien avec un DD
 
 L'ayant déjà fait, j'ai accès à mon serveur Rails de partout comme ici sur mon iPhone par exemple :
 
-![rails-iphone](/assets/images/2016/05/rails-iphone.jpg)
+{% include image.html
+            img = "2016/05/rails-iphone.jpg"
+            title = "Page d'accueil de Rails sur Safari iOS" %}
 
 J'espère que cet article aura pu vous aider un petit peu, si vous avez des questions ou des suggestions n'hésitez surtout pas, les commentaires sont là pour ça !
 
