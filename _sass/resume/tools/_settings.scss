@@ -1,0 +1,32 @@
+// Base
+$font-color: rgb(37, 37, 37);
+$section-width: 1130px;
+$section-padding-top-bottom: 40px;
+$section-padding-border: 20px;
+
+$fa-font-path: "../assets/fonts";
+
+// Breakpoints
+$breakpoints: (
+    xsmall: 584px,
+    small: 767px,
+    medium: 992px,
+    large: 1200px
+);
+
+// Layouts
+$font-color-work: #5f5f5f;
+
+// Working experiences
+$timeline-dot-size: 20px;
+
+// Hobbies
+$hobbies-icons-size: 75px;
+
+// Portfolio
+$portfolio-article-height: 350px;
+$portfolio-article-width: 260px;
+$portfolio-margin: 30px;
+
+// Skills
+$progress-bar-height: 8px;

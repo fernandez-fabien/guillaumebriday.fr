@@ -1,0 +1,20 @@
+<article class="education-block">
+  <div class="education-info">
+    <div class="education-date-container">
+      <span class="education-date">
+        <span class="education-month">{{ include.start_date | date: '%B' }}</span>{{ include.start_date | date: '%Y' }}
+      </span>
+        &nbsp;-&nbsp;
+      <span class="education-date">
+        <span class="education-month">{{ include.end_date | date: '%B' }}</span>{{ include.end_date | date: '%Y' }}
+      </span>
+    </div>
+
+    <p class="education-school">{{ include.school }}</p>
+  </div>
+
+  <div class="education-presentation">
+    <h3 class="education-title">{{ include.title }}</h3>
+    <p class="education-description">{{ include.description }}</p>
+  </div>
+</article>

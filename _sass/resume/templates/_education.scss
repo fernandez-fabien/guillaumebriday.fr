@@ -1,0 +1,144 @@
+$spaces: 30px;
+
+.education-block
+{
+    position: relative;
+
+    display: flex;
+
+    margin-bottom: $spaces;
+    padding-bottom: $spaces;
+
+    border-bottom: 1px solid #e1e1e1;
+
+    flex-wrap: wrap;
+
+    &:last-child
+    {
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        border: none;
+    }
+}
+
+.education-date-container
+{
+    font-size: 2em;
+    font-weight: 700;
+
+    position: relative;
+
+    margin-bottom: $spaces;
+    padding-top: 20px;
+    padding-bottom: $spaces;
+
+    &:after
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100px;
+        height: 1px;
+
+        content: '';
+
+        background: #e1e1e1;
+    }
+}
+
+.education-date
+{
+    position: relative;
+}
+
+.education-month
+{
+    font-size: 12px;
+    font-weight: 400;
+
+    position: absolute;
+    top: -15px;
+    left: 0;
+
+    color: $font-color-work;
+}
+
+.education-school
+{
+    margin-top: 0;
+}
+
+.education-presentation
+{
+    flex-basis: 100%;
+}
+
+.education-title
+{
+    font-size: 1.6em;
+    font-weight: 300;
+
+    color: $brand-color;
+}
+
+.education-description
+{
+    line-height: 1.7;
+
+    text-align: justify;
+    margin: 1em 0;
+
+    color: $font-color-work;
+}
+
+@include bp(medium)
+{
+    .education-block
+    {
+        flex-wrap: initial;
+    }
+
+    .education-presentation
+    {
+        margin-left: 30px;
+        padding-left: 30px;
+
+        border-left: 1px solid #e1e1e1;
+    }
+
+    .education-date-container
+    {
+        text-align: right;
+        &:after
+        {
+            right: 0;
+            left: auto;
+        }
+    }
+
+    .education-info
+    {
+        min-width: 200px;
+    }
+
+    .education-month
+    {
+        right: 0;
+        left: auto;
+    }
+
+    .education-school
+    {
+        text-align: right;
+    }
+}
+
+@include bp (medium)
+{
+    .education-section
+    {
+        width: map-get($breakpoints, medium);
+    }
+}

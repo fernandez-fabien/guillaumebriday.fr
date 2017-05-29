@@ -1,0 +1,22 @@
+{
+  "name": "guillaumebriday.fr",
+  "version": "2.0.0",
+  "description": "My personnal website",
+  "author": "Guillaume Briday",
+  "license": "MIT",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "countup.js": "^1.8.1",
+    "font-awesome": "^4.7.0",
+    "scrolltrigger-classes": "^0.3.5",
+    "turbolinks": "^5.0.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-clean-css": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.1"
+  }
+}

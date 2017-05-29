@@ -1,0 +1,51 @@
+<section id="portfolio-section-container" class="portfolio-section-container section-container">
+  <div class="section portfolio-section">
+    <div class="title-container">
+      <h2 class="title">Portfolio</h2>
+    </div>
+
+    <div class="portfolio-container">
+      {% include resume/components/portfolio.html
+                  url = "https://guillaumebriday.fr"
+                  photo_path = "blog.png"
+                  title = "Mon blog"
+                  description = "J'ai créé un blog pour parler de différents sujets et transmettre ce que je sais à ma manière. Le thème Jekyll est entièrement modifié par mes soins et disponible sur mon compte Github." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://github.com/guillaumebriday/laravel-blog"
+                  photo_path = "laravel.png"
+                  title = "Laravel blog"
+                  description = "Application de blog écrite avec Laravel 5.4. Elle a pour objectif de montrer les bonnes pratiques en présentant le plus possible, les fonctionnalités disponibles du framework." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://github.com/guillaumebriday/Hotel-Tycoon-API-Rails"
+                  photo_path = "rails.png"
+                  title = "API REST en Rails"
+                  description = "C'est une API pour une application de gestion d'hôtels. Développée avec Rails 5 et déployée avec Heroku." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://github.com/guillaumebriday/Minium"
+                  photo_path = "minium.png"
+                  title = "Thème responsive pour Wordpress"
+                  description = "Minium est un thème que j'ai entièrement conçu, de la conception à la réalisation. Il est parfaitement responsive, multilingue et gère différents layouts personnalisables." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://github.com/guillaumebriday/Slider"
+                  photo_path = "slider.gif"
+                  title = "Slider"
+                  description = "Mon premier plugin Jquery me permettant de faire un Slider entre deux images le tout en responsive design." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://guillaumebriday.github.io/dpi.js/"
+                  photo_path = "pixel.png"
+                  title = "dpi.js"
+                  description = "Un site pour calculer quelques informations sur des écrans telles que la densité ou la taille et développé en Javascript Vanilla. Le code source est disponible sur Github." %}
+
+      {% include resume/components/portfolio.html
+                  url = "https://codepen.io/guillaumebriday/pen/obyGaX"
+                  photo_path = "sass-mixin-triangle-shadow.png"
+                  title = "Sass Mixin Triangle Shadow"
+                  description = "Une mixin sass pour générer des triangles avec des ombres en CSS. Disponible librement sur Github" %}
+    </div>
+  </div>
+</section>
