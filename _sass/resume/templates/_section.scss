@@ -1,0 +1,45 @@
+.section-container
+{
+    position: relative;
+
+    background-color: #fff;
+
+    &:nth-child(odd)
+    {
+        background-color: #f5f5f5!important;
+    }
+}
+
+.section
+{
+    position: relative;
+
+    padding: $section-padding-top-bottom $section-padding-border;
+}
+
+.title-container
+{
+    margin-bottom: $section-padding-top-bottom;
+
+    text-align: center;
+}
+
+.title
+{
+    font-size: 36px;
+    font-weight: 500;
+
+    display: inline-block;
+
+    text-transform: uppercase;
+}
+
+@include bp (large)
+{
+    .section,
+    .footer
+    {
+        width: map-get($breakpoints, large);
+        margin: 0 auto;
+    }
+}

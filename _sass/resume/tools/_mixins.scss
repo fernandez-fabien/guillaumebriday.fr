@@ -1,0 +1,21 @@
+@mixin bp($breakpoint)
+{
+    @if map-has-key($breakpoints, $breakpoint)
+    {
+        @media (min-width: map-get($breakpoints, $breakpoint))
+        {
+            @content;
+        }
+    }
+}
+
+@mixin clearfix
+{
+    &:after
+    {
+        display: table;
+        clear: both;
+
+        content: '';
+    }
+}

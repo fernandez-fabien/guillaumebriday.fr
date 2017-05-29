@@ -1,0 +1,19 @@
+@import "tools/settings";
+@import "tools/mixins";
+@import "tools/triangle-shadow";
+
+// Templates
+@import "templates/section";
+@import "templates/about-me";
+@import "templates/experience";
+@import "templates/education";
+@import "templates/skills";
+@import "templates/hobbies";
+@import "templates/portfolio";
+
+// Vendor
+@import "vendor/font-awesome/scss/font-awesome";
+@import "vendor/animate.css/base";
+@import "vendor/animate.css/bounceIn";
+@import "vendor/animate.css/fadeInLeft";
+@import "vendor/animate.css/fadeInRight";
