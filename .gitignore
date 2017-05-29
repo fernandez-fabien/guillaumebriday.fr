@@ -6,3 +6,4 @@ assets/fonts
 _sass/resume/vendor
 js
 node_modules
+.htaccess
