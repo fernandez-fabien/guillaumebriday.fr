@@ -44,6 +44,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - gulpfile.js
+  - package.json
+  - package-lock.json
+  - node_modules
 google_analytics: UA-54003772-2
 sass:
   style: compressed
