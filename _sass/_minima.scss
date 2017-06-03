@@ -15,6 +15,7 @@ $background-color: #fdfdfd !default;
 $brand-color:      #ef1f17 !default;
 
 $commments-border-color: #e9eeee !default;
+$gallery-gutter: 5px;
 
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
@@ -35,6 +36,12 @@ $on-laptop:        800px !default;
 // }
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin media-query-min($device) {
+  @media screen and (min-width: $device) {
     @content;
   }
 }

@@ -1,0 +1,35 @@
+.gallery-wrapper {
+  max-width: 100%;
+}
+
+.gallery-grid {
+  column-gap: $gallery-gutter;
+}
+
+#baguetteBox-overlay {
+  transition: none!important;
+}
+
+.grid-item {
+  break-inside: avoid;
+
+  &.image-container {
+    margin-bottom: $gallery-gutter;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+@include media-query-min($on-laptop) {
+  .gallery-grid {
+    column-count: 2;
+  }
+}
+
+@include media-query-min($content-width) {
+  .gallery-grid {
+    column-count: 3;
+  }
+}
