@@ -10,9 +10,17 @@
     {% endif %}
 {% endcapture %}
 
+{% capture alt %}
+    {% if include.alt %}
+        {{ include.alt }}
+    {% else %}
+        {{ include.title }}
+    {% endif %}
+{% endcapture %}
+
 <div class="image-container {{ include.class }}">
     <a href="{{ url }}" title="{{ include.title }}" target="_blank" data-caption="{{ include.caption }}">
-        <img src="{{ image_url }}" alt="{{ include.title }}" />
+        <img src="{{ image_url }}" alt="{{ include.alt }}" />
     </a>
 
     {% if include.caption %}
