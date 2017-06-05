@@ -4,6 +4,7 @@ _drafts
 .jekyll-metadata
 assets/fonts
 _sass/resume/vendor
+_sass/vendor
 js
 node_modules
 .htaccess

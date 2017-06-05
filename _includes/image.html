@@ -1,5 +1,5 @@
 {% capture image_url %}
-    {{ include.img | prepend: '/assets/images/' }}
+    {{ include.img | prepend: '/assets/images/' | prepend: site.baseurl }}
 {% endcapture %}
 
 {% capture url %}
@@ -10,9 +10,17 @@
     {% endif %}
 {% endcapture %}
 
-<div class="image-container">
-    <a href="{{ url }}" title="{{ include.title }}" target="_blank">
-        <img src="{{ image_url }}" alt="{{ include.title }}" />
+{% capture alt %}
+    {% if include.alt %}
+        {{ include.alt }}
+    {% else %}
+        {{ include.title }}
+    {% endif %}
+{% endcapture %}
+
+<div class="image-container {{ include.class }}">
+    <a href="{{ url }}" title="{{ include.title }}" target="_blank" data-caption="{{ include.caption }}">
+        <img src="{{ image_url }}" alt="{{ include.alt }}" />
     </a>
 
     {% if include.caption %}
