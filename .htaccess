@@ -10,6 +10,7 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [QSA,L,R=301]
 # ----------------------------------------------------------------------
 
 Redirect 301 /amazon https://www.amazon.fr/?tag=guillaumebrid-21
+Redirect 301 /lab/pixel https://guillaumebriday.github.io/dpi.js/
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
