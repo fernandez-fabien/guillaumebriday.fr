@@ -1,0 +1,24 @@
+.page-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.9em;
+  border-top: 1px solid $commments-border-color;
+
+  .next-container { text-align: right; }
+
+  .nav-container {
+    flex-basis: 50%;
+    margin: 10px 0;
+
+    @include media-query($on-palm) {
+      & {
+        flex-basis: 100%;
+      }
+    }
+  }
+
+  span {
+    display: block;
+    color: $grey-color;
+  }
+}
