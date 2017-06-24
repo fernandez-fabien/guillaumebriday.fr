@@ -3,7 +3,7 @@ var ScrollTrigger = require('../node_modules/scrolltrigger-classes/ScrollTrigger
 document.addEventListener('turbolinks:load', function() {
   var trigger = new ScrollTrigger({
                     centerVertical: true,
-                    addHeight: true,
+                    addHeight: false,
                     once: true
                   }, document.body, window)
 });
