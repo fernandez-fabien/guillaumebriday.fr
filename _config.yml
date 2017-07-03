@@ -29,6 +29,14 @@ linkedin: guillaumebriday
 
 # Build settings
 markdown: kramdown
+collections:
+  photos:
+    output: true
+defaults:
+  - scope:
+      type: photos
+    values:
+      layout: photo
 theme: minima
 paginate: 15
 paginate_path: "/page/:num/"

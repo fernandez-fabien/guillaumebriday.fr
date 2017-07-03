@@ -1,0 +1,71 @@
+---
+layout: default
+class: "gallery-wrapper"
+---
+<p>
+    <a href="{{ site.baseurl }}{% link photos/index.md %}">&larr; Retour aux photos</a>
+</p>
+
+<div class="image-container">
+    <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" class="image-show" />
+
+    {% if page.caption %}
+        <span class="image-caption">{{ page.caption }}</span>
+    {% endif %}
+</div>
+
+
+{% if page.exif %}
+<h2>EXIF</h2>
+
+<ul class="exif-container">
+    {% if page.exif.camera %}
+        <li>
+            <div class="exif-label">Camera</div>
+            <span class="exif-value">{{ page.exif.camera }}</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.iso %}
+        <li>
+            <div class="exif-label">ISO</div>
+            <span class="exif-value">{{ page.exif.iso }}</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.shutter_speed %}
+        <li>
+            <div class="exif-label">Shutter Speed</div>
+            <span class="exif-value">{{ page.exif.shutter_speed }} sec</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.aperture %}
+        <li>
+            <div class="exif-label">Aperture</div>
+            <span class="exif-value">f/ {{ page.exif.aperture }}</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.camera %}
+        <li>
+            <div class="exif-label">Focal Length</div>
+            <span class="exif-value">{{ page.exif.focal_length }} mm</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.location %}
+        <li>
+            <div class="exif-label">Location</div>
+            <span class="exif-value">{{ page.exif.location }}</span>
+        </li>
+    {% endif %}
+
+    {% if page.exif.date %}
+        <li>
+            <div class="exif-label">Date</div>
+            <span class="exif-value">{{ page.exif.date | date: "%-d %B %Y" }}</span>
+        </li>
+    {% endif %}
+</ul>
+{% endif %}
