@@ -22,6 +22,34 @@
   }
 }
 
+.image-show {
+  display: block;
+  max-height: 100vh;
+  margin: 0 auto;
+}
+
+.exif-container {
+  margin-left: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+      margin-bottom: 10px;
+      margin-right: $spacing-unit;
+  }
+}
+
+.exif-label {
+  color: $grey-color;
+}
+
+@include media-query($on-laptop) {
+  .exif-container {
+    flex-direction: column;
+  }
+}
+
 @include media-query-min($on-laptop) {
   .gallery-grid {
     column-count: 2;

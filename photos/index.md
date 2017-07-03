@@ -1,22 +1,22 @@
 ---
 layout: default
 title: "Photos"
-permalink: photos
 class: "gallery-wrapper"
 ---
 <h1 class="post-title">Photos</h1>
 
-{% assign images = site.data.gallery | reverse %}
+{% assign images = site.photos | reverse %}
 
 <div class="gallery-grid">
   {% for image in images %}
-    {% assign image_url = image.name | prepend: 'gallery/' %}
+    {% assign path = image.name | prepend: 'gallery/' %}
 
     {% include image.html
-                img = image_url
+                url = image.url
+                img = path
                 title = image.title
-                caption = image.caption
                 class = "grid-item"
-                alt = image.alt %}
+                alt = image.alt
+                new_tab = 'false' %}
   {% endfor %}
 </div>
