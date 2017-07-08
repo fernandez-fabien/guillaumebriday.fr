@@ -131,3 +131,17 @@
     Cordialement
 
     Guy
+
+- id: 14
+  author: Simon
+  date: 2017-07-07 14:53:50+00:00
+  content: |
+    Hello,
+
+    J'ai trouvé ton article en tentant de trouver sur internet la solution à mon problème. Pour ma part, j'ai bien fais la même chose que ce que tu indiques, mais le soucis que je rencontre c'est qu'en local le loopback ne fonctionne pas.
+
+    Pour être plus précis, derrière mon Syno RT j'ai un NAS Syno et j'ai mon service de DDNS qui est connecté à OVH (autant sur le RT que sur le NAS). Autant en 4g j'ai accès au NAS autant en local il n'y arrive pas (cf délai trop long...).
+
+    Une idée ?
+
+    Merci à toi
