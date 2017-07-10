@@ -7,7 +7,6 @@ var browserify = require('gulp-browserify');
 paths = {
   animate_css: 'node_modules/animate.css/source',
   font_awesome: 'node_modules/font-awesome',
-  baguettebox: 'node_modules/baguettebox.js',
   vendor: '_sass/resume/vendor'
 };
 
@@ -26,9 +25,6 @@ gulp.task('copy', function() {
 
   gulp.src(paths.font_awesome + '/fonts/**')
       .pipe(gulp.dest('assets/fonts/'));
-
-  gulp.src(paths.baguettebox + '/src/baguetteBox.scss')
-      .pipe(gulp.dest('_sass/vendor/baguetteBox/'));
 });
 
 gulp.task('scripts', function() {
