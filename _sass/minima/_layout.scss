@@ -208,10 +208,6 @@
 /**
  * Posts
  */
-.post-header {
-  margin-bottom: $spacing-unit;
-}
-
 .post-title {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
@@ -246,6 +242,27 @@
 
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
+    }
+  }
+}
+
+.post-meta-details {
+  margin-left: 0;
+  font-size: 14px;
+  color: $grey-color;
+
+  li {
+    display: inline-block;
+
+    &:before {
+      content: '\2022';
+      display: inline-block;
+      padding: 0 3px;
+      top: 3px;
+    }
+
+    &:first-child:before {
+      display: none;
     }
   }
 }

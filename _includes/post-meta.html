@@ -1,0 +1,25 @@
+{% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+
+<ul class="post-meta-details">
+  <li>
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %} {{ page.date | date: date_format }}
+    </time>
+  </li>
+
+  {% if page.author %}
+  <li>
+    Par {{ page.author }}
+  </li>
+  {% endif %}
+
+  <li>
+    <a href="#comments">
+      {{ site.data[comment_id] | size | pluralize: "commentaire" }}
+    </a>
+  </li>
+
+  <li>
+    {% include read-time.html %}
+  </li>
+</ul>
