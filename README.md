@@ -9,28 +9,33 @@ $ bundle install
 $ npm install
 $ gulp
 ```
-
-## Development
+Copy fonts and css libs :
+```
+$ gulp copy
+```
 
 Compile the assets :
 ```
 $ gulp scripts
 ```
 
-Copy fonts and css libs :
-```
-$ gulp copy
-```
+## Development
 
 The current folder will be generated into ./_site :
 ```
-$ jekyll build
+$ jekyll build --draft
 ```
 
 Build the site on the preview server :
 ```
-$ jekyll serve
+$ jekyll serve --draft --config _config.yml,_config.dev.yml
 $ open http://127.0.0.1:4000/
+```
+
+## Production
+
+```
+$ JEKYLL_ENV=production jekyll build
 ```
 
 ## Contributing
