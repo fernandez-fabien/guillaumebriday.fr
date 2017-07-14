@@ -1,12 +1,12 @@
-{% capture commentid %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+{% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 
-{% if site.data[commentid] or site.comments_form %}
-  <h2 id="comments" class="comments-title">{% include icon-bubbles.svg %} {{ site.data[commentid] | size | pluralize: "commentaire" }}</h2>
+{% if site.comments_form or site.data[comment_id] %}
+  <h2 id="comments" class="comments-title">{% include icons/icon-bubbles.svg %} {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
 
   {% include comments_form.html %}
 
   <div class="comments">
-    {% for comment in site.data[commentid] %}
+    {% for comment in site.data[comment_id] %}
       <div id="comment-{{ comment.id }}" class="comment-body">
           <div class="comment-meta">
             <div class="comment-author">
