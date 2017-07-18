@@ -498,7 +498,7 @@ Dans le ```DB_HOST```, on peut mettre ```mysql``` car c'est le nom utilisé dans
 Si vous souhaitez arrêter les containers et les supprimer :
 
 ```bash
-$ docker-composer down
+$ docker-compose down
 ```
 
 Il existe la version 3 de docker-compose dont je parlais prochainement.
