@@ -43,66 +43,33 @@
     color: $font-color-work;
 }
 
-.progress-bar-container
+.progressbar-container
 {
     position: relative;
 
     height: $progress-bar-height;
 
-    background-color: #ccc;
-
-    & .tooltip.top
-    {
-        font-size: 12px;
-        line-height: 1.4;
-
-        position: absolute;
-        top: -40px;
-        left: 0;
-
-        display: inline-block;
-
-        margin: 0;
-
-        transition: left 1.5s;
-        transform: translateX(-50%);
+    & > svg {
+        height: 100%;
+        display: block;
     }
 }
 
-.progress-bar
+.progressbar-text
 {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-
-    width: 0;
-
-    transition: width 1.5s;
-
-    background-color: #252525;
-}
-
-.progress-percent
-{
-    font-size: 13px;
+    font-size: 12px;
 
     position: absolute;
     bottom: 0;
     left: 0;
 
     padding: 6px;
-
-    transition: all 1.5s;
     white-space: nowrap;
+
+    transform: translate3d(-100%, 0, 0);
 
     color: #fff;
     background: #252525;
-
-    .visible &
-    {
-        transform: translate3d(-100%, 0, 0);
-    }
 }
 
 .knowledge-content-list {

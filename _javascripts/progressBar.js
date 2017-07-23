@@ -1,20 +1,38 @@
-var CountUp = require('../node_modules/countup.js/dist/CountUp.js')
+var ProgressBar = require('progressbar.js')
 
 document.addEventListener('turbolinks:load', function() {
+  var elements = document.querySelectorAll('.progressbar-container')
+
+  for (i = 0, len = elements.length; i < len; i++) {
+    var element = elements[i]
+
+    element.line = new ProgressBar.Line(element, {
+      easing: 'easeInOut',
+      duration: 1500,
+      color: '#252525',
+      trailColor: '#ccc',
+      svgStyle: {
+        width: '100%',
+        height: '100%'
+      },
+      text: {
+          style: null
+      },
+      step: function(_state, bar, attachment) {
+        bar.setText(Math.round(bar.value() * 100) + ' %')
+
+        text = bar._container.querySelector('.progressbar-text')
+
+        text.style.left = bar.value() * 100 + '%'
+      }
+    })
+  }
+
   animate_progress_bar = function() {
-    devContents = document.querySelectorAll('.dev-content');
-    for (i = 0, len = devContents.length; i < len; i++) {
-      var content = devContents[i]
-      var bar = content.querySelector('.progress-bar')
-      var progressPercent = content.querySelector('.progress-percent')
-      var width = bar.getAttribute('data-width')
-      var options = { suffix: '%' };
+    for (i = 0, len = elements.length; i < len; i++) {
+      var element = elements[i]
 
-      bar.style.width = width + '%'
-      progressPercent.style.left = width + '%'
-
-      var countUp = new CountUp(progressPercent, 0, width, 0, 1.5, options)
-      countUp.start()
+      element.line.animate(element.getAttribute('data-width') / 100)
     }
   }
-});
+})
