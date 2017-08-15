@@ -3,7 +3,7 @@ layout: post
 title: "De WordPress à Jekyll"
 categories: Billet
 ---
-Jusqu'en mai dernier, mon site personnel et mon blog utilisaient deux technologies différentes, à savoir [WordPress](https://wordpress.org){:target="_blank"} d'un côté et [Pug](https://github.com/pugjs/pug){:target="_blank"} puis [Middleman](https://github.com/middleman/middleman){:target="_blank"} de l'autre. C'était loin d'être l'idéale à maintenir, à faire évoluer ou à exploiter au quotidien.
+Jusqu'en mai dernier, mon site personnel et mon blog utilisaient deux technologies différentes, à savoir [WordPress](https://wordpress.org){:target="_blank"} d'un côté et [Pug](https://github.com/pugjs/pug){:target="_blank"} puis [Middleman](https://github.com/middleman/middleman){:target="_blank"} de l'autre. C'était loin d'être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.
 
 J'ai donc décidé de tout mettre en commun avec une seule technologie qui correspondait à mes besoins et mes envies, c'est ainsi que je me suis tourné vers le fameux [Jekyll](http://jekyllrb.com){:target="_blank"}.
 
