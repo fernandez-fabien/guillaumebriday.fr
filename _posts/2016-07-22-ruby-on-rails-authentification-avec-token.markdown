@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Rails 5 : Authentification avec token"
-categories: Tutoriel Web Rails
+title: "Ruby On Rails : Authentification avec token"
+categories: DevOps
 thumbnail: "2016/07/rails-token-authentication.jpg"
 ---
 Après les articles concernant les moyens d'installer Rails sur différents supports, nous allons aujourd'hui faire un

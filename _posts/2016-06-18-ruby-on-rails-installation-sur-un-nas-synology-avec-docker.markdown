@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Installer Ruby On Rails 5 avec Docker et un NAS Synology"
-categories: Tutoriel Web Rails
+title: "Ruby On Rails : Installation sur un NAS Synology avec Docker"
+categories: DevOps
 thumbnail: "2016/06/ror-docker-synology.jpg"
 ---
-On a vu dans un [article précédent]({{ site.baseurl }}{% link _posts/2016-05-15-installer-ruby-on-rails-5-0-rpi-3.markdown %}) comment installer et lancer Ruby On Rails sur un Raspberry Pi 3\. Aujourd'hui, on va cette fois-ci voir comment le faire avec Docker et un NAS Synology. Avant toute chose, vérifiez bien que votre NAS est compatible avec le [package Docker ici](https://www.synology.com/en-us/dsm/app_packages/Docker).
+On a vu dans un [article précédent]({{ site.baseurl }}{% link _posts/2016-05-15-ruby-on-rails-installation-sur-un-raspberry-pi-3.markdown %}) comment installer et lancer Ruby On Rails sur un Raspberry Pi 3\. Aujourd'hui, on va cette fois-ci voir comment le faire avec Docker et un NAS Synology. Avant toute chose, vérifiez bien que votre NAS est compatible avec le [package Docker ici](https://www.synology.com/en-us/dsm/app_packages/Docker).
 
 Maintenant qu'on est bon sur ça, on va pouvoir télécharger Docker dans le centre des paquets, il est directement fourni par Synology.
 
