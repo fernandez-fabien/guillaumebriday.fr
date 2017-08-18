@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Le blog est ouvert"
-categories: Autres
+categories: Billets
 published: false
 ---
 Et voilà, on y est, je pense que tout est prêt pour l'ouverture de ce blog !

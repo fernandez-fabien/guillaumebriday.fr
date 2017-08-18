@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Envoyer des fichiers par internet"
-categories: Tutoriel
+categories: Astuces
 ---
 Trop souvent lorsque je demande à des gens de m'envoyer des photos (beaucoup de photos), je les sens un peu perdu et ne savent pas vraiment quoi répondre. J'entends souvent des choses qui ressemble vaguement à : "Je te met tout ça sur un clé USB et tu les auras la prochaine fois qu'on se verra." ou encore : "Je t'enverrai des mails avec des petits paquets de photos car sinon tout dans un seul mail ça ne marche pas."
 

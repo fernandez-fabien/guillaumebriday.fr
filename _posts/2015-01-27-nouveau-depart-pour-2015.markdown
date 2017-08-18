@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nouveau départ pour 2015"
-categories: Presentation
+categories: Billets
 published: false
 ---
 Bonne année à tous !! C'est sur phrase très originale, mais malgré tout sincère qu'on marque le point de départ de l'année 2015 ! Je suis un peu en retard, mais au moment où j'ai commencé la rédaction de cet article, j'étais encore dans les temps donc je vais me faire croire que c'est pardonné. Passons. Avant d'aller plus loin je vous souhaite plein de bonnes choses et j'espère que cette année sera pour vous encore meilleure que les précédentes. Ma résolution de 2015 est probablement "la cessation de la procrastination" ! J'aime beaucoup cette phrase au passage, mais elle va être difficile à mettre en place sans beaucoup de volonté.

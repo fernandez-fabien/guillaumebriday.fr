@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Présentation de l'App Spectacle"
-categories: Presentation
+categories: Astuces
 published: false
 ---
 Venant du monde des fenêtres, il vrai que quand je suis arrivé sur mac après une vie sur le même système d'exploitation, je n'ai pas encore réussi à m'habituer à tout. On peut penser ce que l'on veut de Windows mais il faut admettre qu'il y a certains points bien pratique. Je pense notamment au redimensionnement des fenêtres en les déplaçant simplement sur les bords de l'écran ou en appuyant sur la touche Windows suivi d'une flèche en fonction de où l'on veut déplacer ladite fenêtre.

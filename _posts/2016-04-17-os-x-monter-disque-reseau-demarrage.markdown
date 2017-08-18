@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OS X : Monter un disque en réseau au démarrage"
-categories: Tutoriel
+categories: Astuces
 thumbnail: "2016/04/ordinateur-network.jpg"
 ---
 Si comme moi vous utilisez un disque en réseau (via un NAS par exemple) vous avez peut être envie de le voir apparaitre dans le Finder, comme un disque dur externe le ferait, au démarrage de votre ordinateur. Dans cet article, je vais prendre comme exemple mon cas d'utilisation donc avec un NAS connecté via AFP.

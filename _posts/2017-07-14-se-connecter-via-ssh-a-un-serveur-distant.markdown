@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Se connecter via SSH à un serveur distant"
-categories: Réseau
+categories: DevOps
 ---
 
 Nous allons voir comment se connecter à un NAS Synology via SSH sans avoir à taper notre mot de passe à chaque fois et de façon sécurisée. Cela fonctionne pour tous les serveurs ou machines fonctionnant sous un système Linux qui ont un [serveur SSH de lancé](https://help.ubuntu.com/lts/serverguide/openssh-server.html){:target="_blank"}.

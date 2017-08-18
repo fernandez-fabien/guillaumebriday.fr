@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Laravel : Utiliser Travis CI sur GitHub"
-categories: Laravel
+categories: DevOps
 ---
 Je développe depuis quelques temps un [projet en Laravel](https://github.com/guillaumebriday/laravel-blog){:target="_blank"} pour présenter dans un cas très concret, des aspects et des astuces qui me semblent intéressantes sur le framework.
 

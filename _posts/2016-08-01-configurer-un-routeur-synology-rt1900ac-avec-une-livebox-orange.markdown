@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Configurer un routeur Synology RT1900ac avec une Livebox Orange"
-categories: Presentation Tutoriel
+categories: Astuces
 thumbnail: "2016/07/rt1900ac-livebox.jpg"
 ---
 J'ai reçu, en fin de semaine, le premier routeur de Synology, le fameux [RT1900ac](https://amzn.to/2a96R85). Je ne vais pas aujourd'hui en faire un test ou un récapitulatif de ce que j'en pense, mais pour faire rapide je le trouve fantastique malgré ses petits défauts de jeunesse simplement perfectible avec des mises à jours donc je ne suis pas inquiet, il en ait toujours à ses débuts. L'interface est loin devant par rapport à la concurrence et les fonctionnalités ne manques pas.
@@ -44,7 +44,7 @@ C'est dans `Local Network` que la configuration va être vraiment importante. Po
 
 Dans l'onglet `DHCP Reservation` , vous pouvez attribuer des adresses statiques pour vos appareils connectés, très important si vous avez besoin d'accéder à un appareil depuis l'extérieur comme nous allons le voir. Le plus simple est de sélectionner un appareil dans l'onglet `DHCP Clients` et d'utiliser le bouton `Add to address reservation` plutôt que d'entrer les informations à la main. Cliquez ensuite sur `save` et au prochain renouvellement de bail l'adresse sera alors celle réservée pour l'appareil concerné.
 
-Synology fournit un service de DDNS, ce qui est très pratique pour accéder à son réseau local depuis l'extérieur, comme pour créer [un serveur Rails]({{ site.baseurl }}{% link _posts/2016-06-18-installer-ruby-on-rails-5-avec-docker-et-un-nas-synology.markdown %}) ou accéder à un NAS. Vous pouvez ajouter plusieurs services de DDNS et configurer la redirection de ports directement à vos appareils connectés depuis l'onglet `internet`. Rien de plus simple, il vous propose même des préréglages pour les ports et une liste de l'ensemble de vos appareils disponible, vous n'aurez plus grand chose à faire si ce n'est sélectionner selon vos besoins.
+Synology fournit un service de DDNS, ce qui est très pratique pour accéder à son réseau local depuis l'extérieur, comme pour créer [un serveur Rails]({{ site.baseurl }}{% link _posts/2016-06-18-ruby-on-rails-installation-sur-un-nas-synology-avec-docker.markdown %}) ou accéder à un NAS. Vous pouvez ajouter plusieurs services de DDNS et configurer la redirection de ports directement à vos appareils connectés depuis l'onglet `internet`. Rien de plus simple, il vous propose même des préréglages pour les ports et une liste de l'ensemble de vos appareils disponible, vous n'aurez plus grand chose à faire si ce n'est sélectionner selon vos besoins.
 
 ### Réseau sans fil
 

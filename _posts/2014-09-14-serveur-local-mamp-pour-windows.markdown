@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Serveur local : Mamp pour Windows"
-categories: Presentation
+categories: Web
 published: false
 ---
 Quand on commence le développement PHP, on est directement confronté au fait que pour avoir un résultat, il nous faut un serveur. En effet, le php n'est rien d'autre qu'un langage...serveur. Une fois là, on a plusieurs solutions : soit avoir un serveur hébergé en ligne, soit faire une machine virtuelle ou soit faire un serveur local sur la machine sur laquelle on travaille. Je ne connais pas les statistiques mais généralement c'est bien la troisième solution qu'on choisit, car c'est la plus simple et la plus rapide à mettre en oeuvre. Chacune de ces méthodes a des avantages et des défauts mais je ne fais pas cet article pour vous dire qu'elle solution choisir. Non, aujourd'hui je vais uniquement parler de la troisième solution.
