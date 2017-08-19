@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Prise de notes - Blend Web Mix 2016"
-categories: Web
+categories: Billets
 ---
 J'ai eu l'occasion, comme en 2015, de participer à l'évènement Blend Web Mix. J'ai pu prendre pas mal de notes que je tenais à partager. Ce n'est pas une critique constructive ou un résumé des présentations mais simplement une publication des notes que j'ai pu prendre. J'espère que vous me pardonnerez le côté "haché" du texte. Bonne lecture !
 

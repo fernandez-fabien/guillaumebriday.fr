@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Blend Web Mix - 2015"
-categories: Web
+title: "Prise de notes - Blend Web Mix 2015"
+categories: Billets
 thumbnail: "2015/11/blend-web-mix.jpg"
 ---
 J'ai eu cette année la chance de participer à l'évènement [Blend Web Mix](http://www.blendwebmix.com/) de Lyon, je remercie encore [@FlorentGoumy](https://twitter.com/FlorentGoumy) et [@PKoin](https://twitter.com/PKoin) pour cette opportunité ! Je vais faire ici un bref résumé des conférences auxquelles j'ai pu assister et donner mon ressenti général sur chacune.

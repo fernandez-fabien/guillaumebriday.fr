@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Comment je sauvegarde mes données ?"
-categories: Informatique Synology
+categories: Billets
 ---
 Souvent inexistante ou très marginale, je suis toujours surpris de voir le peu de mérite qui est attribué à la sauvegarde, si indispensable pourtant. Beaucoup d'entre nous, encore aujourd'hui, n'ont leur données que sur leur ordinateur portable. Je vais ici vous présenter la méthode que j'utilise pour avoir l'esprit tranquille ou vous donner quelques idées.
 

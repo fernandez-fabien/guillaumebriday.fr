@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Astuce : Changer rapidement les fenêtres d'une même application"
-categories: Informatique Tutoriel
+title: "Changer de fenêtre d'une même application sur macOS"
+categories: Astuces
 thumbnail: "2016/08/alt-tab.jpg"
 ---
 Aujourd'hui, une petite astuce qui ne paye pas de mine mais qui peut s'avérer très pratique au quotidien.
 
-Si, comme moi, vous venez du monde des fenêtres, vous avez pu êre déstabilisé en arrivant sur OS X et ne voir dans le menu <kbd>alt tab</kbd> qu'une seule icône par application même si plusieurs fenêtres étaient ouvertes. Il est donc impossible avec cette méthode de switcher rapidement au clavier entre différentes fenêtres de Safari par exemple.
+Si, comme moi, vous venez du monde des fenêtres (Windows), vous avez pu êre déstabilisé en arrivant sur OS X et ne voir dans le menu <kbd>alt tab</kbd> qu'une seule icône par application même si plusieurs fenêtres étaient ouvertes. Il est donc impossible avec cette méthode de switcher rapidement au clavier entre différentes fenêtres de Safari par exemple.
 
 Malgré tout, il existe un raccourci pour passer d'une fenêtre à l'autre sans avoir à lever sa main jusqu'à la souris !
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "De WordPress à Jekyll"
-categories: Billet
+categories: Billets
 ---
 Jusqu'en mai dernier, mon site personnel et mon blog utilisaient deux technologies différentes, à savoir [WordPress](https://wordpress.org){:target="_blank"} d'un côté et [Pug](https://github.com/pugjs/pug){:target="_blank"} puis [Middleman](https://github.com/middleman/middleman){:target="_blank"} de l'autre. C'était loin d'être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.
 

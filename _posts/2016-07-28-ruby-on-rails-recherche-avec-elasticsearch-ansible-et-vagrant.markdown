@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Rails : Recherche avec ElasticSearch, Ansible et Vagrant"
-categories: Tutoriel Web Rails
+title: "Ruby On Rails : Recherche avec ElasticSearch, Ansible et Vagrant"
+categories: DevOps
 thumbnail: "2016/07/rails-es-ansible-vagrant.jpg"
 ---
 Aujourd'hui nous allons voir plusieurs notions de mise en place serveur avec un exemple concret : Utiliser [ElasticSearch](https://www.elastic.co/guide/index.html) avec Ruby On Rails. Je ne vais pas montrer comment fonctionne ElasticSearch (ES) mais comment l'installer sur une machine virtuelle avec Vagrant et Ansible pour s'en servir sur une application Rails.

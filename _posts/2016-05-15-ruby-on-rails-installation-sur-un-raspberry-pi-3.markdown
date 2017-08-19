@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Installer Ruby On Rails 5.0 sur un RPi 3"
-categories: Tutoriel Web Rails
+title: "Ruby On Rails : Installation sur un Raspberry Pi 3"
+categories: DevOps
 thumbnail: "2016/05/rails-plus-rpi.jpg"
 ---
 Comme vous avez pu le voir dans le titre aujourd'hui nous allons parler de Linux, et plus particulièrement de Ruby et Ruby On Rails (RoR). Je vais utiliser ici un [RPi 3 modèle B](https://fr.farnell.com/raspberry-pi/raspberrypi-modb-1gb/raspberry-pi-3-model-b/dp/2525225). Je le trouve surtout très pratique, contrairement à ses prédécesseurs, car il embarque directement un module Wi-Fi que je vais utiliser tout le temps. Ce tutoriel est réalisé un Mac et malheureusement je n'ai aucune idée de comment faire sur Windows 🤷‍♂️.

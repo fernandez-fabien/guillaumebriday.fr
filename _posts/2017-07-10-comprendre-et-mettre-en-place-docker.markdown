@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Comprendre et mettre en place Docker"
-categories: Docker
+categories: DevOps
 ---
 J'ai eu l'occasion récemment d'utiliser [Docker](https://www.docker.com){:target="_blank"} de façon un peu plus poussée et je tenais à faire un retour car j'ai eu pas mal de points de blocage dans mon apprentissage que je voudrais détailler ici plus clairement.
 
