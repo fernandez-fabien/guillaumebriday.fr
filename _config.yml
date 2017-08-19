@@ -29,6 +29,7 @@ linkedin: guillaumebriday
 
 # Build settings
 markdown: kramdown
+timezone: FR
 collections:
   photos:
     output: true

@@ -16,7 +16,7 @@
 //  with this program; if not, see <http://www.gnu.org/licences/>
 
 
-$DATE_FORMAT = 'Y-m-d H:i:sP';
+$DATE_FORMAT = 'Y-m-d H:i:s';
 $EMAIL_ADDRESS = 'hello@guillaumebriday.fr';
 $SUBJECT = 'Nouveau commentaire sur blog.guillaumebriday.fr';
 
