@@ -1,7 +1,7 @@
 - id: 1
   author: Nicolas Dutertry
   author-url: http://nicolas.dutertry.com/
-  date: 2017-07-13 16:41:46+02:00
+  date: 2017-07-13 16:41:46
   content: |
     Bon article pour comprendre Docker !
 
@@ -12,7 +12,7 @@
 - id: 2
   author: Guillaume Briday
   author-url: https://guillaumebriday.fr/
-  date: 2017-07-13 23:56:00+02:00
+  date: 2017-07-13 23:56:00
   content: |
     Salut Nicolas et merci pour ton retour !
 
