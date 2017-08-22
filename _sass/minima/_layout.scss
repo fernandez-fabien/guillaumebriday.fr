@@ -282,3 +282,31 @@
   text-align: center;
   color: $grey-color;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $commments-border-color;
+  margin-bottom: 1rem;
+
+  td,
+  th {
+    padding: .3rem;
+    vertical-align: top;
+    border: 1px solid $commments-border-color;
+  }
+
+  thead {
+    th {
+      vertical-align: bottom;
+      border-bottom: 2px solid $commments-border-color;
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: rgba(0,0,0,.05);
+    }
+  }
+}
