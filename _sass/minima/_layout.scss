@@ -200,6 +200,7 @@
 
 .post-link {
   display: block;
+  font-weight: 500;
   @include relative-font-size(1.5);
 }
 
@@ -212,6 +213,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
+  font-weight: 500;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
