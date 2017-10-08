@@ -36,6 +36,16 @@ Bon c'est la que les choses sérieuses commencent. Je vous laisse le soin de con
 
 Dans l'onglet `Internet > Connection` pensez bien à mettre le `Set as default gateway` pour avoir accès à internet depuis le routeur. C'est très important, sans ça les périphériques sur votre routeur n'auront pas accès à internet, embêtant...
 
+EDIT : En effet, dans les dernières versions de SRM cette configuration est activée par défaut s'il peut le faire, mais il faut l'activer si vous voulez accéder à internet depuis votre LAN. Les Gateways (passerelles en français) permettent de lier deux réseaux entre eux. Dans notre cas, on indique juste au RT1900ac de se comporter comme un routeur entre le WAN et notre LAN.
+
+Ainsi, tous les appareils du réseau sauront qu'ils devront envoyer leurs paquets via ce périphérique pour accéder à internet. De la même manière, vous devez également indiquer au Synology quelle Gateway il doit utiliser pour communiquer avec l'extérieur, il faudra indiquer l'adresse ip de la livebox.
+
+Dans mon cas, l'adresse de la DMZ est `192.168.1.11`.
+
+{% include image.html
+            img = "2016/07/internet-rt1900ac.jpg"
+            title = "Onglet internet du centre de contrôle du SRM" %}
+
 C'est dans `Local Network` que la configuration va être vraiment importante. Pour la plage d'adresses ip, j'ai choisi de faire dans la continuité de la livebox donc `192.168.2.1/24`. Tous les appareils sur le Synology auront des adresses du format `192.168.2.x` et les appareils du réseau invité auront `192.168.3.x`, c'est simple à retenir et tout le monde est bien organisé dans un ordre logique.
 
 {% include image.html
@@ -57,3 +67,11 @@ J'ai été aussi agréablement surpris de voir des applications comme Download S
 J'espère avoir pu aider ceux qui se posaient des questions sur la configuration d'une livebox avec ce [Synology RT1900ac](https://amzn.to/2a96R85), si vous en avez d'autres n'hésitez pas à les poser je répondrais au plus vite !
 
 Merci :)
+
+EDIT 2 :
+
+Depuis une mise à jour récente sur les Synology, il y a une option pour activer le CTF. Cela permet d'avoir, dans les rapports d'activités, des statistiques très poussées sur les sites visités, les protocoles utilisés et ce genre de choses d'informations. En revanche, cela consomme beaucoup de puissance et les Synology (même les RT2600ac) ne sont pas calibrés pour gérer des débits très important avec cette option.
+
+J'ai la fibre 1Go et j'observe une baisse de débit considérable lorsque j'active l'option. Si votre connexion ne le permet pas, vous pouvez utiliser cette fonctionnalité sans compromis, sinon vous devrez choisir entre les statistiques et une connexion vraiment fibrée. L'exemple en image que j'ai publié sur twitter :
+
+https://twitter.com/guillaumebriday/status/914550113795796993

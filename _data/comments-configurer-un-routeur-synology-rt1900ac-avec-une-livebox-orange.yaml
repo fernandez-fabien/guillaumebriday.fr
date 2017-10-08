@@ -145,3 +145,57 @@
     Une idée ?
 
     Merci à toi
+
+- id: 15
+  author: Geoffrey
+  date: 2017-10-05 17:06:00
+  content: |
+    Bonjour Guillaume,
+
+    Avant toute chose, je tenais à vous remercier pour votre tutoriel sur l’installation d’un routeur RT1900AC en DMZ sur une Livebox !
+
+    Merci, car il est en effet très rare de trouver des tutoriels complets comme le vôtre. :)
+
+    Je me permets de vous contacter, pour avoir une information complémentaire qui ne figure pas dans votre tutoriel.
+
+    Vous indiquez, dans la partie « Configuration du routeur RT1900AC »,  je cite : « Dans l’onglet Internet > Connection pensez bien à mettre le Set as default Gateway »
+
+    Je ne comprend pas de quoi s’agit-il ?
+
+    Pour information, je compte effectué la même configuration sur une Bbox :
+
+    IP WAN     |     Bbox  | IP Lan                   -> DMZ sur          IP WAN            |   RT1900AC   |  IP Lan
+
+    5.xx.xxx.xxx/32   |   192.168.1.1/24                         192.168.1.2/24   |                      | 192.168.2.1/24
+
+
+    Je pense qu’il faut indiquer « Type de connexion » en Manuel, mais je n’arrive pas à voir quoi renseigner à la suite de ceci :
+
+    Adresse IP  :  Wan extérieur ? LAN Bbox ?
+    Passerelle : Lan Bbox ?
+
+
+    Je ne possède pas encore le routeur, mais ça ne saurait tarder, aussi j’anticipe sur ces questions qui vont se poser pour moi très rapidement…
+
+    En vous remerciant sincèrement par avance du tremps consacré à répondre à cette interrogation.
+
+    Bien cordialement.
+
+    Geoffrey
+
+- id: 16
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-10-07 13:55:00
+  content: |
+    Bonjour Geoffrey,
+
+    Tout d'abord, merci pour tes compliments et ta question, ça fait super plaisir.
+
+    Pour répondre à ta question, le `Set as default Gateway` permet de dire aux éléments du réseau local que c'est par cette adresse (celle du routeur) qu'ils doivent envoyer leurs paquets pour accéder au réseau extérieur et inversement si les paquets viennent de l'extérieur. Sans ça, les clients de ton réseau local pourrons communiquer entre eux, mais pas vers l'extérieur.
+
+    Pour ta configuration, il faut distinguer deux choses, ton interface primaire et ton ip locale. Ton interface primaire doit être l'adresse que tu as définie sur ta livebox (dans ton cas `192.168.1.2`) et ta Gateway doit être `192.168.1.1` (ta livebox). Et pour ton ip locale tu peux mettre ce que tu veux, mais dans ton exemple c'est `192.168.2.1`.
+
+    Je vais voir si j'ai le temps de faire une modification sur l'article pour expliquer ce point.
+
+    En espérant avoir répondu à ta question :)
