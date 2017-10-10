@@ -129,6 +129,15 @@ blockquote {
 /**
  * Code formatting
  */
+
+kbd {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  color: #fff;
+  background-color: #212529;
+  border-radius: .2rem
+}
+
 pre,
 code {
   @include relative-font-size(0.9375);
