@@ -1,7 +1,7 @@
 {% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 
 {% if site.comments_form or site.data[comment_id] %}
-  <h2 id="comments" class="comments-title">{% include icons/icon-bubbles.svg %} {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
+  <h2 id="comments" class="comments-title"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
 
   {% include comments_form.html %}
 

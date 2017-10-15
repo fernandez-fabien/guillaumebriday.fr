@@ -1,62 +1,48 @@
 <ul class="social-media-list">
   <li>
     <a href="{{ "/feed.xml" | relative_url }}" target="_blank">
-      <span class="icon icon--rss">{% include icons/icon-rss.svg %}</span>
-      <span class="username">RSS</span>
-    </a>
+      <i class="fa fa-rss" aria-hidden="true"></i> RSS </a>
   </li>
 
   {% if site.github_username %}
   <li>
     <a href="https://github.com/{{ site.github_username }}" target="_blank">
-      <span class="icon icon--github">{% include icon-github.svg %}</span>
-      <span class="username">GitHub</span>
-    </a>
+      <i class="fa fa-github" aria-hidden="true"></i> GitHub </a>
   </li>
   {% endif %}
 
   {% if site.twitter_username %}
   <li>
     <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
-      <span class="icon icon--twitter">{% include icon-twitter.svg %}</span>
-      <span class="username">Twitter</span>
-    </a>
+      <i class="fa fa-twitter" aria-hidden="true"></i> Twitter </a>
   </li>
   {% endif %}
 
   {% if site.instagram_username %}
   <li>
     <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank">
-      <span class="icon icon--instagram">{% include icons/icon-instagram.svg %}</span>
-      <span class="username">Instagram</span>
-    </a>
+      <i class="fa fa-instagram" aria-hidden="true"></i> Instagram </a>
   </li>
   {% endif %}
 
   {% if site.linkedin %}
   <li>
     <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
-      <span class="icon icon--linkedin">{% include icons/icon-linkedin.svg %}</span>
-      <span class="username">LinkedIn</span>
-    </a>
+      <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
   </li>
   {% endif %}
 
   {% if site.amazon_tag %}
   <li>
     <a href="https://www.amazon.fr/?tag={{ site.amazon_tag }}" target="_blank">
-      <span class="icon icon--amazon">{% include icons/icon-amazon.svg %}</span>
-      <span class="username">Amazon</span>
-    </a>
+      <i class="fa fa-amazon" aria-hidden="true"></i> Amazon </a>
   </li>
   {% endif %}
 
   {% if site.paypal %}
   <li>
     <a href="https://www.paypal.me/{{ site.paypal }}" target="_blank">
-      <span class="icon icon--paypal">{% include icons/icon-paypal.svg %}</span>
-      <span class="username">M'offrir un café</span>
-    </a>
+      <i class="fa fa-paypal" aria-hidden="true"></i> M'offrir un café </a>
   </li>
   {% endif %}
 </ul>

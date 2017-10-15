@@ -2,22 +2,24 @@
 
 <ul class="post-meta-details">
   <li>
-    <time datetime="{{ page.date | date_to_xmlschema }}">{% include page-date.html %}</time>
+    <time datetime="{{ page.date | date_to_xmlschema }}">
+      <i class="fa fa-calendar" aria-hidden="true"></i> {% include page-date.html %}
+    </time>
   </li>
 
   {% if page.author %}
   <li>
-    Par {{ page.author }}
+      <i class="fa fa-user" aria-hidden="true"></i> Par {{ page.author }}
   </li>
   {% endif %}
 
   <li>
     <a href="#comments">
-      {{ site.data[comment_id] | size | pluralize: "commentaire" }}
+      <i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}
     </a>
   </li>
 
   <li>
-    {% include read-time.html %}
+      <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}
   </li>
 </ul>
