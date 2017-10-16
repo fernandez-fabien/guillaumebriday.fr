@@ -1,13 +1,14 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
+var csscomb = require('gulp-csscomb');
 var browserify = require('gulp-browserify');
 
 paths = {
   animate_css: 'node_modules/animate.css/source',
   font_awesome: 'node_modules/font-awesome',
-  vendor: '_sass/resume/vendor'
+  vendor: '_sass/vendor'
 };
 
 gulp.task('copy', function() {
@@ -33,6 +34,12 @@ gulp.task('scripts', function() {
       .pipe(uglify())
       .pipe(concat('app.js'))
       .pipe(gulp.dest('js'));
+});
+
+gulp.task('styles', function() {
+  gulp.src('_sass/**')
+      .pipe(csscomb())
+      .pipe(gulp.dest('_sass/'));
 });
 
 gulp.task('default', ['scripts', 'copy']);

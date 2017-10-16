@@ -1,6 +1,14 @@
 .archives-list {
   list-style: none;
 
+  @include media-query($on-palm) {
+    margin-left: 0;
+
+    li {
+      margin-left: 0;
+    }
+  }
+
   h3 {
     margin: 1em 0 .2em 0;
     font-size: 2em;
@@ -19,13 +27,5 @@
     display: inline-block;
     width: 100px;
     text-align: right;
-  }
-
-  @include media-query($on-palm) {
-    margin-left: 0;
-
-    li {
-      margin-left: 0;
-    }
   }
 }

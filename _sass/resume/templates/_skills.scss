@@ -1,105 +1,83 @@
-.skills-container
-{
-    display: flex;
+.skills-container {
+  display: flex;
 
-    flex-wrap: wrap;
-    justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .knowledge-title,
-.dev-title
-{
-    color: $brand-color;
+.dev-title {
+  color: $brand-color;
 }
 
 .dev-block,
-.knowledge-block
-{
-    margin-bottom: 75px;
+.knowledge-block {
+  margin-bottom: 75px;
 
-    flex-basis: 100%;
+  flex-basis: 100%;
 }
 
 .dev-title,
-.knowledge-title
-{
-    margin-bottom: 50px;
+.knowledge-title {
+  margin-bottom: 50px;
 }
 
-.dev-content
-{
-    margin-bottom: 25px;
+.dev-content {
+  margin-bottom: 25px;
 
-    &:last-child
-    {
-        margin-bottom: 0;
-    }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.content-title
-{
-    margin-bottom: 25px;
-
-    color: $font-color-work;
+.content-title {
+  margin-bottom: 25px;
+  color: $font-color-work;
 }
 
-.progressbar-container
-{
-    position: relative;
+.progressbar-container {
+  position: relative;
+  height: $progress-bar-height;
 
-    height: $progress-bar-height;
-
-    & > svg {
-        height: 100%;
-        display: block;
-    }
+  & > svg {
+    display: block;
+    height: 100%;
+  }
 }
 
-.progressbar-text
-{
-    font-size: 12px;
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    padding: 6px;
-    white-space: nowrap;
-
-    transform: translate3d(-100%, 0, 0);
-
-    color: #fff;
-    background: #252525;
+.progressbar-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 6px;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  background: #252525;
+  transform: translate3d(-100%, 0, 0);
 }
 
 .knowledge-content-list {
-    list-style-type: none;
-    margin: 0px;
+  margin: 0;
+  list-style-type: none;
 }
 
-.knowledge-content-item
-{
-    font-size: 16px;
-    line-height: 1.7;
+.knowledge-content-item {
+  display: block;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $font-color-work;
 
-    display: block;
-
-    color: $font-color-work;
-
-    .fa
-    {
-        &:before
-        {
-            margin-right: 10px;
-        }
+  .fa {
+    &:before {
+      margin-right: 10px;
     }
+  }
 }
 
-@include bp(small)
-{
-    .dev-block,
-    .knowledge-block
-    {
-        flex-basis: 40%;
-    }
+@include bp(small) {
+  .dev-block,
+  .knowledge-block {
+    flex-basis: 40%;
+  }
 }
