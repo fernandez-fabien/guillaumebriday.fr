@@ -19,6 +19,11 @@ Compile the assets :
 $ gulp scripts
 ```
 
+Cleaning the sass:
+```
+$ gulp styles
+```
+
 ## Development
 
 The current folder will be generated into ./_site :
