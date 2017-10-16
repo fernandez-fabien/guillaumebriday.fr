@@ -1,12 +1,13 @@
+// Tools
 @import "tools/settings";
 @import "tools/mixins";
 @import "tools/triangle-shadow";
 
-// Templates
-@import "templates/section";
-@import "templates/about-me";
-@import "templates/experience";
-@import "templates/education";
-@import "templates/skills";
-@import "templates/hobbies";
-@import "templates/portfolio";
+// Layout
+@import "layout/section";
+@import "layout/about-me";
+@import "layout/experience";
+@import "layout/education";
+@import "layout/skills";
+@import "layout/hobbies";
+@import "layout/portfolio";
