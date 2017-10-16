@@ -1,0 +1,44 @@
+/**
+ * Code formatting
+ */
+
+kbd {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  color: #fff;
+  background-color: #212529;
+  border-radius: .2rem;
+}
+
+pre,
+code {
+  border: 1px solid $grey-color-light;
+  border-radius: 3px;
+
+  @include relative-font-size(.9375);
+}
+
+code {
+  padding: 1px 5px;
+}
+
+p {
+  > code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+  }
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    padding-right: 0;
+    padding-left: 0;
+    border: 0;
+  }
+}

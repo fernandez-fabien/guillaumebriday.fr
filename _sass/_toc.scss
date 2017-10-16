@@ -1,0 +1,24 @@
+/**
+ * Table of content
+ */
+
+ul#markdown-toc {
+  counter-reset: item;
+}
+
+#markdown-toc {
+  margin-left: 0;
+
+  & ul {
+    counter-reset: item;
+  }
+
+  li {
+    display: block;
+
+    &:before {
+      content: counters(item, '.') '. ';
+      counter-increment: item;
+    }
+  }
+}
