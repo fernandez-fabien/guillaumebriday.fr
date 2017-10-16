@@ -6,7 +6,9 @@ layout: default
   <ul class="post-list">
     {% for page in paginator.posts %}
       <li>
-        <span class="post-meta">{% include page-date.html %}</span>
+        <span class="post-meta">
+          Le {% include page-date.html %} dans {{ page.categories | first }}
+        </span>
 
         <h2>
           <a class="post-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
