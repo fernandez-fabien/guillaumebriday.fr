@@ -1,15 +1,18 @@
 .page-navigation {
   display: flex;
-  flex-wrap: wrap;
-  font-size: 0.9em;
+  font-size: .9em;
   border-top: 1px solid $commments-border-color;
 
-  .next-container { text-align: right; }
+  flex-wrap: wrap;
+
+  .next-container {
+    text-align: right;
+  }
 
   .nav-container {
-    flex-basis: 50%;
     margin: 10px 0;
 
+    flex-basis: 50%;
     @include media-query($on-palm) {
       & {
         flex-basis: 100%;
