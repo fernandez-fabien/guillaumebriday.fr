@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Photos"
-class: "gallery-wrapper"
+class: "gallery-container"
 ---
 <h1 class="post-title">Photos</h1>
 

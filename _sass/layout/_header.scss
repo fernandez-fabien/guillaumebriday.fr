@@ -26,7 +26,27 @@
   float: right;
   line-height: $base-line-height * $base-font-size * 2.25;
 
-  @include media-query($on-palm) {
+  .menu-icon {
+    display: none;
+  }
+
+  .nav-trigger {
+    display: none;
+  }
+
+  .page-link {
+    line-height: $base-line-height;
+    color: $text-color;
+
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+@include media-query($on-palm) {
+  .site-nav {
     position: absolute;
     top: 9px;
     right: $spacing-unit / 2;
@@ -76,24 +96,6 @@
       &:not(:last-child) {
         margin-right: 0;
       }
-    }
-  }
-
-  .nav-trigger {
-    display: none;
-  }
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    line-height: $base-line-height;
-    color: $text-color;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 20px;
     }
   }
 }
