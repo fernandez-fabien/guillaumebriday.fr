@@ -2,21 +2,25 @@
 @import 'variables';
 @import 'mixins';
 
+// Base
+@import 'base/base';
+@import 'base/reset';
+
 // Layout
-@import 'archives';
-@import 'base';
-@import 'code';
-@import 'comments';
-@import 'footer';
-@import 'gallery';
-@import 'header';
-@import 'highlight';
-@import 'layout';
-@import 'page-navigation';
-@import 'pagination';
-@import 'posts';
-@import 'reset';
-@import 'toc';
+@import 'layout/archives';
+@import 'layout/code';
+@import 'layout/comments';
+@import 'layout/footer';
+@import 'layout/gallery';
+@import 'layout/header';
+@import 'layout/layout';
+@import 'layout/posts';
+
+// Module
+@import 'module/highlight';
+@import 'module/page-navigation';
+@import 'module/pagination';
+@import 'module/toc';
 
 // Resume
 @import 'resume/resume';
