@@ -12,6 +12,7 @@ group :jekyll_plugins do
    gem "jekyll-paginate"
    gem "jekyll-sitemap"
    gem "jekyll-livereload"
+   gem "jekyll-admin"
    gem "octopress-minify-html"
    gem "liquid_pluralize"
 end
