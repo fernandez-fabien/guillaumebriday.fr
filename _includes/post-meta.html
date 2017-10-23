@@ -2,14 +2,19 @@
 
 <ul class="post-meta-details">
   <li>
-    <time datetime="{{ page.date | date_to_xmlschema }}">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
       <i class="fa fa-calendar" aria-hidden="true"></i> {% include page-date.html %}
     </time>
   </li>
 
   {% if page.author %}
   <li>
-      <i class="fa fa-user" aria-hidden="true"></i> Par {{ page.author }}
+      <i class="fa fa-user" aria-hidden="true"></i> Par
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">
+            {{ page.author }}
+        </span>
+      </span>
   </li>
   {% endif %}
 

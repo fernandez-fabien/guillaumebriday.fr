@@ -11,8 +11,8 @@ title: Catégories
     <h3>{{ category_name }}</h3>
 
     {% for post in site.categories[category_name] %}
-    <li>
-      <time datetime="{{ post.date | time_tag }}">
+    <li itemscope itemtype="http://schema.org/Article">
+      <time datetime="{{ post.date | time_tag }}" itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%d' }}">
         {% assign m = post.date | date: "%-m" %}
         {{ post.date | date: "%-d" }}
         {% case m %}
@@ -31,7 +31,9 @@ title: Catégories
         {% endcase %}
         {{ post.date | date: "%Y" }}
       </time>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{ post.url }}">
+        <span itemprop="name">{{ post.title }}</span>
+      </a>
     </li>
     {% endfor %}
   {% endfor %}
