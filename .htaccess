@@ -11,6 +11,7 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [QSA,L,R=301]
 
 Redirect 301 /amazon https://www.amazon.fr/?tag=guillaumebrid-21
 Redirect 301 /lab/pixel https://guillaumebriday.github.io/dpi.js/
+Redirect 301 /coinbase https://www.coinbase.com/join/59abd8d4e7be8202c8825dc1
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
