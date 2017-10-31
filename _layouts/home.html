@@ -1,40 +1,39 @@
 ---
 layout: default
+class: 'home-container'
 ---
 
-<div class="home">
-  <ul class="post-list">
-    {% for page in paginator.posts %}
-      <li itemscope itemtype="http://schema.org/Article">
-        <span class="post-meta">
-          Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{% include page-date.html %}</span>
-          dans <span itemprop="articleSection">{{ page.categories | first }}</span>
-        </span>
+<ul class="post-list">
+  {% for page in paginator.posts %}
+    <li itemscope itemtype="http://schema.org/Article">
+      <span class="post-meta">
+        Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{% include page-date.html %}</span>
+        dans <span itemprop="articleSection">{{ page.categories | first }}</span>
+      </span>
 
-        <h2>
-          <a class="post-link" href="{{ page.url | relative_url }}">
-            <span itemprop="name">{{ page.title | escape }}</span>
-          </a>
-        </h2>
+      <h2>
+        <a class="post-link" href="{{ page.url | relative_url }}">
+          <span itemprop="name">{{ page.title | escape }}</span>
+        </a>
+      </h2>
 
-        <span itemprop="articleBody">
-          {{ page.excerpt | strip_html }}
-        </span>
-      </li>
-    {% endfor %}
-  </ul>
+      <span itemprop="articleBody">
+        {{ page.excerpt | strip_html }}
+      </span>
+    </li>
+  {% endfor %}
+</ul>
 
-  {% if paginator.total_pages > 1 %}
-    <div class="pagination">
-      {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="page_previous">Précédent</a>
-      {% endif %}
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}" class="page_previous">Précédent</a>
+    {% endif %}
 
-      <span class="page_number ">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+    <span class="page_number ">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
 
-      {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="page_next">Suivant</a>
-      {% endif %}
-    </div>
-  {% endif %}
-</div>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}" class="page_next">Suivant</a>
+    {% endif %}
+  </div>
+{% endif %}
