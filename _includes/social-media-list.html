@@ -1,4 +1,6 @@
-<ul class="social-media-list">
+<ul class="social-media-list" itemscope itemtype="http://schema.org/Person">
+  <link itemprop="url" href="{{ site.url }}">
+
   <li>
     <a href="{{ "/feed.xml" | relative_url }}" target="_blank">
       <i class="fa fa-rss" aria-hidden="true"></i> RSS </a>
@@ -13,21 +15,21 @@
 
   {% if site.twitter_username %}
   <li>
-    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank">
+    <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" itemprop="sameAs">
       <i class="fa fa-twitter" aria-hidden="true"></i> Twitter </a>
   </li>
   {% endif %}
 
   {% if site.instagram_username %}
   <li>
-    <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank">
+    <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" itemprop="sameAs">
       <i class="fa fa-instagram" aria-hidden="true"></i> Instagram </a>
   </li>
   {% endif %}
 
   {% if site.linkedin %}
   <li>
-    <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank">
+    <a href="https://www.linkedin.com/in/{{ site.linkedin }}" target="_blank" itemprop="sameAs">
       <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
   </li>
   {% endif %}
