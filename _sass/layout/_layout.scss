@@ -1,19 +1,23 @@
 .page-content {
-  padding: $spacing-unit 0;
+  padding: $spacing-unit / 2;
   background: #f5f5f5;
 }
 
 .page-content {
-  .container {
+  .container:not(.home-container) {
     padding: $spacing-unit;
     background: $background-color;
     border: 1px solid $grey-color-light;
+  }
+
+  .home-container {
+    padding: 0;
   }
 }
 
 @include media-query($on-palm) {
   .page-content {
-    .container {
+    .container:not(.home-container) {
       padding: $spacing-unit / 2;
     }
   }
