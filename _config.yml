@@ -28,7 +28,7 @@ paginate: 15
 paginate_path: "/page/:num/"
 comments_form: true
 permalink: /:title
-gems:
+plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
