@@ -14,7 +14,7 @@ Vous pouvez retrouver la mise en place du serveur dans l'article précédent : [
 
 Capistrano est un outil écrit en [Ruby](https://github.com/ruby/ruby){:target="_blank"} qui permet d'automatiser des scripts de déploiement. Pour faire simple, il va nous permettre de mettre simplement et automatiquement notre application en production.
 
-On peut s'en servir pour déployer des applications en Ruby bien-sûr, mais pas seulement. Comme pour Ansible, Capistrano va exécuter des commandes sur notre serveur, on peut donc l'utiliser pour n'importe quel langage. Lors d'une déploiement, Capistrano va créer une release de notre projet à chaque fois. Cela nous permettra de revenir très simplement à un état antérieur de notre application en une seule ligne de commande et d'avoir le moins de downtime possible entre les déploiements voire aucun.
+On peut s'en servir pour déployer des applications en Ruby bien-sûr, mais pas seulement. Comme pour Ansible, Capistrano va exécuter des commandes sur notre serveur, on peut donc l'utiliser pour n'importe quel langage. Lors d'un déploiement, Capistrano va créer une release de notre projet à chaque fois. Cela nous permettra de revenir très simplement à un état antérieur de notre application en une seule ligne de commande et d'avoir le moins de downtime possible entre les déploiements voire aucun.
 
 Je rappelle que notre exemple, nous allons déployer mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog){:target="_blank"}, qui est développé en PHP avec Laravel, dans [des containers avec Docker]({{ site.baseurl }}{% post_url 2017-07-10-comprendre-et-mettre-en-place-docker %}){:target="_blank"}.
 
