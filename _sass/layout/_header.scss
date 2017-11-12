@@ -1,10 +1,10 @@
 .site-header {
   // Positioning context for the mobile navigation icon
   position: relative;
+  z-index: 2;
   min-height: $spacing-unit * 1.865;
   border-top: 3px solid $brand-color;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1);
-  z-index: 2;
+  box-shadow: 0 2px 3px rgba(10, 10, 10, .1);
 }
 
 .site-title {
