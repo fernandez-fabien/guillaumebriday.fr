@@ -1,0 +1,22 @@
+.categories-container {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+
+  li {
+    display: inline-block;
+    margin: 3px;
+  }
+
+  a {
+    color: #4a4a4a !important;
+    background-color: $grey-color-lighter;
+    padding: 5px 5px;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: $grey-color-light;
+    }
+  }
+}
