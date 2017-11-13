@@ -6,8 +6,8 @@ class: "gallery-container"
     <a href="{{ site.baseurl }}{% link photos/index.md %}">&larr; Retour aux photos</a>
 </p>
 
-<div class="image-container">
-    <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" class="image-show" />
+<div class="image-container" itemscope itemtype="http://schema.org/ImageObject">
+    <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" class="image-show" itemprop="contentUrl" />
 
     {% if page.caption %}
         <span class="image-caption">{{ page.caption }}</span>
@@ -57,14 +57,14 @@ class: "gallery-container"
     {% if page.exif.location %}
         <li>
             <div class="exif-label">Location</div>
-            <span class="exif-value">{{ page.exif.location }}</span>
+            <span class="exif-value" itemprop="contentLocation">{{ page.exif.location }}</span>
         </li>
     {% endif %}
 
     {% if page.exif.date %}
         <li>
             <div class="exif-label">Date</div>
-            <span class="exif-value">{{ page.exif.date | date: "%-d %B %Y" }}</span>
+            <span class="exif-value" itemprop="datePublished" content="{{ page.exif.date | date: '%Y-%m-%d' }}">{{ page.exif.date | date: "%-d %B %Y" }}</span>
         </li>
     {% endif %}
 </ul>

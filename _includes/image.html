@@ -24,9 +24,9 @@
     {% endunless %}
 {% endcapture %}
 
-<div class="image-container {{ include.class }}">
+<div class="image-container {{ include.class }}" itemscope itemtype="http://schema.org/ImageObject">
     <a href="{{ url }}" title="{{ include.title }}" {{ new_tab }} data-caption="{{ include.caption }}">
-        <img src="{{ image_url }}" alt="{{ include.alt }}" />
+        <img src="{{ image_url }}" alt="{{ include.alt }}" itemprop="contentUrl" />
     </a>
 
     {% if include.caption %}
