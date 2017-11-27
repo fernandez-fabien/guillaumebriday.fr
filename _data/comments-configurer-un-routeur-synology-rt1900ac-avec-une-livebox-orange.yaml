@@ -212,3 +212,41 @@
   date: 2017-11-03 20:54:00
   content: |
     Merci Olivier pour ton commentaire. Oui SRM et DSM évoluent très vite en restant très stable c'est super agréable à l'usage !
+
+- id: 19
+  author: Pilou
+  date: 2017-11-27 11:00:46
+  content: |
+    Bonjour Guillaume, merci pour le tuto très complet.
+
+    Je suis intéressé par ce Routeur, mais une question reste ouverte pour moi.
+
+    Je souhaiterais l'installer dans le cadre d'un Gite, et donc n'ouvrir que le réseau invité au client.
+
+    Est-ce que celui-ci est bridé?
+
+    J'aimerais interdire l'accès au P2P (Hadopi), aux sites illictes (genre pédo-pornographie), mais laisser quand même certains accès (Steam par exemple).
+
+    Est-ce qu'il le permet?
+
+    Enfin dernière question: Si jamais un client contourne les protections, est-ce qu'il y a un journal de connexion (moins consommateur de bande passante que le CTF).
+
+    Merci d'avance pour ton retour.
+
+- id: 20
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-11-27 20:00:00
+  content: |
+    Bonjour Pilou merci pour ton retour !
+
+    Alors, je viens de faire le test sur SRM (1.1.5-6542 Update 4), la seule option que j'ai trouvé par rapport au réseau invité à ce niveau-là c'est de l'isoler du réseau principal...
+    Je crois que ce n'est pas encore possible sur SRM, mais je sais que pfSense le permet, en revanche on est à des années-lumière de la simplicité et de l'ergonomie de SRM en terme de mise en place.
+
+    Par contre, tu peux mettre des filtres sur certaines catégories de sites ou service par défaut sur tous les appareils, mais le couper pour certains (les tiens). Tu peux aussi filtrer les sites par url. Je m'en sers personnellement pour bloquer la publicité et le phishing par exemple. Tu peux trouver plus d'infos ici : [https://www.synology.com/en-us/knowledgebase/SRM/help/SRM/RouterApp/parentalcontrol_keyword](https://www.synology.com/en-us/knowledgebase/SRM/help/SRM/RouterApp/parentalcontrol_keyword)
+
+    Pour la seconde question, à ma connaissance tu ne pourras pas avoir un journal de connexion sans CTF, tu pourras avoir un "top" des sites visités, mais pas historisés et groupés par devices.
+
+    J'espère avoir répondu à la question !
+
+    Merci à toi.
