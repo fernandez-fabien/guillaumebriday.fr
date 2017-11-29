@@ -250,3 +250,36 @@
     J'espère avoir répondu à la question !
 
     Merci à toi.
+
+- id: 21
+  author: Pilou
+  date: 2017-11-28 09:27:19
+  content: |
+    Bonjour Guillaume,
+
+    Ça me semble pas mal ces catégories, ainsi que la possibilité d'ajouter manuellement des URL.
+
+    De ton point de vue, le filtrage fishing (difficile à quantifier) et advertising sont-ils efficaces?
+
+    En ce qui concerne le logging du traffic, j'ai vu sur ton tweet que pour quantifier les 2 vitesses, tu activais les 2 options ("save visited web pages", "enable detection application").
+
+    De ce que je comprends de l'image, c'est justement la 2e option qui a un gros impact sur le débit.
+
+    Je vais surement investir dans cet équipement (j'ai un NAS Syno dont je suis très content, j'ai envie de continuer avec eux), je te ferais part de mon expérience à ce moment-là.
+
+    En tout cas merci dans pour ton retour!
+
+- id: 22
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2017-11-29 13:27:00
+  content: |
+    Oui c'est top et ça marche vraiment bien. Effectivement le fishing je n'ai pas eu l'occasion de tester, mais pour la publicité et le reste c'est devenu la règle par défaut sur tous mes appareils.
+
+    Pour la publicité, ça filtre pas tout, mais une partie seulement. Dans la plupart des cas on peut voir que les js sont bloqués même sans bloqueur de pub sur le navigateur. :)
+
+    Ah oui bien-sûr, sur twitter j'ai décoché les deux cases pour faire des tests mais c'est bien la deuxième qui est problématique, la première n'a pas d'influence et permet d'avoir un rapport plus complet.
+
+    Oui j'aimerais bien avoir un retour dans le cas d'un gîte.
+
+    Merci à toi !
