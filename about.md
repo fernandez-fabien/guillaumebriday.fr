@@ -20,7 +20,7 @@ De plus, j'ai un iPhone X 64Go comme smartphone, un [a6000](http://amzn.to/2cta
 ## Qui suis-je ?
 J'en oublierai presque les formalités !
 
-Bonjour à tous, je suis un développeur Web de 22 ans. Le Web, les nouvelles technologies, la photographie et la veille font partie des choses qui me passionnent. J'ai beaucoup de projets en tête et beaucoup d'énergie à revendre lorsqu'il s'agit de ce domaine !
+Bonjour à tous, je suis un développeur Web de 23 ans. Le Web, les nouvelles technologies, la photographie et la veille font partie des choses qui me passionnent. J'ai beaucoup de projets en tête et beaucoup d'énergie à revendre lorsqu'il s'agit de ce domaine !
 
 Tu peux découvrir quelques-uns de mes projets sur [mon GitHub](https://github.com/guillaumebriday).
 
