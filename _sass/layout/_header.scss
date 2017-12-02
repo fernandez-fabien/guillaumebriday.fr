@@ -4,7 +4,7 @@
   z-index: 2;
   min-height: $spacing-unit * 1.865;
   border-top: 3px solid $brand-color;
-  box-shadow: 0 2px 3px rgba(10, 10, 10, .1);
+  border-bottom: 1px solid $grey-color-light;
 }
 
 .site-title {
