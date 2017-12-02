@@ -18,6 +18,7 @@ timezone: FR
 collections:
   photos:
     output: true
+    permalink: /photos/:slug
 defaults:
   - scope:
       type: photos
