@@ -1,9 +1,10 @@
 .page-content {
-  padding: $spacing-unit / 2;
+  padding: ($spacing-unit / 2);
   background: #f5f5f5;
-}
 
-.page-content {
+  padding-left: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-left)})");
+  padding-right: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-right)})");
+
   .container:not(.home-container) {
     padding: $spacing-unit;
     background: $background-color;
