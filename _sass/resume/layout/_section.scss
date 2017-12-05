@@ -10,6 +10,9 @@
 .section {
   position: relative;
   padding: $section-padding-top-bottom $section-padding-border;
+
+  padding-left: unquote("max(#{$section-padding-border, env(safe-area-inset-left)})");
+  padding-right: unquote("max(#{$section-padding-border, env(safe-area-inset-right)})");
 }
 
 .title-container {
