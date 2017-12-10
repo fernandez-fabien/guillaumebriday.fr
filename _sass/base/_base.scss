@@ -1,13 +1,11 @@
 .container {
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  padding-right: $spacing-unit;
+  padding-right: unquote("max(#{$spacing-unit, env(safe-area-inset-right)})");
+  padding-left: $spacing-unit;
+  padding-left: unquote("max(#{$spacing-unit, env(safe-area-inset-left)})");
   margin-right: auto;
   margin-left: auto;
-
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
-
-  padding-left: unquote("max(#{$spacing-unit, env(safe-area-inset-left)})");
-  padding-right: unquote("max(#{$spacing-unit, env(safe-area-inset-right)})");
 
   @extend %clearfix;
   @include media-query($on-laptop) {

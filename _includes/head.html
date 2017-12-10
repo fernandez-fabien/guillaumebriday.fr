@@ -21,4 +21,7 @@
   {% endif %}
 
   <script src="{{ "/js/app.js" | relative_url }}" defer></script>
+  {% if page.url == '/recherche/' %}
+    <script src="{{ "/js/simple-jekyll-search.min.js" | relative_url }}" data-turbolinks-track="reload"></script>
+  {% endif %}
 </head>
