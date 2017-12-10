@@ -27,17 +27,22 @@ figure {
   margin: 0;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 /**
  * Basic styling
  */
 body {
-  position: relative;
   width: 100%;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
+  background-color: #f5f5f5;
   -webkit-text-size-adjust: 100%;
 
   -webkit-font-feature-settings: 'kern' 1;

@@ -2,7 +2,12 @@
   padding: ($spacing-unit / 2);
   padding-right: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-right)})");
   padding-left: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-left)})");
-  background: #f5f5f5;
+
+  padding-bottom: 290px + ($spacing-unit / 2);
+
+  @include media-query($on-laptop) {
+    padding-bottom: 460px + ($spacing-unit / 2);
+  }
 
   .container:not(.home-container) {
     padding: $spacing-unit;

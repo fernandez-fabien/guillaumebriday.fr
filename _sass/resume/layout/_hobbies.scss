@@ -1,3 +1,11 @@
+.hobbies-section-container {
+  padding-bottom: 290px + ($spacing-unit / 2);
+
+  @include media-query($on-laptop) {
+    padding-bottom: 460px + ($spacing-unit / 2);
+  }
+}
+
 .hobbies-container {
   display: flex;
 
