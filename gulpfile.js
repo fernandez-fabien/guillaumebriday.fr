@@ -26,6 +26,9 @@ gulp.task('copy', function() {
 
   gulp.src(paths.font_awesome + '/fonts/**')
       .pipe(gulp.dest('assets/fonts/'));
+
+  gulp.src('node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js')
+      .pipe(gulp.dest('js/'));
 });
 
 gulp.task('scripts', function() {
