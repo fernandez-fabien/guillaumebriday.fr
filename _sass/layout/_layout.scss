@@ -1,9 +1,8 @@
 .page-content {
   padding: ($spacing-unit / 2);
-  background: #f5f5f5;
-
-  padding-left: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-left)})");
   padding-right: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-right)})");
+  padding-left: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-left)})");
+  background: #f5f5f5;
 
   .container:not(.home-container) {
     padding: $spacing-unit;
