@@ -45,4 +45,4 @@ gulp.task('styles', function() {
       .pipe(gulp.dest('_sass/'));
 });
 
-gulp.task('default', ['scripts', 'copy']);
+gulp.task('default', ['scripts', 'copy', 'styles']);
