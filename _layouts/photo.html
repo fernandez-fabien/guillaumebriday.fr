@@ -60,7 +60,7 @@ class: "gallery-container"
         {% if page.exif.date %}
             <li>
                 <div class="exif-label">Date</div>
-                <span class="exif-value" itemprop="datePublished" content="{{ page.exif.date | date: '%Y-%m-%d' }}">{{ page.exif.date | date: "%-d %B %Y" }}</span>
+                <span class="exif-value" itemprop="datePublished" content="{{ page.exif.date | date: '%Y-%m-%d' }}">{{ page.exif.date | localize: ":excerpt" }}</span>
             </li>
         {% endif %}
     </ul>
