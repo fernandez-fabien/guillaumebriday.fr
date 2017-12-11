@@ -8,7 +8,7 @@ class: 'home-container'
     <li itemscope itemtype="http://schema.org/Article">
       <span class="post-meta">
         Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | localize: ":excerpt" }}</span>
-        dans <span itemprop="articleSection">{{ page.categories | first }}</span>
+        dans <span itemprop="articleSection">{{ page.categories | join: ', ' }}</span>
       </span>
 
       <h2>
