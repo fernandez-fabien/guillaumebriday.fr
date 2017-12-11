@@ -62,8 +62,6 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     mercenary (0.3.6)
-    minima (2.1.1)
-      jekyll (~> 3.3)
     multi_css (0.1.0)
       css_press
     multi_js (0.1.0)
@@ -121,7 +119,6 @@ DEPENDENCIES
   jekyll-paginate
   jekyll-sitemap
   liquid_pluralize
-  minima (~> 2.0)
   octopress-minify-html
 
 RUBY VERSION
