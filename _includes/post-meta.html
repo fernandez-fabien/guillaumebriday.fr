@@ -3,7 +3,7 @@
 <ul class="post-meta-details">
   <li>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
-      <i class="fa fa-calendar" aria-hidden="true"></i> {% include page-date.html %}
+      <i class="fa fa-calendar" aria-hidden="true"></i> {{ page.date | localize: ":excerpt" }}
     </time>
   </li>
 

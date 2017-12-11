@@ -7,7 +7,7 @@
       "category" : "{{ post.categories.first }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: "%-d %b %Y" }}"
+      "date"     : "{{ post.date | localize: ":short_date" }}"
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

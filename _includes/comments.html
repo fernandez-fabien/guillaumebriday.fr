@@ -21,7 +21,7 @@
 
             <div class="comment-date">
               <a href="#comment-{{ comment.id }}">
-                <time datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | date: "Le %d/%m/%Y à %H:%M" }}</time>
+                <time datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
               </a>
             </div>
           </div>

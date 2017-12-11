@@ -7,7 +7,7 @@ class: 'home-container'
   {% for page in paginator.posts %}
     <li itemscope itemtype="http://schema.org/Article">
       <span class="post-meta">
-        Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{% include page-date.html %}</span>
+        Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | localize: ":excerpt" }}</span>
         dans <span itemprop="articleSection">{{ page.categories | first }}</span>
       </span>
 
