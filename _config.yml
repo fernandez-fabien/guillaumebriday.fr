@@ -32,7 +32,6 @@ defaults:
       layout: photo
 
 # Theme
-theme: minima
 markdown: kramdown
 paginate: 15
 paginate_path: "/page/:num/"
