@@ -5,7 +5,7 @@
   padding-left: unquote("max(#{($spacing-unit / 2), env(safe-area-inset-left)})");
 
   @include media-query($on-laptop) {
-    padding-bottom: 460px + ($spacing-unit / 2);
+    padding-bottom: 480px + ($spacing-unit / 2);
   }
 
   .container:not(.home-container) {
