@@ -6,20 +6,20 @@ class: 'home-container'
 <ul class="post-list">
   {% for page in paginator.posts %}
     <li itemscope itemtype="http://schema.org/Article">
-      <span class="post-meta">
-        Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | localize: ":excerpt" }}</span>
-        dans <span itemprop="articleSection">{{ page.categories | join: ', ' }}</span>
-      </span>
-
       <h2>
         <a class="post-link" href="{{ page.url | relative_url }}">
           <span itemprop="name">{{ page.title | escape }}</span>
         </a>
       </h2>
 
-      <span itemprop="articleBody">
+      <div class="post-meta">
+        Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | localize: ":excerpt" }}</span>
+        dans <span itemprop="articleSection">{{ page.categories | join: ', ' }}</span>
+      </div>
+
+      <div itemprop="articleBody">
         {{ page.excerpt | strip_html }}
-      </span>
+      </div>
     </li>
   {% endfor %}
 </ul>
