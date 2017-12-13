@@ -20,3 +20,8 @@
   clear: both;
   content: '';
 }
+
+::selection {
+  background: $brand-color;
+  color: $background-color;
+}

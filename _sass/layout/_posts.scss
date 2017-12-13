@@ -8,6 +8,10 @@
     background: $background-color;
     border-radius: $border-radius;
     box-shadow: 0 2px 3px rgba(10, 10, 10, .1), 0 0 0 1px rgba(10, 10, 10, .1);
+
+    h2 {
+      margin: 0;
+    }
   }
 }
 
@@ -22,6 +26,7 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  margin-bottom: ($spacing-unit / 2);
 }
 
 .post-link {
@@ -36,7 +41,7 @@
   line-height: 1;
   letter-spacing: -1px;
 
-  @include relative-font-size(2.625);
+  @include relative-font-size(2.5);
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
