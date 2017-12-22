@@ -7,13 +7,15 @@
 
   <div class="comments">
     {% for comment in site.data[comment_id] %}
-      <div id="comment-{{ comment.id }}" class="comment-body">
+      <div id="comment-{{ comment.id }}" class="comment-body" itemscope itemtype="https://schema.org/Comment">
           <div class="comment-meta">
             <div class="comment-author">
               {% if comment.author-url %}
                 <a href="{{ comment.author-url }}" target="_blank">
               {% endif %}
-                {{ comment.author }}
+              <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+                <span itemprop="name">{{ comment.author }}</span>
+              </span>
               {% if comment.author-url %}
                 </a>
               {% endif %}
@@ -21,12 +23,12 @@
 
             <div class="comment-date">
               <a href="#comment-{{ comment.id }}">
-                <time datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
+                <time itemprop="dateCreated" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
               </a>
             </div>
           </div>
 
-          <div class="comment-content">
+          <div class="comment-content" itemprop="text">
             {{ comment.content | liquify | markdownify }}
           </div>
       </div>
