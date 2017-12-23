@@ -48,5 +48,9 @@
     &.active {
       color: $brand-color;
     }
+
+    &:last-child {
+      float: right;
+    }
   }
 }
