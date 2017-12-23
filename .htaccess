@@ -12,6 +12,12 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [QSA,L,R=301]
 Redirect 301 /amazon https://www.amazon.fr/?tag=guillaumebrid-21
 Redirect 301 /lab/pixel https://guillaumebriday.github.io/dpi.js/
 Redirect 301 /coinbase https://www.coinbase.com/join/59abd8d4e7be8202c8825dc1
+Redirect 301 /blog/ https://guillaumebriday.fr/
+
+Redirect 301 /2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques/ https://guillaumebriday.fr/comment-jutilise-git-mes-astuces-et-bonnes-pratiques
+Redirect 301 /2016/11/18/un-mac-pour-le-prix-de-deux/ https://guillaumebriday.fr/un-mac-pour-le-prix-de-deux
+Redirect 301 /2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange/ https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
+Redirect 301 /2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology/ https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
