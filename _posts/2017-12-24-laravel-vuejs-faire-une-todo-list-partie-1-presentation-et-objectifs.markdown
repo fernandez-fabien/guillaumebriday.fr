@@ -7,7 +7,7 @@ Je vais commencer une série d'articles pour présenter un projet que je souhait
 
 On ne va pas se mentir, ce projet n'est pas là pour révolutionner le monde des applications de Todo List, mais il a plusieurs objectifs précis. Le premier est de me faire monter en compétence sur des aspects techniques particuliers, on y reviendra plus tard, mais également d'avoir une application "exemple" la plus complète possible comme j'ai essayé de le faire au maximum avec mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog) pour Laravel et d'autres technologies.
 
-Avec cette série d'article, je veux vraiment présenter étape par étape la conception de cette application et les technologies qui seront utilisées pour bien comprendre les tenants et aboutissement d'un tel développement.
+Avec cette série d'article, je veux vraiment présenter étape par étape la conception de cette application et les technologies qui seront utilisées pour bien comprendre les tenants et aboutissements d'un tel développement.
 
 Je veux couvrir beaucoup d'aspects techniques bien-sûr, mais également miser sur l'expérience utilisateur et visuelle de l'application. On va profiter de la simplicité du concept pour mettre en avant ce qu'il nous reste, à savoir l'UX/UI et le code.
 
@@ -135,6 +135,6 @@ Je ne fais pas plus long, si vous avez des remarques ou des contributions à app
 
 [todolist-frontend](https://github.com/guillaumebriday/todolist-frontend)
 
-[todolist-frontend](https://github.com/guillaumebriday/todolist-backend)
+[todolist-backend](https://github.com/guillaumebriday/todolist-backend)
 
 Merci !
