@@ -54,10 +54,7 @@ exclude:
   - package.json
   - package-lock.json
   - node_modules
+  - assets/javascripts
+  - assets/styles
 include:
   - .htaccess
-
-# Sass
-sass:
-  style: compressed
-  sass_dir: _sass
