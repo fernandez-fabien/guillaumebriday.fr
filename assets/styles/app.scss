@@ -26,3 +26,10 @@
 
 // Resume
 @import 'resume/resume';
+
+// Vendor
+@import "~font-awesome/scss/font-awesome.scss";
+@import '~animate.css/source/base';
+@import '~animate.css/source/fading_entrances/fadeInLeft';
+@import '~animate.css/source/fading_entrances/fadeInRight';
+@import '~animate.css/source/bouncing_entrances/bounceIn';
