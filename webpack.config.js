@@ -3,6 +3,7 @@ var glob = require('glob-all')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var PurifyCSSPlugin = require('purifycss-webpack')
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 var inProduction = (process.env.NODE_ENV === 'production')
 
 module.exports = {
@@ -54,6 +55,11 @@ module.exports = {
     new ExtractTextPlugin({
       filename: 'css/[name].css',
     }),
+    new CopyWebpackPlugin([
+      { from: 'node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js',
+        to: 'js/simple-jekyll-search.min.js'
+      }
+    ])
   ]
 }
 
