@@ -1,3 +1,3 @@
-require("./turbolinks.js");
-require("./progressBar.js");
-require("./scrolltrigger.js");
+require('./turbolinks.js')
+require('./progressBar.js')
+require('./scrolltrigger.js')

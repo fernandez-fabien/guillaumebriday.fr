@@ -31,6 +31,15 @@ module.exports = {
         })
       },
       {
+        test: /\.(js)$/,
+        loader: 'eslint-loader',
+        enforce: 'pre',
+        include: [path.resolve(__dirname, './assets/javascripts')],
+        options: {
+          emitWarning: true
+        }
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
