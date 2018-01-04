@@ -56,5 +56,7 @@ exclude:
   - node_modules
   - assets/javascripts
   - assets/styles
+  - webpack.config.js
+  - .eslint.js
 include:
   - .htaccess
