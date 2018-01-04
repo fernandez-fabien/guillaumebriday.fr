@@ -7,21 +7,6 @@ Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Jeky
 ```
 $ bundle install
 $ npm install
-$ gulp
-```
-Copy fonts and css libs :
-```
-$ gulp copy
-```
-
-Compile the assets :
-```
-$ gulp scripts
-```
-
-Cleaning the sass:
-```
-$ gulp styles
 ```
 
 ## Development

@@ -7,13 +7,6 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "font-awesome": "^4.7.0",
-    "gulp": "^3.9.1",
-    "gulp-browserify": "^0.5.1",
-    "gulp-clean-css": "^3.9.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csscomb": "^3.0.8",
-    "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^3.0.0",
     "progressbar.js": "^1.0.1",
     "scrolltrigger-classes": "^0.3.6",
     "simple-jekyll-search": "^1.5.0",

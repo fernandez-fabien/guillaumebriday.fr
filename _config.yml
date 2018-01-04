@@ -51,7 +51,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - gulpfile.js
   - package.json
   - package-lock.json
   - node_modules
