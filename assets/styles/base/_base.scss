@@ -1,9 +1,13 @@
 .container {
   max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
   padding-right: $spacing-unit;
-  padding-right: unquote("max(#{$spacing-unit, env(safe-area-inset-right)})");
   padding-left: $spacing-unit;
-  padding-left: unquote("max(#{$spacing-unit, env(safe-area-inset-left)})");
+
+  @supports(padding: max(0px)) {
+    padding-right: unquote("max(#{$spacing-unit, env(safe-area-inset-right)})");
+    padding-left: unquote("max(#{$spacing-unit, env(safe-area-inset-left)})");
+  }
+
   margin-right: auto;
   margin-left: auto;
 
