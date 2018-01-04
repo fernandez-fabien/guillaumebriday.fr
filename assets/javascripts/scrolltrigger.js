@@ -10,4 +10,6 @@ document.addEventListener("turbolinks:load", function() {
     document.body,
     window
   );
+
+  trigger.callScope = window.scope
 });

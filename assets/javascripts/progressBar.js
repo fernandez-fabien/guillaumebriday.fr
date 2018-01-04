@@ -2,8 +2,9 @@ import ProgressBar from 'progressbar.js'
 
 document.addEventListener("turbolinks:load", function() {
   var elements = document.querySelectorAll(".progressbar-container");
+  window.scope = {}
 
-  for (i = 0, len = elements.length; i < len; i++) {
+  for (var i = 0, len = elements.length; i < len; i++) {
     var element = elements[i];
 
     element.line = new ProgressBar.Line(element, {
@@ -21,18 +22,18 @@ document.addEventListener("turbolinks:load", function() {
       step: function(_state, bar, attachment) {
         bar.setText(Math.round(bar.value() * 100) + " %");
 
-        text = bar._container.querySelector(".progressbar-text");
+        var text = bar._container.querySelector(".progressbar-text");
 
         text.style.left = bar.value() * 100 + "%";
       }
     });
   }
 
-  animate_progress_bar = function() {
-    for (i = 0, len = elements.length; i < len; i++) {
+  window.scope.animate_progress_bar = function() {
+    for (var i = 0, len = elements.length; i < len; i++) {
       var element = elements[i];
 
       element.line.animate(element.getAttribute("data-width") / 100);
     }
-  };
+  }
 });
