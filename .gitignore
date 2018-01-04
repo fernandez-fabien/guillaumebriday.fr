@@ -2,8 +2,7 @@ _site
 _drafts
 .sass-cache
 .jekyll-metadata
-assets/fonts
-_sass/resume/vendor
-_sass/vendor
 js
+css
+fonts
 node_modules

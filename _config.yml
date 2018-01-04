@@ -51,14 +51,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - gulpfile.js
   - package.json
   - package-lock.json
   - node_modules
+  - assets/javascripts
+  - assets/styles
+  - webpack.config.js
+  - .eslint.js
 include:
   - .htaccess
-
-# Sass
-sass:
-  style: compressed
-  sass_dir: _sass

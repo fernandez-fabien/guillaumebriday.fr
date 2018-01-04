@@ -14,7 +14,7 @@ $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-lighter: lighten($grey-color, 45%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
-$fa-font-path: "../assets/fonts";
+$fa-font-path: "~font-awesome/fonts";
 
 // Width of the content area
 $content-width: 900px !default;

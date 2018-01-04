@@ -1,45 +1,49 @@
 # guillaumebriday.fr
 
-Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Jekyll](http://jekyllrb.com/).
+Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Jekyll](http://jekyllrb.com/) and [Webpack](https://webpack.js.org/).
 
 ## Installation
 
-```
+```bash
 $ bundle install
 $ npm install
-$ gulp
-```
-Copy fonts and css libs :
-```
-$ gulp copy
-```
-
-Compile the assets :
-```
-$ gulp scripts
-```
-
-Cleaning the sass:
-```
-$ gulp styles
 ```
 
 ## Development
 
 The current folder will be generated into ./_site :
+```bash
+$ jekyll build
 ```
-$ jekyll build --draft
+
+Building the assets with Webpack :
+```bash
+$ npm run dev
+
+# Or
+
+$ npm run watch
+
+# Or
+
+$ npm run prod
+```
+
+Running ESLint :
+```bash
+$ npm run lint
 ```
 
 Build the site on the preview server :
-```
-$ jekyll serve --draft --config _config.yml,_config.dev.yml
+```bash
+$ jekyll serve --config _config.yml,_config.dev.yml
 $ open http://127.0.0.1:4000/
 ```
 
 ## Production
 
-```
+```bash
+$ npm run prod
 $ JEKYLL_ENV=production jekyll build
 ```
 
