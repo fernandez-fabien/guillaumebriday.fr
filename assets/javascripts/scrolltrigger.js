@@ -1,4 +1,4 @@
-var ScrollTrigger = require("../node_modules/scrolltrigger-classes/ScrollTrigger.js");
+import ScrollTrigger from 'scrolltrigger-classes'
 
 document.addEventListener("turbolinks:load", function() {
   var trigger = new ScrollTrigger(

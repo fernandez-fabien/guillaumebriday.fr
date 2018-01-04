@@ -1,4 +1,4 @@
-var ProgressBar = require("progressbar.js");
+import ProgressBar from 'progressbar.js'
 
 document.addEventListener("turbolinks:load", function() {
   var elements = document.querySelectorAll(".progressbar-container");
