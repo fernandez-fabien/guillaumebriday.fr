@@ -11,9 +11,11 @@ module Jekyll
     #   {{ post.date | localize: "%d.%m.%Y" }}
     #   {{ post.date | localize: ":short" }}
     def localize(input, format=nil, locale=nil)
+      locale ||= LOCALE
+      I18n.config.available_locales << locale.to_sym
       load_translations
       format = (format =~ /^:(\w+)/) ? $1.to_sym : format
-      I18n.locale = locale || LOCALE
+      I18n.locale = locale
 
       I18n.l input, :format => format
     end
