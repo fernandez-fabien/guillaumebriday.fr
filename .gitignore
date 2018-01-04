@@ -3,7 +3,6 @@ _drafts
 .sass-cache
 .jekyll-metadata
 assets/fonts
-_sass/resume/vendor
-_sass/vendor
 js
+css
 node_modules
