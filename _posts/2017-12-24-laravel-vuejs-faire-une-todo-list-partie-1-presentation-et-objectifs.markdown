@@ -23,7 +23,7 @@ En effet, le serveur back-end ne fera que servir des API versionnées et RESTful
 
 On aurait pu servir des vues avec Laravel, mais on aurait limité les possibilités à ce que propose ces vues à moins de développer des API en parallèle, ce qui est un peu dommage avec l'arrivée des frameworks JS, je pense.
 
-Il est également possible de faire une SPA dans le même projet et de ne servir que la première vue avec Laravel et utiliser tout le reste de l'application via des API, mais je préfère séparément complètement le back-end du front-end pour ce projet.
+Il est également possible de faire une SPA dans le même projet et de ne servir que la première vue avec Laravel et utiliser tout le reste de l'application via des API, mais je préfère séparer complètement le back-end du front-end pour ce projet.
 
 {% include toc.html %}
 
