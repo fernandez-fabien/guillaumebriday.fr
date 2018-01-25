@@ -1,31 +1,12 @@
-// Config
-@import 'variables';
-@import 'mixins';
-
-// Base
-@import 'base/base';
-@import 'base/reset';
-
-// Layout
-@import 'layout/archives';
-@import 'layout/code';
-@import 'layout/comments';
-@import 'layout/footer';
-@import 'layout/gallery';
-@import 'layout/header';
-@import 'layout/layout';
-@import 'layout/posts';
-
-// Module
-@import 'module/highlight';
-@import 'module/page-navigation';
-@import 'module/pagination';
-@import 'module/toc';
-@import 'module/category';
-@import 'module/search';
+@import "variables";
 
 // Resume
 @import 'resume/resume';
+
+// Module
+@import 'module/highlight';
+@import 'module/code';
+@import 'module/toc';
 
 // Vendor
 @import "~font-awesome/scss/font-awesome.scss";

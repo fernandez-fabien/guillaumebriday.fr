@@ -1,66 +1,65 @@
 ---
 layout: default
-class: "gallery-container"
 ---
 <p>
     <a href="{{ site.baseurl }}{% link photos/index.md %}">&larr; Retour aux photos</a>
 </p>
 
-<div class="image-container" itemscope itemtype="http://schema.org/ImageObject">
-    <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" class="image-show" itemprop="contentUrl" />
+<divitemscope itemtype="http://schema.org/ImageObject">
+    <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}"  itemprop="contentUrl" />
 
-    <span class="image-caption" itemprop="caption">{{ page.title }}</span>
+    <span itemprop="caption">{{ page.title }}</span>
 
     {% if page.exif %}
     <h2>EXIF</h2>
 
-    <ul class="exif-container">
+    <ul>
         {% if page.exif.camera %}
             <li>
-                <div class="exif-label">Camera</div>
-                <span class="exif-value">{{ page.exif.camera }}</span>
+                <div>Camera</div>
+                <span>{{ page.exif.camera }}</span>
             </li>
         {% endif %}
 
         {% if page.exif.iso %}
             <li itemprop="exifData" itemscope itemtype="http://schema.org/PropertyValue">
-                <div class="exif-label" itemprop="name">ISO</div>
-                <span class="exif-value" itemprop="value">{{ page.exif.iso }}</span>
+                <div  itemprop="name">ISO</div>
+                <span itemprop="value">{{ page.exif.iso }}</span>
             </li>
         {% endif %}
 
         {% if page.exif.shutter_speed %}
             <li itemprop="exifData" itemscope itemtype="http://schema.org/PropertyValue">
-                <div class="exif-label" itemprop="name">Shutter Speed</div>
-                <span class="exif-value" itemprop="value">{{ page.exif.shutter_speed }} sec</span>
+                <div  itemprop="name">Shutter Speed</div>
+                <span itemprop="value">{{ page.exif.shutter_speed }} sec</span>
             </li>
         {% endif %}
 
         {% if page.exif.aperture %}
             <li itemprop="exifData" itemscope itemtype="http://schema.org/PropertyValue">
-                <div class="exif-label" itemprop="name" content="FNumber">Aperture</div>
-                <span class="exif-value" itemprop="value">f/ {{ page.exif.aperture }}</span>
+                <div  itemprop="name" content="FNumber">Aperture</div>
+                <span itemprop="value">f/ {{ page.exif.aperture }}</span>
             </li>
         {% endif %}
 
         {% if page.exif.camera %}
             <li>
-                <div class="exif-label">Focal Length</div>
-                <span class="exif-value">{{ page.exif.focal_length }} mm</span>
+                <div Focal Length</div>
+                <span  page.exif.focal_length }} mm</span>
             </li>
         {% endif %}
 
         {% if page.exif.location %}
             <li>
-                <div class="exif-label">Location</div>
-                <span class="exif-value" itemprop="contentLocation">{{ page.exif.location }}</span>
+                <div Location</div>
+                <span itemprop="contentLocation">{{ page.exif.location }}</span>
             </li>
         {% endif %}
 
         {% if page.exif.date %}
             <li>
-                <div class="exif-label">Date</div>
-                <span class="exif-value" itemprop="datePublished" content="{{ page.exif.date | date: '%Y-%m-%d' }}">{{ page.exif.date | localize: ":excerpt" }}</span>
+                <div Date</div>
+                <span itemprop="datePublished" content="{{ page.exif.date | date: '%Y-%m-%d' }}">{{ page.exif.date | localize: ":excerpt" }}</span>
             </li>
         {% endif %}
     </ul>

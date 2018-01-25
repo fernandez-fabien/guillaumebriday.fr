@@ -4,38 +4,38 @@
   </p>
 
 {% else if %}
-  <form method="POST" action="{{ site.baseurl }}/comments/submit.php" class="comment-form">
+  <form method="POST" action="{{ site.baseurl }}/comments/submit.php">
     <input type="hidden" name="post_id" value="{{ page.id }}" />
     <input type="hidden" name="return_url" value="{{ site.baseurl }}{{ page.url }}" />
 
-    <p class="comment-notes">
+    <p>
       Votre adresse de messagerie ne sera pas publiée.<br />
       Les champs obligatoires sont indiqués avec *.
     </p>
 
-    <p class="comment-form-author">
+    <p>
       <label for="name">Nom *</label>
       <input id="name" name="name" type="text" required="required" />
     </p>
 
-    <p class="comment-form-email">
+    <p>
       <label for="email">Adresse de messagerie *</label>
       <input id="email" name="email" type="email" required="required" />
     </p>
 
-    <p class="comment-form-url">
+    <p>
       <label for="url">Site web</label>
       <input id="url" name="url" type="text" />
     </p>
 
-    <p class="comment-form-comment">
+    <p>
       <label for="comment">Commentaire</label>
       <textarea id="comment" name="comment" rows="8" required="required"></textarea>
       <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
     </p>
 
-    <p class="form-submit">
-      <input type="submit" class="submit" value="Laisser un commentaire">
+    <p>
+      <input type="submit" value="Laisser un commentaire">
     </p>
   </form>
 {% endif %}

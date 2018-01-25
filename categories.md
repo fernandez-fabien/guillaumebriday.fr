@@ -2,9 +2,9 @@
 layout: default
 title: Catégories
 ---
-<h1 class="post-title">Catégories</h1>
+<h1>Catégories</h1>
 
-<ul class="archives-list">
+<ul>
   {% for category in site.categories %}
     {% capture category_name %}{{ category | first }}{% endcapture %}
 

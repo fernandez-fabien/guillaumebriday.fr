@@ -1,6 +1,6 @@
 {% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 
-<ul class="post-meta-details">
+<ul>
   <li>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
       <i class="fa fa-calendar" aria-hidden="true"></i> {{ page.date | localize: ":excerpt" }}

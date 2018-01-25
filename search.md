@@ -5,13 +5,13 @@ permalink: /recherche/
 exclude: true
 sitemap: false
 ---
-<h1 class="post-title">Recherche</h1>
+<h1>Recherche</h1>
 
 <div id="search-container">
   <span class="icon icon-search"></span>
-  <input type="text" id="search-input" placeholder="Rechercher..." class="basic-input" autofocus>
+  <input type="text" id="search-input" placeholder="Rechercher..." autofocus>
 
-  <ul id="results-container" class="archives-list"></ul>
+  <ul id="results-container"></ul>
 </div>
 
 <script type="text/javascript">

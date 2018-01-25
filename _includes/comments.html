@@ -1,15 +1,15 @@
 {% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 
 {% if site.comments_form or site.data[comment_id] %}
-  <h2 id="comments" class="comments-title"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
+  <h2 id="comments"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
 
   {% include comments_form.html %}
 
-  <div class="comments">
+  <div>
     {% for comment in site.data[comment_id] %}
-      <div id="comment-{{ comment.id }}" class="comment-body" itemscope itemtype="https://schema.org/Comment">
-          <div class="comment-meta">
-            <div class="comment-author">
+      <div id="comment-{{ comment.id }}" itemscope itemtype="https://schema.org/Comment">
+          <div>
+            <div>
               {% if comment.author-url %}
                 <a href="{{ comment.author-url }}" target="_blank">
               {% endif %}
@@ -21,14 +21,14 @@
               {% endif %}
             </div>
 
-            <div class="comment-date">
+            <div>
               <a href="#comment-{{ comment.id }}">
                 <time itemprop="dateCreated" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
               </a>
             </div>
           </div>
 
-          <div class="comment-content" itemprop="text">
+          <div itemprop="text">
             {{ comment.content | liquify | markdownify }}
           </div>
       </div>

@@ -1,18 +1,17 @@
 ---
 layout: default
-class: 'home-container'
 ---
 
-<ul class="post-list">
+<ul>
   {% for page in paginator.posts %}
     <li itemscope itemtype="http://schema.org/Article">
       <h2>
-        <a class="post-link" href="{{ page.url | relative_url }}">
+        <a href="{{ page.url | relative_url }}">
           <span itemprop="name">{{ page.title | escape }}</span>
         </a>
       </h2>
 
-      <div class="post-meta">
+      <div>
         Le <span itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | localize: ":excerpt" }}</span>
         dans <span itemprop="articleSection">{{ page.categories | join: ', ' }}</span>
       </div>
@@ -25,15 +24,15 @@ class: 'home-container'
 </ul>
 
 {% if paginator.total_pages > 1 %}
-  <div class="pagination">
+  <div>
     {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}" class="page_previous">Précédent</a>
+      <a href="{{ paginator.previous_page_path | relative_url }}">Précédent</a>
     {% endif %}
 
-    <span class="page_number ">Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
+    <span>Page {{ paginator.page }} sur {{ paginator.total_pages }}</span>
 
     {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}" class="page_next">Suivant</a>
+      <a href="{{ paginator.next_page_path | relative_url }}">Suivant</a>
     {% endif %}
   </div>
 {% endif %}

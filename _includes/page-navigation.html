@@ -1,17 +1,17 @@
-<div class="page-navigation">
-  <div class="nav-container">
+<div>
+  <div>
     {% if page.previous.url %}
       <span>Article précédent</span>
-      <a class="prev" href="{{ page.previous.url }}">
+      <a href="{{ page.previous.url }}">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.previous.title }}
       </a>
     {% endif %}
   </div>
 
-  <div class="nav-container next-container">
+  <div>
     {% if page.next.url %}
       <span>Article suivant</span>
-      <a class="next" href="{{ page.next.url }}">
+      <a href="{{ page.next.url }}">
         {{ page.next.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
     {% endif %}
