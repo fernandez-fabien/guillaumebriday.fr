@@ -33,7 +33,7 @@ defaults:
 
 # Theme
 markdown: kramdown
-paginate: 15
+paginate: 30
 paginate_path: "/page/:num/"
 comments_form: true
 permalink: /:title
