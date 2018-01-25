@@ -25,6 +25,7 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: [
             {loader: 'css-loader', options: {importLoaders: 2}},
+            'postcss-loader',
             'sass-loader'
           ],
           fallback: 'style-loader'

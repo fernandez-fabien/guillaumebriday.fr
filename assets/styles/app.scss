@@ -1,5 +1,9 @@
 @import "variables";
 
+// Tailwind
+@tailwind preflight;
+@tailwind utilities;
+
 // Resume
 @import 'resume/resume';
 
