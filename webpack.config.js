@@ -4,6 +4,7 @@ var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var PurifyCSSPlugin = require('purifycss-webpack')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
+var HtmlWebpackPlugin = require('html-webpack-plugin')
 var inProduction = (process.env.NODE_ENV === 'production')
 
 module.exports = {
@@ -16,7 +17,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './'),
     publicPath: '/',
-    filename: 'js/[name].js'
+    filename: 'js/[name].[hash].js'
   },
   module: {
     rules: [
@@ -63,14 +64,19 @@ module.exports = {
   devtool: '#eval-source-map',
   plugins: [
     new ExtractTextPlugin({
-      filename: 'css/[name].css'
+      filename: 'css/[name].[hash].css'
     }),
     new CopyWebpackPlugin([
       {
         from: 'node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js',
         to: 'js/simple-jekyll-search.min.js'
       }
-    ])
+    ]),
+    new HtmlWebpackPlugin({
+      filename: '_includes/head.html',
+      template: 'assets/head.html',
+      inject: false
+    })
   ]
 }
 

@@ -6,7 +6,8 @@
   <title>{% if page.title %}{{ page.title | escape | append: ' - ' }}{% endif %}{{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-  <link rel="stylesheet" href="{{ "/css/app.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "<%= htmlWebpackPlugin.files.css %>" | relative_url }}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
 
@@ -17,10 +18,13 @@
   <link rel="mask-icon" href="{{ "/assets/icons/safari-pinned-tab.svg" | relative_url }}" color="#2b5797">
 
   {% if jekyll.environment == 'production' and site.google_analytics %}
-  {% include google-analytics.html %}
+    {% include google-analytics.html %}
   {% endif %}
 
-  <script src="{{ "/js/app.js" | relative_url }}" defer></script>
+  <% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+    <script src="{{ '<%= htmlWebpackPlugin.files.chunks[chunk].entry %>' | relative_url }}" defer></script>
+  <% } %>
+
   {% if page.url == '/recherche/' %}
     <script src="{{ "/js/simple-jekyll-search.min.js" | relative_url }}" data-turbolinks-track="reload"></script>
   {% endif %}
