@@ -63,10 +63,11 @@ module.exports = {
   devtool: '#eval-source-map',
   plugins: [
     new ExtractTextPlugin({
-      filename: 'css/[name].css',
+      filename: 'css/[name].css'
     }),
     new CopyWebpackPlugin([
-      { from: 'node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js',
+      {
+        from: 'node_modules/simple-jekyll-search/dest/simple-jekyll-search.min.js',
         to: 'js/simple-jekyll-search.min.js'
       }
     ])
@@ -93,13 +94,10 @@ if (inProduction) {
         path.join(__dirname, '**/*.html'),
         path.join(__dirname, '**/*.md')
       ]),
-      minimize: true,
-      purifyOptions: {
-        whitelist: ['*visible*', 'page-content']
-      }
+      minimize: true
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    }),
+    })
   ])
 }
