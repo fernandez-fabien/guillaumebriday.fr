@@ -5,6 +5,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var PurifyCSSPlugin = require('purifycss-webpack')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var CleanWebpackPlugin = require('clean-webpack-plugin')
 var inProduction = (process.env.NODE_ENV === 'production')
 
 module.exports = {
@@ -76,7 +77,8 @@ module.exports = {
       filename: '_includes/head.html',
       template: 'assets/head.html',
       inject: false
-    })
+    }),
+    new CleanWebpackPlugin(['css', 'js'])
   ]
 }
 
