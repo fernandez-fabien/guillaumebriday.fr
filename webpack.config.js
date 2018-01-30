@@ -1,12 +1,20 @@
+/* eslint-disable no-useless-escape */
+
 var path = require('path')
 var glob = require('glob-all')
 var webpack = require('webpack')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
-var PurifyCSSPlugin = require('purifycss-webpack')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CleanWebpackPlugin = require('clean-webpack-plugin')
+var PurgecssPlugin = require('purgecss-webpack-plugin')
 var inProduction = (process.env.NODE_ENV === 'production')
+
+class TailwindExtractor {
+  static extract (content) {
+    return content.match(/[A-z0-9-:\/]+/g) || []
+  }
+}
 
 module.exports = {
   entry: {
@@ -96,13 +104,18 @@ if (inProduction) {
         warnings: false
       }
     }),
-    new PurifyCSSPlugin({
-      // Give paths to parse for rules. These should be absolute!
+    new PurgecssPlugin({
+      // Specify the locations of any files you want to scan for class names.
       paths: glob.sync([
         path.join(__dirname, '**/*.html'),
-        path.join(__dirname, '**/*.md')
+        path.join(__dirname, '**/assets/javascripts/*.js')
       ]),
-      minimize: true
+      extractors: [
+        {
+          extractor: TailwindExtractor,
+          extensions: ['html', 'js']
+        }
+      ]
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
