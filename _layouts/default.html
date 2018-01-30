@@ -3,14 +3,12 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="font-sans leading-normal">
 
     {% include header.html %}
 
-    <main>
-      <div>
-        {{ content }}
-      </div>
+    <main class="container mx-auto max-w-xl px-3">
+      {{ content }}
     </main>
 
     {% include footer.html %}
