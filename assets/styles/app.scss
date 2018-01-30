@@ -4,8 +4,14 @@
 @tailwind preflight;
 @tailwind utilities;
 
+@import "base";
+
 // Resume
 @import 'resume/resume';
+
+// Component
+@import 'component/nav';
+@import 'component/table';
 
 // Module
 @import 'module/highlight';

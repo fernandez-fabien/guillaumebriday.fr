@@ -1,5 +1,6 @@
 ul#markdown-toc {
   counter-reset: item;
+  @apply .px-0;
 }
 
 #markdown-toc {

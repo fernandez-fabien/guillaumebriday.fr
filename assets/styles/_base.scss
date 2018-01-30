@@ -1,0 +1,15 @@
+a {
+  @apply .no-underline .text-red;
+
+  &:hover {
+    @apply .underline;
+  }
+}
+
+p {
+  @apply my-4;
+}
+
+h2 {
+  @apply my-4;
+}
