@@ -1,16 +1,18 @@
-<div>
-  <div>
+<div class="my-6 py-6 flex flex-wrap border-t border-b">
+  <div class="w-full sm:w-1/2">
     {% if page.previous.url %}
-      <span>Article précédent</span>
+      <span class="block text-grey-darker text-sm">Article précédent</span>
+
       <a href="{{ page.previous.url }}">
         <i class="fa fa-chevron-left" aria-hidden="true"></i> {{ page.previous.title }}
       </a>
     {% endif %}
   </div>
 
-  <div>
+  <div class="w-full mt-3 sm:w-1/2 sm:mt-0 text-right">
     {% if page.next.url %}
-      <span>Article suivant</span>
+      <span class="block text-grey-darker text-sm">Article suivant</span>
+
       <a href="{{ page.next.url }}">
         {{ page.next.title }} <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>

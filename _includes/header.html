@@ -1,25 +1,29 @@
-<header>
-
-  <div>
+<div class="border-t-4 border-red">
+  <header class="container mx-auto max-w-xl px-3">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
-    <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+
+    <a class="block text-5xl my-8 font-semibold text-black" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     {% if page_paths %}
-      <nav>
-        {% for path in page_paths %}
-          {% assign my_page = site.pages | where: "path", path | first %}
-          {% unless my_page.exclude %}
-            {% if my_page.title %}
-            <a href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-            {% endif %}
-          {% endunless %}
-        {% endfor %}
+      <nav class="my-8 text-grey border-b-2">
+        <div class="-my-2px flex justify-between">
+          <div>
+            {% for path in page_paths %}
+              {% assign my_page = site.pages | where: "path", path | first %}
+              {% unless my_page.exclude %}
+                {% if my_page.title %}
+                <a class="header-link sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                {% endif %}
+              {% endunless %}
+            {% endfor %}
+          </div>
 
-        <a href="{{ site.baseurl }}{% link search.md %}">
-          <i class="fa fa-search" aria-hidden="true"></i>
-        </a>
+          <a class="header-link sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ site.baseurl }}{% link search.html %}">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        </div>
       </nav>
     {% endif %}
-  </div>
-</header>
+  </header>
+</div>
