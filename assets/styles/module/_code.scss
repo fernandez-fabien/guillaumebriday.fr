@@ -6,13 +6,6 @@ kbd {
   border-radius: .2rem;
 }
 
-pre,
-code {
-  border-radius: 3px;
-
-  @include relative-font-size(.9375);
-}
-
 code {
   padding: 1px 5px;
 }
