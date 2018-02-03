@@ -1,8 +1,10 @@
-<div data-scroll>
-  <div></div>
+<div class="relative bg-white p-3 border-b shadow rounded-lg ml-8 mb-8" data-scroll>
+  <div class="timeline-dot"></div>
   <div>
-    <p>{{ include.date }}</p>
-    <h3>{{ include.title }}</h3>
-    <p>{{ include.description }}</p>
+    <p class="m-0 mt-4 text-sm text-grey-darker">{{ include.date }}</p>
+
+    <h3 class="text-red">{{ include.title }}</h3>
+
+    <p class="text-grey-darker">{{ include.description }}</p>
   </div>
 </div>
