@@ -1,24 +1,21 @@
-<footer class="site-footer">
-  <div class="container footer-container">
-    <div class="item footer-description">
-      <ul class="contact-list">
-        <li>
-          {% if site.author %}
-            {{ site.author | escape }}
-          {% else %}
-            {{ site.title | escape }}
-          {% endif %}
-          </li>
-          {% if site.email %}
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          {% endif %}
-      </ul>
+<div class="bg-black text-white px-3 py-6">
+  <footer class="container mx-auto max-w-xl flex flex-wrap md:flex-no-wrap">
+    <div class="mb-6 mr-6">
+      {% if site.author %}
+        {{ site.author | escape }}
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
 
-      <p>{{ site.description | escape }}</p>
+      {% if site.email %}
+        <p>
+          <a class="block text-grey hover:text-grey-lightest" class="" href="mailto:{{ site.email }}">{{ site.email }}</a>
+        </p>
+      {% endif %}
+
+      <p class="mt-4">{{ site.description | escape }}</p>
     </div>
 
-    <div class="item">
-      {% include social-media-list.html %}
-    </div>
-  </div>
-</footer>
+    {% include social-media-list.html %}
+  </footer>
+</div>

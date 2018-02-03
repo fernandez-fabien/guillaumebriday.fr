@@ -1,11 +1,10 @@
-<section id="skills-section-container" class="skills-section-container section-container">
-  <div class="section skills-section">
-    <div class="title-container">
-      <h1 class="title">Compétences</h1>
-    </div>
-    <div class="skills-container">
-      <div class="dev-block" data-scroll data-scroll-showCallback="animate_progress_bar">
-        <h3 class="dev-title">Développement</h3>
+<section class="py-8 bg-grey-lighter">
+  <div class="container mx-auto max-w-3xl px-3">
+    <h2 class="resume-title">Compétences</h2>
+
+    <div class="flex flex-wrap">
+      <div  class="w-full md:w-1/2 sm:px-8" data-scroll data-scroll-showCallback="animate_progress_bar">
+        <h3 class="text-red mb-4">Développement</h3>
 
         {% include resume/components/skill.html
                    title = "Ruby / Ruby On Rails"
@@ -32,15 +31,13 @@
                    percent = "80" %}
       </div>
 
-      <div class="knowledge-block">
-        <h3 class="knowledge-title">Connaissances</h3>
-        <div class="knowledge-content">
-          <ul class="knowledge-content-list">
-            {% for knowledge in page.knowledges %}
-              <li class="knowledge-content-item"><i class="fa fa-check"></i>{{ knowledge }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+      <div class="w-full md:w-1/2 sm:px-8">
+        <h3 class="text-red mb-4">Connaissances</h3>
+        <ul class="list-reset">
+          {% for knowledge in page.knowledges %}
+            <li><i class="pr-3 fa fa-check"></i>{{ knowledge }}</li>
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </div>

@@ -1,34 +1,30 @@
 {% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
 
 {% if site.comments_form or site.data[comment_id] %}
-  <h2 id="comments" class="comments-title"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
+  <h2 id="comments"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
 
   {% include comments_form.html %}
 
-  <div class="comments">
+  <div class="mt-3">
     {% for comment in site.data[comment_id] %}
-      <div id="comment-{{ comment.id }}" class="comment-body" itemscope itemtype="https://schema.org/Comment">
-          <div class="comment-meta">
-            <div class="comment-author">
-              {% if comment.author-url %}
-                <a href="{{ comment.author-url }}" target="_blank">
-              {% endif %}
-              <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
-                <span itemprop="name">{{ comment.author }}</span>
-              </span>
-              {% if comment.author-url %}
-                </a>
-              {% endif %}
-            </div>
-
-            <div class="comment-date">
-              <a href="#comment-{{ comment.id }}">
-                <time itemprop="dateCreated" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
+      <div class="border-t pt-3 my-3" id="comment-{{ comment.id }}" itemscope itemtype="https://schema.org/Comment">
+          <div class="flex flex-wrap justify-between">
+            {% if comment.author-url %}
+              <a href="{{ comment.author-url }}" target="_blank">
+            {% endif %}
+            <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
+              <span class="font-bold text-sm" itemprop="name">{{ comment.author }}</span>
+            </span>
+            {% if comment.author-url %}
               </a>
-            </div>
+            {% endif %}
+
+            <a class="text-sm text-grey-darker" href="#comment-{{ comment.id }}">
+              <time itemprop="dateCreated" datetime="{{ comment.date | date_to_xmlschema }}">{{ comment.date | localize: ":long" }}</time>
+            </a>
           </div>
 
-          <div class="comment-content" itemprop="text">
+          <div class="break-words" itemprop="text">
             {{ comment.content | liquify | markdownify }}
           </div>
       </div>

@@ -24,12 +24,12 @@
     {% endunless %}
 {% endcapture %}
 
-<div class="image-container {{ include.class }}" itemscope itemtype="http://schema.org/ImageObject">
+<div class="text-center mb-3" itemscope itemtype="http://schema.org/ImageObject">
     <a href="{{ url }}" title="{{ include.title }}" {{ new_tab }} data-caption="{{ include.caption }}">
         <img src="{{ image_url }}" alt="{{ include.alt }}" itemprop="contentUrl" />
     </a>
 
     {% if include.caption %}
-        <span class="image-caption">{{ include.caption }}</span>
+        <span class="block mt-2 italic text-grey-darker text-center">{{ include.caption }}</span>
     {% endif %}
 </div>

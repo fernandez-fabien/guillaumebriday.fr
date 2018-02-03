@@ -204,4 +204,5 @@ fr:
       short: "%d %b %Hh%M"
       short_date: "%d %b %Y"
       excerpt: "%d %B %Y"
+      month: '%B'
     pm: pm

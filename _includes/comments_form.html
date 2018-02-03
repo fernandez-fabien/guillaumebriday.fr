@@ -4,38 +4,38 @@
   </p>
 
 {% else if %}
-  <form method="POST" action="{{ site.baseurl }}/comments/submit.php" class="comment-form">
+  <form method="POST" action="{{ site.baseurl }}/comments/submit.php">
     <input type="hidden" name="post_id" value="{{ page.id }}" />
     <input type="hidden" name="return_url" value="{{ site.baseurl }}{{ page.url }}" />
 
-    <p class="comment-notes">
+    <p class="text-sm">
       Votre adresse de messagerie ne sera pas publiée.<br />
-      Les champs obligatoires sont indiqués avec *.
+      Les champs obligatoires sont indiqués avec <span class="text-red">*</span>.
     </p>
 
-    <p class="comment-form-author">
-      <label for="name">Nom *</label>
-      <input id="name" name="name" type="text" required="required" />
+    <p>
+      <label for="name">Nom <span class="text-red">*</span></label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" required />
     </p>
 
-    <p class="comment-form-email">
-      <label for="email">Adresse de messagerie *</label>
-      <input id="email" name="email" type="email" required="required" />
+    <p>
+      <label for="email">Adresse de messagerie <span class="text-red">*</span></label>
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" name="email" type="email" required />
     </p>
 
-    <p class="comment-form-url">
+    <p>
       <label for="url">Site web</label>
-      <input id="url" name="url" type="text" />
+      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="url" name="url" type="text" />
     </p>
 
-    <p class="comment-form-comment">
-      <label for="comment">Commentaire</label>
-      <textarea id="comment" name="comment" rows="8" required="required"></textarea>
+    <p>
+      <label for="comment">Commentaire <span class="text-red">*</span></label>
+      <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="comment" name="comment" rows="8" required></textarea>
       <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
     </p>
 
-    <p class="form-submit">
-      <input type="submit" class="submit" value="Laisser un commentaire">
+    <p>
+      <input class="bg-white border border-red hover:bg-red hover:text-white cursor-pointer text-red shadow w-full py-2 px-4 rounded" type="submit" value="Laisser un commentaire">
     </p>
   </form>
 {% endif %}

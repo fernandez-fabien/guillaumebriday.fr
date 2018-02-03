@@ -17,6 +17,8 @@ module Jekyll
       format = (format =~ /^:(\w+)/) ? $1.to_sym : format
       I18n.locale = locale
 
+      input = Time.parse(input) if input.is_a?(String)
+
       I18n.l input, :format => format
     end
 

@@ -1,20 +1,24 @@
-<article class="education-block">
-  <div class="education-info">
-    <div class="education-date-container">
-      <span class="education-date">
-        <span class="education-month">{{ include.start_date | date: '%B' }}</span>{{ include.start_date | date: '%Y' }}
-      </span>
-        &nbsp;-&nbsp;
-      <span class="education-date">
-        <span class="education-month">{{ include.end_date | date: '%B' }}</span>{{ include.end_date | date: '%Y' }}
-      </span>
+<article class="mb-8 py-6 border-b flex flex-wrap md:flex-no-wrap">
+  <div class="flex-no-shrink">
+    <div class="inline-block border-b pb-4">
+      <div class="inline-block leading-none">
+        <div class="text-grey-darker text-xs text-right">{{ include.start_date | localize: ":month" }}</div>
+        <span class="font-bold text-3xl">{{ include.start_date | date: '%Y' }}</span>
+      </div>
+
+      <div class="inline-block font-bold mx-6">&ndash;</div>
+
+      <div class="inline-block leading-none">
+        <div class="text-grey-darker text-xs text-right">{{ include.end_date | localize: ":month" }}</div>
+        <span class="font-bold text-3xl">{{ include.end_date | date: '%Y' }}</span>
+      </div>
     </div>
 
-    <p class="education-school">{{ include.school }}</p>
+    <p class="mt-4 md:text-right">{{ include.school }}</p>
   </div>
 
-  <div class="education-presentation">
-    <h3 class="education-title">{{ include.title }}</h3>
-    <p class="education-description">{{ include.description }}</p>
+  <div class="md:ml-6 md:pl-6 md:border-l">
+    <h3 class="text-red text-2xl">{{ include.title }}</h3>
+    <p class="text-grey-darker">{{ include.description }}</p>
   </div>
 </article>

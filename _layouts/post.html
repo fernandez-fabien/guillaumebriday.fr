@@ -1,18 +1,18 @@
 ---
 layout: default
 ---
-<article class="post" itemscope itemtype="http://schema.org/Article">
+<article itemscope itemtype="http://schema.org/Article">
 
-  <header class="post-header">
-    <h1 class="post-title" itemprop="name">{{ page.title | escape }}</h1>
+  <header>
+    <h1 class="mb-2" itemprop="name">{{ page.title | escape }}</h1>
     {% include post-meta.html %}
   </header>
 
   <div class="post-content">
     {% if page.thumbnail %}
-    {% include image.html
-                img = page.thumbnail
-                title = page.title %}
+      {% include image.html
+                  img = page.thumbnail
+                  title = page.title %}
     {% endif %}
 
     {{ content }}
