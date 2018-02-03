@@ -20,7 +20,7 @@ module.exports = {
   entry: {
     app: [
       './assets/javascripts/app.js',
-      './assets/styles/app.scss'
+      './assets/styles/app.sass'
     ]
   },
   output: {
