@@ -31,6 +31,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          extractCSS: true
+        }
+      },
+      {
         test: /\.s[ac]ss$/,
         use: ExtractTextPlugin.extract({
           use: [
@@ -42,7 +49,7 @@ module.exports = {
         })
       },
       {
-        test: /\.(js)$/,
+        test: /\.(js|vue)$/,
         loader: 'eslint-loader',
         enforce: 'pre',
         include: [path.resolve(__dirname, './assets/javascripts')],
@@ -66,6 +73,12 @@ module.exports = {
         }]
       }
     ]
+  },
+  resolve: {
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    },
+    extensions: ['*', '.js', '.vue', '.json']
   },
   performance: {
     hints: false
@@ -108,12 +121,13 @@ if (inProduction) {
       // Specify the locations of any files you want to scan for class names.
       paths: glob.sync([
         path.join(__dirname, '**/*.html'),
-        path.join(__dirname, '**/assets/javascripts/*.js')
+        path.join(__dirname, '**/assets/javascripts/components/*.vue'),
+        path.join(__dirname, '**/assets/javascripts/**/*.js')
       ]),
       extractors: [
         {
           extractor: TailwindExtractor,
-          extensions: ['html', 'js']
+          extensions: ['html', 'js', 'vue']
         }
       ]
     }),
