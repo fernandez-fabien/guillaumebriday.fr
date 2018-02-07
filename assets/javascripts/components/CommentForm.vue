@@ -7,7 +7,7 @@
 
     <div v-if="isPosted" class="bg-green-lightest border border-green-light text-green-dark px-4 py-3 rounded relative" role="alert">
       <strong class="font-bold">Félicitation !</strong>
-      <span class="block sm:inline">Votre commentaire a bien été envoyé avec succès.</span>
+      <span class="block sm:inline">Votre commentaire a été envoyé avec succès.</span>
     </div>
 
     <form v-else @submit.prevent="submit" @keydown="form.errors.clear($event.target.name)">
