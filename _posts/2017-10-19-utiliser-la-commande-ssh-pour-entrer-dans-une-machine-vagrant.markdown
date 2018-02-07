@@ -3,7 +3,7 @@ title: "Utiliser la commande SSH pour entrer dans une machine Vagrant"
 layout: post
 categories: DevOps
 ---
-Si vous utilisez régulièrement [Vagrant](https://www.vagrantup.com){:target="_blank"}, vous devez savoir que pour accéder à la machine virtuelle il faut utiliser la commande :
+Si vous utilisez régulièrement [Vagrant](https://www.vagrantup.com), vous devez savoir que pour accéder à la machine virtuelle il faut utiliser la commande :
 
 ```bash
 $ vagrant ssh
@@ -11,7 +11,7 @@ $ vagrant ssh
 
 Sans explication particulière, Vagrant nous connecte dans la machine virtuelle avec l'utilisateur ```vagrant```.
 
-En revanche, si un [réseau privé](https://www.vagrantup.com/docs/networking/private_network.html#static-ip){:target="_blank"} a été défini et que vous connaissez l'adresse IP de la machine virtuelle on peut essayer de s'y connecter avec l'utilisateur ```vagrant``` :
+En revanche, si un [réseau privé](https://www.vagrantup.com/docs/networking/private_network.html#static-ip) a été défini et que vous connaissez l'adresse IP de la machine virtuelle on peut essayer de s'y connecter avec l'utilisateur ```vagrant``` :
 
 Par exemple, pour une configuration comme celle-ci :
 
@@ -28,7 +28,7 @@ $ ssh vagrant@192.168.50.4
 
 Mais on obtient alors une erreur. Pour une raison étrange, dans ce cas l'utilisateur ```vagrant``` n'arrive pas à se connecter.
 
-Pour se connecter à la machine virtuelle via ```vagrant ssh```, Vagrant utilise les clés SSH et un port particulier. J'en ai déjà parlé dans l'article : [Se connecter via SSH à un serveur distant]({{ site.baseurl }}{% post_url 2017-07-14-se-connecter-via-ssh-a-un-serveur-distant %}){:target="_blank"} si vous ne voyez pas de quoi je parle.
+Pour se connecter à la machine virtuelle via ```vagrant ssh```, Vagrant utilise les clés SSH et un port particulier. J'en ai déjà parlé dans l'article : [Se connecter via SSH à un serveur distant]({{ site.baseurl }}{% post_url 2017-07-14-se-connecter-via-ssh-a-un-serveur-distant %}) si vous ne voyez pas de quoi je parle.
 
 On va pouvoir utiliser cette clé privée pour surcharger la configuration SSH par défaut et ainsi s'en servir avec la commande standard.
 
@@ -73,6 +73,6 @@ Notre configuration sera ainsi utilisée avec la bonne clé privée et la connex
 
 Il est désormais inutile de spécifier l'utilisateur ```vagrant``` dans la commande puisqu'il est indiqué dans le fichier ```~/.ssh/config```.
 
-Dans mon cas j'avais besoin de faire cette manipulation pour exécuter des scripts [Ansible](https://www.ansible.com){:target="_blank"} manuellement plutôt que de passer par le [Provisioner d'Ansible](https://www.vagrantup.com/docs/provisioning/ansible.html){:target="_blank"}.
+Dans mon cas j'avais besoin de faire cette manipulation pour exécuter des scripts [Ansible](https://www.ansible.com) manuellement plutôt que de passer par le [Provisioner d'Ansible](https://www.vagrantup.com/docs/provisioning/ansible.html).
 
 Merci !

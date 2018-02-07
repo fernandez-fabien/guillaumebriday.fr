@@ -18,14 +18,8 @@
     {% endif %}
 {% endcapture %}
 
-{% capture new_tab %}
-    {% unless include.new_tab %}
-        target="_blank"
-    {% endunless %}
-{% endcapture %}
-
 <div class="text-center mb-3" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="{{ url }}" title="{{ include.title }}" {{ new_tab }} data-caption="{{ include.caption }}">
+    <a href="{{ url }}" title="{{ include.title }}" data-caption="{{ include.caption }}">
         <img src="{{ image_url }}" alt="{{ include.alt }}" itemprop="contentUrl" />
     </a>
 

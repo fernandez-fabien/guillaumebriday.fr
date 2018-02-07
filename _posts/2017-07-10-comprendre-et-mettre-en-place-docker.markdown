@@ -3,7 +3,7 @@ layout: post
 title: "Comprendre et mettre en place Docker"
 categories: DevOps
 ---
-J'ai eu l'occasion récemment d'utiliser [Docker](https://www.docker.com){:target="_blank"} de façon un peu plus poussée et je tenais à faire un retour car j'ai eu pas mal de points de blocage dans mon apprentissage que je voudrais détailler ici plus clairement.
+J'ai eu l'occasion récemment d'utiliser [Docker](https://www.docker.com) de façon un peu plus poussée et je tenais à faire un retour car j'ai eu pas mal de points de blocage dans mon apprentissage que je voudrais détailler ici plus clairement.
 
 On va parler de plusieurs choses importantes. L'objectif est de voir en détails le fonctionnement de Docker et les principes généraux à bien comprendre avant d'aller plus loin. Nous verrons dans un second temps comment le mettre en place dans un cas concret.
 
@@ -39,7 +39,7 @@ Comme on l'a vu avant, les containers sont isolés du système hôte. Ils ont un
 
 Ils devront soit, être partagés par plusieurs containers, soit ils devront être sauvegardés mêmes après la suppression d'un container. En effet, lorsqu'un container est supprimé, l'ensemble des fichiers présents à l'intérieur le sont également. Cela peut être gênant pour ces raisons ou pour un upload de fichier par un utilisateur sur une application Web entre autres.
 
-Pour remédier à ce problème, Docker a mis en place un système appelé [Volume](https://docs.docker.com/glossary/?term=volume){:target="_blank"}.
+Pour remédier à ce problème, Docker a mis en place un système appelé [Volume](https://docs.docker.com/glossary/?term=volume).
 
 Les volumes ont pour objectifs d'utiliser des données directement sur le système hôte. Pour faire simple, on va dire à Docker : "Voilà ce dossier (ou ce fichier) en particulier ne le cherche pas dans le container mais à cet emplacement sur l'host. Merci !". Les chemins vers ces dossiers et fichiers peuvent être mis en place dans la configuration du container que nous verrons en détail plus tard.
 
@@ -69,7 +69,7 @@ J'ai choisi le port 1337, complètement arbitrairement, libre à vous de changer
 
 #### Entre containers
 
-Il existe également un autre aspect important avec les ports, c'est la notion d'[EXPOSE](https://docs.docker.com/engine/reference/builder/#expose){:target="_blank"}.
+Il existe également un autre aspect important avec les ports, c'est la notion d'[EXPOSE](https://docs.docker.com/engine/reference/builder/#expose).
 
 ```EXPOSE``` va permettre d'ouvrir un port uniquement pour les autres containers. En pratique, on va s'en servir pour faire interagir des containers entre eux. Typiquement, un container MySQL n'aura pas besoin d'être accessible via l'host, on va donc exposer son port par défaut ```3306``` aux autres container pour qu'ils y aient accès.
 
@@ -89,9 +89,9 @@ Docker va également modifier le fichier ```/etc/hosts``` pour nous. Ainsi, on p
 
 Maintenant que nous avons un peu plus en tête les grands principes de Docker, je vais aborder un point fondamental de Docker, à savoir les ```images```.
 
-Les images ont en grande partie fait la popularité de Docker grâce à leur simplicité de mise en place. Une image représente un état d'un container à un moment donné. Beaucoup de services plus ou moins connus proposent des images pré-configurées pour que vous n'aillez plus qu'à les lancer en un clin d'oeil. La liste est disponible sur le [Docker Hub](https://hub.docker.com){:target="_blank"}.
+Les images ont en grande partie fait la popularité de Docker grâce à leur simplicité de mise en place. Une image représente un état d'un container à un moment donné. Beaucoup de services plus ou moins connus proposent des images pré-configurées pour que vous n'aillez plus qu'à les lancer en un clin d'oeil. La liste est disponible sur le [Docker Hub](https://hub.docker.com).
 
-Les images sont définies par un Dockerfile, sur lequel nous reviendrons en détail par la suite. Elles proviennent toutes d'une image parent (sauf les images de bases comme les OS par exemple). Par exemple, pour PHP, d'après le [Dockerfile de l'image officielle](https://hub.docker.com/_/php/){:target="_blank"} c'est Debian en version Jessie qui est utilisé pour construire l'image au moment d'écrire cet article.
+Les images sont définies par un Dockerfile, sur lequel nous reviendrons en détail par la suite. Elles proviennent toutes d'une image parent (sauf les images de bases comme les OS par exemple). Par exemple, pour PHP, d'après le [Dockerfile de l'image officielle](https://hub.docker.com/_/php/) c'est Debian en version Jessie qui est utilisé pour construire l'image au moment d'écrire cet article.
 
 Comme je le disais, une image est juste un état d'une configuration Docker à un moment. On le voit très bien dans le Dockerfile de PHP, ils sont partis d'une installation vierge de Debian pour installer et configurer PHP. De notre côté, on aura juste à lancer cette image dans un container et ce sera tout bon. Docker va ajouter des couches de configuration sur l'image à chaque changement de configuration.
 
@@ -105,11 +105,11 @@ $ docker images
 
 ## Les Dockerfiles
 
-Pour la suite, Docker doit être installé sur votre poste ou serveur. Pour cette partie, je vous en remet à la documentation qui vous détaillera les étapes à suivre, selon votre système d'exploitation : [https://docs.docker.com](https://docs.docker.com){:target="_blank"}.
+Pour la suite, Docker doit être installé sur votre poste ou serveur. Pour cette partie, je vous en remet à la documentation qui vous détaillera les étapes à suivre, selon votre système d'exploitation : [https://docs.docker.com](https://docs.docker.com).
 
 C'est un fichier qui va décrire la construction de votre image. Il doit se situer à la racine de votre projet. Il va contenir plusieurs instructions indispensables et d'autres optionnelles que nous allons voir ensemble.
 
-Je vous propose de mettre en place mon projet [Laravel-blog](https://github.com/guillaumebriday/laravel-blog){:target="_blank"} sur Docker. Le besoin est très standard et je pense que cela fera un bon exemple pour comprendre les fondamentaux.
+Je vous propose de mettre en place mon projet [Laravel-blog](https://github.com/guillaumebriday/laravel-blog) sur Docker. Le besoin est très standard et je pense que cela fera un bon exemple pour comprendre les fondamentaux.
 
 Nous allons avoir besoin de :
 - PHP 7.1 fpm et de quelques dépendances dont Laravel a besoin
@@ -120,7 +120,7 @@ Nous allons avoir besoin de :
 
 Pour commencer nous allons créer un fichier ```Dockerfile```. L'idée est de construire une nouvelle image à partir de celle de PHP-FPM, pour pouvoir nous en servir dans des containers par la suite.
 
-Nous allons modifier l'image de ```php:7.1-fpm``` comme ils l'ont fait avec celle de Debian. On peut le voir dans le [Dockerfile de l'image officielle](https://hub.docker.com/_/php/){:target="_blank"}.
+Nous allons modifier l'image de ```php:7.1-fpm``` comme ils l'ont fait avec celle de Debian. On peut le voir dans le [Dockerfile de l'image officielle](https://hub.docker.com/_/php/).
 
 Dans le Dockerfile, il faut en premier choisir l'image de base que nous allons adapter à nos besoins :
 
@@ -175,7 +175,7 @@ WORKDIR /application
 
 Le ```WORKDIR``` est le point d'entrée de notre container. Il définit le chemin à utiliser pour toutes les commandes telles que ```RUN```, ```CMD```, ```ENTRYPOINT```, ```COPY``` et ```ADD```.
 
-Je n'utilise pas de l'```ENTRYPOINT``` ici, mais je tenais à en parler rapidement. Je vous laisse consulter [cet article](http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/){:target="_blank"} qui détaille la différence entre les commandes ```RUN```, ```CMD``` et ```ENTRYPOINT```.
+Je n'utilise pas de l'```ENTRYPOINT``` ici, mais je tenais à en parler rapidement. Je vous laisse consulter [cet article](http://goinbigdata.com/docker-run-vs-cmd-vs-entrypoint/) qui détaille la différence entre les commandes ```RUN```, ```CMD``` et ```ENTRYPOINT```.
 
 Et voilà, notre Dockerfile est complet pour cette image et il devrait ressembler à cela :
 
@@ -224,11 +224,11 @@ $ docker images | grep laravel-blog
 
 Comme je le disais en début d'article, l'idée est de créer un container par service.
 
-Contrairement à une machine virtuelle, un container ne peut pas être lancé s'il ne fait rien. On peut donc lancer un container pour une tâche très unitaire et le laisser "mourir" une fois son [travail terminé](https://www.youtube.com/watch?v=OTB0Q03BRn0){:target="_blank"}.
+Contrairement à une machine virtuelle, un container ne peut pas être lancé s'il ne fait rien. On peut donc lancer un container pour une tâche très unitaire et le laisser "mourir" une fois son [travail terminé](https://www.youtube.com/watch?v=OTB0Q03BRn0).
 
 Ainsi, la première chose à faire dans notre cas c'est d'installer les dépendances PHP via composer.
 
-La [commande](https://docs.docker.com/engine/reference/commandline/run/){:target="_blank"} ```docker run``` que nous allons beaucoup utiliser par la suite se compose de cette façon :
+La [commande](https://docs.docker.com/engine/reference/commandline/run/) ```docker run``` que nous allons beaucoup utiliser par la suite se compose de cette façon :
 
 ```bash
 $ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
@@ -236,7 +236,7 @@ $ docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 ### Installer nos dépendances via Composer
 
-Je n'avais pas beaucoup d'intérêt à installer Composer dans mon Dockerfile tout à l'heure. J'aurais ajouté de la complexité à ce dernier et une [image Composer officielle](https://hub.docker.com/r/composer/composer/){:target="_blank"} existe justement pour ce besoin.
+Je n'avais pas beaucoup d'intérêt à installer Composer dans mon Dockerfile tout à l'heure. J'aurais ajouté de la complexité à ce dernier et une [image Composer officielle](https://hub.docker.com/r/composer/composer/) existe justement pour ce besoin.
 
 La documentation nous indique exactement ce que nous devons faire pour installer nos dépendances via un container :
 
@@ -252,7 +252,7 @@ La commande ```-v $(pwd):/app``` permet de monter un ```VOLUME``` entre le dossi
 
 ### Installer une base de données avec MySQL
 
-On peut maintenant passer à une partie critique de l'application, à savoir sauvegarder nos données dans une base. Pour cela, j'utilise tout simplement l'[image officielle de MySQL](https://hub.docker.com/_/mysql/){:target="_blank"}.
+On peut maintenant passer à une partie critique de l'application, à savoir sauvegarder nos données dans une base. Pour cela, j'utilise tout simplement l'[image officielle de MySQL](https://hub.docker.com/_/mysql/).
 
 La documentation nous explique tout encore une fois. Pour définir une base de données ou créer un utilisateur avec un mot de passe, il faut utiliser les variables d'environnements.
 
@@ -305,7 +305,7 @@ Il n'y a pas besoin de commande à la fin, tout est déjà géré par l'image PH
 $ docker run --name blog-server -v $(pwd):/application --link mysql -d laravel-blog
 ```
 
-Pour le gestionnaire de queues, c'est un peu différent. Laravel intègre un [gestionnaire de queues](https://laravel.com/docs/5.4/queues#running-the-queue-worker){:target="_blank"} qu'il faut lancer en ligne de commande. Je vais monter un deuxième container avec la même image, mais cette fois-ci en précisant la commande à lancer :
+Pour le gestionnaire de queues, c'est un peu différent. Laravel intègre un [gestionnaire de queues](https://laravel.com/docs/5.4/queues#running-the-queue-worker) qu'il faut lancer en ligne de commande. Je vais monter un deuxième container avec la même image, mais cette fois-ci en précisant la commande à lancer :
 
 ```bash
 $ docker run --name queue-server -v $(pwd):/application --link mysql:mysql -d laravel-blog php artisan queue:work
@@ -345,11 +345,11 @@ server {
 
 C'est une configuration assez standard. Tout d'abord, on commence par écouter le ```port 80``` qui est le port http par défaut, cela implique que nous devrons rediriger les ports extérieurs vers le port 80 du container nginx.
 
-Ensuite, nous indiquons le chemin ```root```, qui sera le chemin par défaut pour traiter les requêtes. Nous utilisations ```/application/public```, car ```public``` est le [dossier d'entrée utilisé par Laravel](https://laravel.com/docs/5.4/structure#the-public-directory){:target="_blank"}. Toutes les requêtes doivent arriver dans le fichier ```index.php``` de ce dossier et seront traitées ensuite par le routeur interne de Laravel.
+Ensuite, nous indiquons le chemin ```root```, qui sera le chemin par défaut pour traiter les requêtes. Nous utilisations ```/application/public```, car ```public``` est le [dossier d'entrée utilisé par Laravel](https://laravel.com/docs/5.4/structure#the-public-directory). Toutes les requêtes doivent arriver dans le fichier ```index.php``` de ce dossier et seront traitées ensuite par le routeur interne de Laravel.
 
 La dernière ligne qui nous intéresse est ```fastcgi_pass blog-server:9000```. On remarque une chose importante c'est le ```blog-server```.
 
-En effet, le ```fastcgi_pass``` s'attend à recevoir le lien vers un serveur fastCGI (dans notre cas c'est PHP-FPM qui le gère) sur le port 9000 par défaut. Ce qui est génial, c'est que nous pouvons utiliser le nom du container qu'on nous avons monté tout à l'heure puisque [Docker a changé le fichier](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/){:target="_blank"} ```/etc/hosts``` pour pouvoir binder ```blog-server``` vers l'adresse IP correspondante du container via le réseau privé. C'est tellement pratique !
+En effet, le ```fastcgi_pass``` s'attend à recevoir le lien vers un serveur fastCGI (dans notre cas c'est PHP-FPM qui le gère) sur le port 9000 par défaut. Ce qui est génial, c'est que nous pouvons utiliser le nom du container qu'on nous avons monté tout à l'heure puisque [Docker a changé le fichier](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/) ```/etc/hosts``` pour pouvoir binder ```blog-server``` vers l'adresse IP correspondante du container via le réseau privé. C'est tellement pratique !
 
 Il nous reste à monter un volume pour pouvoir accéder aux assets, entre autres, depuis l'extérieur et remplacer la configuration ```default.conf``` utilisée par nginx par défaut :
 
@@ -425,7 +425,7 @@ Et enfin, c'est hyper lourd à lire je trouve, c'est ni agréable ni intuitif. B
 
 ## Automatisation avec docker-compose
 
-[Docker compose](https://github.com/docker/compose){:target="_blank"} est un outil pour lancer un ou plusieurs containers, définis par un fichier nommé ```docker-compose.yml``` à la racine de votre projet, avec une seule ligne de commande.
+[Docker compose](https://github.com/docker/compose) est un outil pour lancer un ou plusieurs containers, définis par un fichier nommé ```docker-compose.yml``` à la racine de votre projet, avec une seule ligne de commande.
 
 Voilà le fichier final pour notre application :
 

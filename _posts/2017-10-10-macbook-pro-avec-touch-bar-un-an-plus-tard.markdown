@@ -21,7 +21,7 @@ Et c'est là toute la force de la Touch Bar, Apple a laissé aux développeurs l
 
 On m'a quand même dit un jour, qu'il n'était plus possible d'avoir la touche <kbd>esc</kbd> ou de mute le son via les touches de contrôles...
 
-Il y a un article officiel sur l'[Utilisation de la Touch Bar](https://support.apple.com/fr-fr/HT207055){:target="_blank"} qui fourni déjà beaucoup d'informations.
+Il y a un article officiel sur l'[Utilisation de la Touch Bar](https://support.apple.com/fr-fr/HT207055) qui fourni déjà beaucoup d'informations.
 
 On remarque tout d'abord que la Touch Bar est complètement optionnelle, donc si vraiment on veut le nouveau modèle sans pour autant être forcé de s'en servir, c'est possible !
 
@@ -47,13 +47,13 @@ Au lieu de proposer une réelle intégration de l'application dans la Touch Bar,
 
 Heureusement pour nous, des applications peuvent utiliser la Touch Bar de manière globale et prendre son contrôle que l'application intègre le support ou pas.
 
-[BetterTouchTool](https://www.boastr.net/){:target="_blank"} en fait partie et le fait à la perfection. Je ne vais pas faire une présentation complète de BTT, il faudra un article à part entière, mais pour faire rapide c'est une application qui tourne en tâche de fond et qui vous permet de personnaliser des raccourcis claviers, souris, Touch Bar etc. pour exécuter tout un tas d'actions systèmes.
+[BetterTouchTool](https://www.boastr.net/) en fait partie et le fait à la perfection. Je ne vais pas faire une présentation complète de BTT, il faudra un article à part entière, mais pour faire rapide c'est une application qui tourne en tâche de fond et qui vous permet de personnaliser des raccourcis claviers, souris, Touch Bar etc. pour exécuter tout un tas d'actions systèmes.
 
 L'idée va être, pour chaque application que vous voulez, définir des boutons avec un texte, une icône et une action. Les actions peuvent être des raccourcis clavier ou des actions système et plusieurs peuvent être enchaînées automatiquement. Je vous laisse imaginer le potentiel de cette solution pendant que je regrette encore qu'Apple ne l'ai pas intégré par défaut dans macOS.
 
 Je vais aller droit au but et montrer quelques exemples que j'utilise désormais quotidiennement pour mieux comprendre.
 
-Dans mon éditeur de texte [VSCode](https://github.com/Microsoft/vscode){:target="_blank"} :
+Dans mon éditeur de texte [VSCode](https://github.com/Microsoft/vscode) :
 
 {% include image.html
             img = "2017/10/touch-bar-vscode.png"
@@ -89,7 +89,7 @@ Pour iTerm :
 
 Si vous êtes développeur, je pense que cela peut être la partie la plus intéressante. Il y a énormément de cas où l'on est amené à faire un enchainement de raccourci clavier dans certains outils (je pense à vim pour sauvegarde et quitter un fichier), mais également à ré-écrire plusieurs fois de longues commandes.
 
-La première solution est de faire des [alias](https://en.wikipedia.org/wiki/Alias_(command)){:target="_blank"} pour nous simplifier un peu la vie, mais il y en a des tonnes, on ne sait pas toujours comment les nommer, parfois on met le même nom, etc. vous voyez très bien de quoi je veux parler. Je m'en sers tout le temps, mais ce n'est pas toujours optimal, il faut le reconnaitre. Je suis très fainéant et je n'aime pas répéter ou chercher les mêmes actions plusieurs fois, qui plus est lorsque je dois le faire des centaines de fois par jour.
+La première solution est de faire des [alias](https://en.wikipedia.org/wiki/Alias_(command)) pour nous simplifier un peu la vie, mais il y en a des tonnes, on ne sait pas toujours comment les nommer, parfois on met le même nom, etc. vous voyez très bien de quoi je veux parler. Je m'en sers tout le temps, mais ce n'est pas toujours optimal, il faut le reconnaitre. Je suis très fainéant et je n'aime pas répéter ou chercher les mêmes actions plusieurs fois, qui plus est lorsque je dois le faire des centaines de fois par jour.
 
 Avant pour sauvegarder et quitter sur vim, je devais :
 
@@ -126,7 +126,7 @@ Pour les emoji dans  iTerm:
 
 On peut également faire des groupes pour avoir un même type d'action dans un même dossier, c'est assez pratique.
 
-Et je pourrais continuer comme ça pour toutes mes applications ou presque. Il y a quelques exemples très sympa et complet sur le [site officiel](http://docs.bettertouchtool.net/docs/touch_bar.html){:target="_blank"} avec également les widgets que je n'utilise pas personnellement. On voit très bien que tout est personnalisable, c'est vraiment ce qu'il faut retenir, il n'y a plus de limite.
+Et je pourrais continuer comme ça pour toutes mes applications ou presque. Il y a quelques exemples très sympa et complet sur le [site officiel](http://docs.bettertouchtool.net/docs/touch_bar.html) avec également les widgets que je n'utilise pas personnellement. On voit très bien que tout est personnalisable, c'est vraiment ce qu'il faut retenir, il n'y a plus de limite.
 
 La configuration est un jeu d'enfant. Il suffit de créer un bouton, ajouter un texte et une icône (optionnel) ainsi qu'une action et c'est tout. Pas de redémarrage nécessaire ou de rechargement, tout est en live.
 
@@ -134,11 +134,11 @@ La configuration est un jeu d'enfant. Il suffit de créer un bouton, ajouter un 
             img = "2017/10/better-touch-tool.jpg"
             title = "Interface de better touch tool" %}
 
-L'ensemble de ma configuration est disponible sur [mon Github](https://github.com/guillaumebriday/dotfiles){:target="_blank"}.
+L'ensemble de ma configuration est disponible sur [mon Github](https://github.com/guillaumebriday/dotfiles).
 
 ### Le Thunderbolt 3 et le Type C
 
-J'en avais déjà parlé dans [Un Mac pour le prix de deux]({{ site.url }}/un-mac-pour-le-prix-de-deux){:target="_blank"} et je peux le confirmer maintenant, le Thunderbolt 3 est absolument fantastique.
+J'en avais déjà parlé dans [Un Mac pour le prix de deux]({{ site.url }}/un-mac-pour-le-prix-de-deux) et je peux le confirmer maintenant, le Thunderbolt 3 est absolument fantastique.
 
 Je ne reviendrais pas dessus, mais à l'usage, rien que pouvoir mettre son câble dans les deux sens et de n'importe quel côté du Mac c'est top. Je pensais que le MagSafe allait me manquer mais finalement pas du tout même après m'avoir pris les pieds dans le câble, il s'enlève sans faire de dégât.
 
@@ -183,9 +183,9 @@ Je pense pour le coup qu'il n'y a pas de mieux ou moins bien, c'est juste une qu
 Tout n'est pas parfait dans ce Mac. Enfin, presque.
 
 ### Le chargeur
-Apple a fait un changement étrange avec ce nouveau chargeur. Précédemment pour [89€](https://www.apple.com/fr/shop/product/MD506Z/A/adaptateur-secteur-magsafe-2-85w-apple-pour-macbook-pro-avec-écran-retina?fnode=8b){:target="_blank"} on avait une rallonge, le convertisseur et l'adaptateur secteur mural. Un indicateur de charge était directement sur le connecteur et un système pour enrouler la rallonge était intégrée au convertisseur. Un point négatif de l'ancien chargeur, c'est que le câble entre le convertisseur et le Mac n'était pas séparable. Cela reste un problème mineur comparé au nouveau chargeur.
+Apple a fait un changement étrange avec ce nouveau chargeur. Précédemment pour [89€](https://www.apple.com/fr/shop/product/MD506Z/A/adaptateur-secteur-magsafe-2-85w-apple-pour-macbook-pro-avec-écran-retina?fnode=8b) on avait une rallonge, le convertisseur et l'adaptateur secteur mural. Un indicateur de charge était directement sur le connecteur et un système pour enrouler la rallonge était intégrée au convertisseur. Un point négatif de l'ancien chargeur, c'est que le câble entre le convertisseur et le Mac n'était pas séparable. Cela reste un problème mineur comparé au nouveau chargeur.
 
-Sur les modèles de 2016, tout est séparé en trois morceaux. On a d'un côté [la rallonge](https://www.apple.com/fr/shop/product/MK122Z/A/câble-extension-adaptateur-secteur?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804){:target="_blank"}, puis [l'adaptateur secteur](https://www.apple.com/fr/shop/product/MNF82Z/A/adaptateur-secteur-usb-c-87w-apple?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804){:target="_blank"} et enfin un câble [Thunderbolt 3](https://www.apple.com/fr/shop/product/MLL82ZM/A/câble-de-charge-usb-c-2-m?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804){:target="_blank"} (USB-C). Certains me diront que "cela est pratique", "que l'on peut changer qu'une partie si elle venait à être abimée", mais pour une fois mon problème : c'est le prix. Le convertisseur seul coûte maintenant 89€, la rallonge en coûte 25€(!) et le câble USB-C 25€ également. Il faudra qu'on m'explique ce qui justifie la différence de 50€.
+Sur les modèles de 2016, tout est séparé en trois morceaux. On a d'un côté [la rallonge](https://www.apple.com/fr/shop/product/MK122Z/A/câble-extension-adaptateur-secteur?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804), puis [l'adaptateur secteur](https://www.apple.com/fr/shop/product/MNF82Z/A/adaptateur-secteur-usb-c-87w-apple?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804) et enfin un câble [Thunderbolt 3](https://www.apple.com/fr/shop/product/MLL82ZM/A/câble-de-charge-usb-c-2-m?fnode=8b&fs=f%3D15_mbp_thdblt3_late2016%26fh%3D4595%252B4804) (USB-C). Certains me diront que "cela est pratique", "que l'on peut changer qu'une partie si elle venait à être abimée", mais pour une fois mon problème : c'est le prix. Le convertisseur seul coûte maintenant 89€, la rallonge en coûte 25€(!) et le câble USB-C 25€ également. Il faudra qu'on m'explique ce qui justifie la différence de 50€.
 
 ### Et c'est tout ?
 

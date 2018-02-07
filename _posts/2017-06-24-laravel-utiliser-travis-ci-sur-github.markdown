@@ -3,31 +3,31 @@ layout: post
 title: "Laravel : Utiliser Travis CI sur GitHub"
 categories: DevOps
 ---
-Je développe depuis quelques temps un [projet en Laravel](https://github.com/guillaumebriday/laravel-blog){:target="_blank"} pour présenter dans un cas très concret, des aspects et des astuces qui me semblent intéressantes sur le framework.
+Je développe depuis quelques temps un [projet en Laravel](https://github.com/guillaumebriday/laravel-blog) pour présenter dans un cas très concret, des aspects et des astuces qui me semblent intéressantes sur le framework.
 
 {% include toc.html %}
 
 Une fois les tests unitaires et fonctionnels mis en place, je voulais que d'autres contributeurs puissent rejoindre le projet et que je puisse voir le résultat des tests et de PHP-CS-Fixer directement sans avoir à le lancer sur mon environnement de développement à chaque fois.
 
-C'est maintenant qu'intervient [Travis-CI](https://travis-ci.org){:target="_blank"}.
+C'est maintenant qu'intervient [Travis-CI](https://travis-ci.org).
 
 La plateforme Travis-CI travaille en étroite collaboration avec GitHub et elle est donc très bien intégré au site. Pour l'installer, il suffit de se rendre dans les ```settings``` de votre projet sur GitHub et d'ajouter Travis-CI dans la partie ```Integrations & services```.
 
 Sur Travis-CI vous devez autoriser l'application à accéder à votre GitHub. Désormais, lorsqu'une branche sera pushée ou mergée sur le dépôt, des scripts seront lancés sur Travis-CI et vous pourrez voir l'avancement via un terminal directement dans votre navigateur.
 
-Bon, je pourrais parler plus longtemps de toutes les fonctionnalités disponibles mais ce n'est pas le sujet de l'article je vous redirige vers la [documentation](https://docs.travis-ci.com){:target="_blank"} si vous souhaitez plus d'informations à ce sujet.
+Bon, je pourrais parler plus longtemps de toutes les fonctionnalités disponibles mais ce n'est pas le sujet de l'article je vous redirige vers la [documentation](https://docs.travis-ci.com) si vous souhaitez plus d'informations à ce sujet.
 
 ## Mais alors, comment intégrer Travis-CI sur mon dépôt ?
 
 Toute la configuration de Travis tient dans un seul fichier nommé ```.travis.yml```, si le fichier est nommé autrement cela ne fonctionnera pas. Il doit également être situé à la racine de votre projet. Une fois que vous aurez poussé une branche contenant ce fichier, Travis le remarquera et lancera les scripts mais dans le cas contraire il ne fera rien et tout sera comme avant pour vous.
 
-Il y a vraiment des centaines de possibilités et de configuration possibles mais je tenais juste à présenter un cas classique contenant des tests avec [PHPUnit](https://phpunit.de/){:target="_blank"} et de la vérification syntaxique avec [PHP-CS-Fixer](http://cs.sensiolabs.org/){:target="_blank"} dans un projet complet en PHP.
+Il y a vraiment des centaines de possibilités et de configuration possibles mais je tenais juste à présenter un cas classique contenant des tests avec [PHPUnit](https://phpunit.de/) et de la vérification syntaxique avec [PHP-CS-Fixer](http://cs.sensiolabs.org/) dans un projet complet en PHP.
 
 ## Comment écrire les instructions ?
 
 Comme on peut le voir, le fichier est en yml. La syntaxe est donc très basique et tout se joue sur l'indentation.
 
-Je vais prendre en exemple le fichier que j'utilise pour [mon projet](https://github.com/guillaumebriday/laravel-blog/blob/master/.travis.yml){:target="_blank"} et le détailler pour comprendre mais bien-sûr il faudra adapter selon vos besoins.
+Je vais prendre en exemple le fichier que j'utilise pour [mon projet](https://github.com/guillaumebriday/laravel-blog/blob/master/.travis.yml) et le détailler pour comprendre mais bien-sûr il faudra adapter selon vos besoins.
 
 ### Langage
 
@@ -37,7 +37,7 @@ Tout d'abord, il va falloir préciser le langage utilisé principalement dans vo
 language: php
 ```
 
-Par défaut, Travis propose plusieurs environnements de tests avec des outils pré-installés dessus. L'environnement PHP installe [tous ces paquets](https://docs.travis-ci.com/user/ci-environment/#PHP-VM-images){:target="_blank"} donc vous n'aurez pas à le faire dans les scripts suivant.
+Par défaut, Travis propose plusieurs environnements de tests avec des outils pré-installés dessus. L'environnement PHP installe [tous ces paquets](https://docs.travis-ci.com/user/ci-environment/#PHP-VM-images) donc vous n'aurez pas à le faire dans les scripts suivant.
 
 ### Les versions
 
@@ -54,7 +54,7 @@ php:
 ### Les services
 
 Plusieurs services sont fournis par défaut pour chaque images. Il suffit de les activer et Travis fera l'installation et la configuration pour nous.
-[La liste](https://docs.travis-ci.com/user/ci-environment/#Data-Stores){:target="_blank"} est plutôt complète mais dans notre cas, nous n'avons besoin que de ```MySql```. Bien-sûr ces services sont pré-installés mais rien ne vous empêche d'installer manuellement ceux de votre choix.
+[La liste](https://docs.travis-ci.com/user/ci-environment/#Data-Stores) est plutôt complète mais dans notre cas, nous n'avons besoin que de ```MySql```. Bien-sûr ces services sont pré-installés mais rien ne vous empêche d'installer manuellement ceux de votre choix.
 Pour les activer, rien de plus simple :
 
 ```yaml
@@ -64,7 +64,7 @@ services:
 
 ### Le cache (optionnel)
 
-Si vos builds mettent trop de temps à se terminer, c'est peut être à cause du téléchargement ou la mise en place trop longue de vos dépendances. Heureusement, Travis prévoit un [système de cache](https://docs.travis-ci.com/user/caching/){:target="_blank"} pour sauvegarder l'état de dossier entre les différents builds. Dans notre cas, on voudra garder d'un build à l'autre les dépendances de composer :
+Si vos builds mettent trop de temps à se terminer, c'est peut être à cause du téléchargement ou la mise en place trop longue de vos dépendances. Heureusement, Travis prévoit un [système de cache](https://docs.travis-ci.com/user/caching/) pour sauvegarder l'état de dossier entre les différents builds. Dans notre cas, on voudra garder d'un build à l'autre les dépendances de composer :
 
 ```yaml
 cache:
@@ -85,14 +85,14 @@ before_script:
   - composer install --no-progress --no-interaction --prefer-dist --no-suggest
 ```
 
-Pour la base de données, même si MySQL est maintenant installé il faut créer une base. La documentation complète se trouve dans la section [database](https://docs.travis-ci.com/user/database-setup/#MySQL){:target="_blank"} sur le site officiel. On notera qu'on pourra se connecter à cette base avec les identifiants ```root``` ou ```travis``` et sans mot de passe.
+Pour la base de données, même si MySQL est maintenant installé il faut créer une base. La documentation complète se trouve dans la section [database](https://docs.travis-ci.com/user/database-setup/#MySQL) sur le site officiel. On notera qu'on pourra se connecter à cette base avec les identifiants ```root``` ou ```travis``` et sans mot de passe.
 
 On peut rajouter cette ligne dans notre ```before_script``` :
 ```yaml
 - mysql -e 'CREATE DATABASE homestead;'
 ```
 
-Pour ces raisons, j'ai créé dans mon projet un [fichier de configuration d'environnement](https://github.com/guillaumebriday/laravel-blog/blob/master/.env.travis){:target="_blank"} Laravel spécialement pour Travis. Cela permet d'indiquer au framework quelle base de données utiliser avec les bons identifiants. Puisque PHPUnit utilise le fichier de configuration ```.env.testing``` par défaut, cela me permet de remplacer le fichier original, utilisé sur mon environnement de développement, par celui spécifique à Travis lors des builds.
+Pour ces raisons, j'ai créé dans mon projet un [fichier de configuration d'environnement](https://github.com/guillaumebriday/laravel-blog/blob/master/.env.travis) Laravel spécialement pour Travis. Cela permet d'indiquer au framework quelle base de données utiliser avec les bons identifiants. Puisque PHPUnit utilise le fichier de configuration ```.env.testing``` par défaut, cela me permet de remplacer le fichier original, utilisé sur mon environnement de développement, par celui spécifique à Travis lors des builds.
 
 ```yaml
 - cp .env.travis .env.testing

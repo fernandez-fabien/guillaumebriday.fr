@@ -5,7 +5,7 @@
   content: |
     Bon article pour comprendre Docker !
 
-    Attention tout de même à l'utilisation des links. Ils ne doivent normalement plus être utilisés d'après la doc de Docker : [https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/){:target="_blank"}
+    Attention tout de même à l'utilisation des links. Ils ne doivent normalement plus être utilisés d'après la doc de Docker : [https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/](https://docs.docker.com/engine/userguide/networking/default_network/dockerlinks/)
 
     Pour la communication entre conteneur il vaut mieux utiliser un réseau utilisateur.
 

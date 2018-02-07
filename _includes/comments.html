@@ -10,7 +10,7 @@
       <div class="border-t pt-3 my-3" id="comment-{{ comment.id }}" itemscope itemtype="https://schema.org/Comment">
           <div class="flex flex-wrap justify-between">
             {% if comment.author-url %}
-              <a href="{{ comment.author-url }}" target="_blank">
+              <a href="{{ comment.author-url }}">
             {% endif %}
             <span itemprop="creator" itemscope itemtype="http://schema.org/Person">
               <span class="font-bold text-sm" itemprop="name">{{ comment.author }}</span>

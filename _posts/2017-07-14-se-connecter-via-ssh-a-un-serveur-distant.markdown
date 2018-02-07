@@ -4,7 +4,7 @@ title: "Se connecter via SSH à un serveur distant"
 categories: DevOps
 ---
 
-Nous allons voir comment se connecter à un NAS Synology via SSH sans avoir à taper notre mot de passe à chaque fois et de façon sécurisée. Cela fonctionne pour tous les serveurs ou machines fonctionnant sous un système Linux qui ont un [serveur SSH de lancé](https://help.ubuntu.com/lts/serverguide/openssh-server.html){:target="_blank"}.
+Nous allons voir comment se connecter à un NAS Synology via SSH sans avoir à taper notre mot de passe à chaque fois et de façon sécurisée. Cela fonctionne pour tous les serveurs ou machines fonctionnant sous un système Linux qui ont un [serveur SSH de lancé](https://help.ubuntu.com/lts/serverguide/openssh-server.html).
 
 Sur les Synology, pour activer le SSH vous pouvez vous rendre sur DSM, puis sélectionner le ```Control Panel > Terminal & SNMP```. Cliquez sur ```Enable SSH service``` et choisissez un port (```22``` étant celui par défaut).
 
@@ -108,9 +108,9 @@ Host eve
   IdentityFile ~/.ssh/id_rsa,mon_nas
 ```
 
-La première partie du fichier est une configuration pour macOS Sierra ou supérieur. Cela permet d'ajouter, quel que soit l'```Host``` défini, la clé au [ssh-agent](https://fr.wikipedia.org/wiki/Ssh-agent){:target="_blank"}. Ainsi, on aura à rentrer qu'une seule fois notre passphrase pour une session de temps donnée. Sans cela, il faudrait le faire à chaque fois que l'on veut se connecter en SSH. Si une session se termine, il faudra entrer notre passphrase de nouveau.
+La première partie du fichier est une configuration pour macOS Sierra ou supérieur. Cela permet d'ajouter, quel que soit l'```Host``` défini, la clé au [ssh-agent](https://fr.wikipedia.org/wiki/Ssh-agent). Ainsi, on aura à rentrer qu'une seule fois notre passphrase pour une session de temps donnée. Sans cela, il faudrait le faire à chaque fois que l'on veut se connecter en SSH. Si une session se termine, il faudra entrer notre passphrase de nouveau.
 
-Pour éviter ce comportement, on peut utiliser le [trousseau d'accès](https://en.wikipedia.org/wiki/Keychain_(software)){:target="_blank"} de macOS pour qu'il l'enregistre automatiquement pour une durée indéterminée en utilisant ```UseKeychain yes```.
+Pour éviter ce comportement, on peut utiliser le [trousseau d'accès](https://en.wikipedia.org/wiki/Keychain_(software)) de macOS pour qu'il l'enregistre automatiquement pour une durée indéterminée en utilisant ```UseKeychain yes```.
 
 Vous trouverez plus de détails dans le manuel de ```ssh_config``` :
 

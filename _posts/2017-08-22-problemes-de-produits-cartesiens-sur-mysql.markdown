@@ -58,7 +58,7 @@ On peut alors ajouter une ligne de facture pour se rendre compte que le ```paid_
 
 N'ayant pas de relation direct entre les tables ```payments``` et ```invoice_lines``` mais ayant un ```GROUP BY``` sur les invoices, ce que va faire MySQL est assez simple.
 
-Pour calculer la ```SUM```, il va pour chaque ```ROW``` trouvés, faire le [produit cartésien](https://fr.wikipedia.org/wiki/Produit_cartésien){:target="_blank"} avec toutes les tables dans les ```JOIN``` reliées aux ```invoices```.
+Pour calculer la ```SUM```, il va pour chaque ```ROW``` trouvés, faire le [produit cartésien](https://fr.wikipedia.org/wiki/Produit_cartésien) avec toutes les tables dans les ```JOIN``` reliées aux ```invoices```.
 
 En clair, pour chaque ```payments```, il va multiplier la valeur de ```amount``` par le nombre de lignes dans les ```invoice_lines``` et inversement, pour chaque ```invoice_lines``` il va multiplier la valeur de ```amount``` par le nombre de ```payments```.
 
@@ -68,7 +68,7 @@ Je ne sais pas pourquoi c'est le fonctionnement par défaut de MySQL, mais si vo
 
 Il existe plusieurs solutions actuellement. Tout d'abord, il est possible de faire des sous-requêtes dans la ```JOIN``` pour isoler les tables, mais je ne trouve pas cela très lisible.
 
-Dans la [documentation officielle](https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html#function_sum){:target="_blank"}, on nous explique que l'on peut rajouter le mot clé ```DISTINCT``` dans la méthode ```SUM``` pour forcer l'utilisation de valeurs différentes, donc utiliser les lignes qu'une seule fois.
+Dans la [documentation officielle](https://dev.mysql.com/doc/refman/5.7/en/group-by-functions.html#function_sum), on nous explique que l'on peut rajouter le mot clé ```DISTINCT``` dans la méthode ```SUM``` pour forcer l'utilisation de valeurs différentes, donc utiliser les lignes qu'une seule fois.
 
 Je rajoute donc des ```DISTINCT``` dans tous mes ```SUM``` :
 

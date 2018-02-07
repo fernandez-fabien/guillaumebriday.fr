@@ -3,9 +3,9 @@ layout: post
 title: "Ajouter de la RAM sur un NAS Synology 1515+"
 categories: High-Tech
 ---
-Comme j'ai pu en parler sur le blog, j'ai un [NAS Synology 1515+](http://amzn.to/2xtjCSv){:target="_blank"}, c'est une petite merveille et je m'en sers absolument tout le temps. Depuis un moment maintenant, ce NAS a remplacé en grande partie les outils que j'utilisais au quotidien. Pour ne citer qu'eux, il y a [Dropbox](https://db.tt/9QPHDw69){:target="_blank"}, les outils Google (Calendrier, contacts, Office, etc.), [Transmission](https://transmissionbt.com){:target="_blank"} et j'en passe.
+Comme j'ai pu en parler sur le blog, j'ai un [NAS Synology 1515+](http://amzn.to/2xtjCSv), c'est une petite merveille et je m'en sers absolument tout le temps. Depuis un moment maintenant, ce NAS a remplacé en grande partie les outils que j'utilisais au quotidien. Pour ne citer qu'eux, il y a [Dropbox](https://db.tt/9QPHDw69), les outils Google (Calendrier, contacts, Office, etc.), [Transmission](https://transmissionbt.com) et j'en passe.
 
-Tous ces logiciels sont vraiment géniaux et me permettent, sans compromis, d'avoir un Cloud complet et auto-hébergé. De plus, avec l'arrivée de [Docker](https://www.docker.com){:target="_blank"} sur DSM, je peux installer absolument tout ce que je souhaite ! Je peux même faire mes propres application Web comme si j'avais un VPS chez un hébergeur externe. Le revers de la médaille est que la consommation moyenne de la RAM augmente toujours plus !
+Tous ces logiciels sont vraiment géniaux et me permettent, sans compromis, d'avoir un Cloud complet et auto-hébergé. De plus, avec l'arrivée de [Docker](https://www.docker.com) sur DSM, je peux installer absolument tout ce que je souhaite ! Je peux même faire mes propres application Web comme si j'avais un VPS chez un hébergeur externe. Le revers de la médaille est que la consommation moyenne de la RAM augmente toujours plus !
 
 ## Quelles quantités et modèles sont disponibles ?
 
@@ -13,9 +13,9 @@ Les modèles de cette gamme Synology sont livrés par défaut avec 2Go de RAM, c
 
 En 2015, nous avions 2Go par défaut avec un seul slot de RAM vide disponible et un maximum total de 8Go. En 2017, deux versions sont proposées pour le modèle 1517+, une version avec 2Go et avec 8Go, avec également un slot de RAM pour augmenter la capacité jusqu'à 16Go cette fois-ci.
 
-Donc pour le 1515+, il faut obligatoirement une seule nouvelle barrette de 4Go, les spécifications techniques sont disponibles en détails sur le [site officiel](https://www.synology.com/en-us/products/DDR3){:target="_blank"}. Pour nous ce sera donc de la ```DDR3-1600 unbuffered SO-DIMM 204pin 1.35V/1.5```.
+Donc pour le 1515+, il faut obligatoirement une seule nouvelle barrette de 4Go, les spécifications techniques sont disponibles en détails sur le [site officiel](https://www.synology.com/en-us/products/DDR3). Pour nous ce sera donc de la ```DDR3-1600 unbuffered SO-DIMM 204pin 1.35V/1.5```.
 
-Je me suis tourné chez [Crucial](http://amzn.to/2wL0yli){:target="_blank"} pour trouver ma barrette, car j'ai toujours eu une bonne expérience avec leurs produits.
+Je me suis tourné chez [Crucial](http://amzn.to/2wL0yli) pour trouver ma barrette, car j'ai toujours eu une bonne expérience avec leurs produits.
 
 {% include image.html
             img = "2017/08/synology-crucial-ram.jpg"

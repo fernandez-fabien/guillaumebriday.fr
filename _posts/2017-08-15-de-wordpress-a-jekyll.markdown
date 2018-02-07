@@ -3,13 +3,13 @@ layout: post
 title: "De WordPress à Jekyll"
 categories: Billets
 ---
-Jusqu'en mai dernier, mon site personnel et mon blog utilisaient deux technologies différentes, à savoir [WordPress](https://wordpress.org){:target="_blank"} d'un côté et [Pug](https://github.com/pugjs/pug){:target="_blank"} puis [Middleman](https://github.com/middleman/middleman){:target="_blank"} de l'autre. C'était loin d'être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.
+Jusqu'en mai dernier, mon site personnel et mon blog utilisaient deux technologies différentes, à savoir [WordPress](https://wordpress.org) d'un côté et [Pug](https://github.com/pugjs/pug) puis [Middleman](https://github.com/middleman/middleman) de l'autre. C'était loin d'être idéal à maintenir, à faire évoluer ou à exploiter au quotidien.
 
-J'ai donc décidé de tout mettre en commun avec une seule technologie qui correspondait à mes besoins et mes envies, c'est ainsi que je me suis tourné vers le fameux [Jekyll](http://jekyllrb.com){:target="_blank"}.
+J'ai donc décidé de tout mettre en commun avec une seule technologie qui correspondait à mes besoins et mes envies, c'est ainsi que je me suis tourné vers le fameux [Jekyll](http://jekyllrb.com).
 
 ## Qu'est-ce que Jekyll ?
 
-Jekyll est un outil développé en Ruby qui permet de générer des pages statiques et un blog. Concrètement, en respectant une structure définie par Jekyll, en écrivant vos pages en [Markdown](https://daringfireball.net/projects/markdown/){:target="_blank"} ou [Liquid](https://github.com/Shopify/liquid/wiki){:target="_blank"} et avec une configuration personnalisée. Il vous suffira alors de lancer une seule ligne de commande pour générer l'ensemble de votre site Web avec la bonne architecture de dossier et de fichier HTML prêt à être déployé sur n'importe quel hébergeur.
+Jekyll est un outil développé en Ruby qui permet de générer des pages statiques et un blog. Concrètement, en respectant une structure définie par Jekyll, en écrivant vos pages en [Markdown](https://daringfireball.net/projects/markdown/) ou [Liquid](https://github.com/Shopify/liquid/wiki) et avec une configuration personnalisée. Il vous suffira alors de lancer une seule ligne de commande pour générer l'ensemble de votre site Web avec la bonne architecture de dossier et de fichier HTML prêt à être déployé sur n'importe quel hébergeur.
 
 On comprend alors vite pourquoi cette technologie est très intéressante à l'usage.
 
@@ -41,7 +41,7 @@ Vous pouvez compiler l'ensemble autant de fois que vous le souhaitez, il suffira
 
 Si vous utilisez un système de gestion de version comme Git, sachez que beaucoup de services s'occupent de l'hébergement pour vous, il suffira de ```push``` votre code sur le repository distant et le site sera compilé pour vous. C'est top !
 
-Le plus connu étant [Github Pages](https://pages.github.com){:target="_blank"} si besoin. Malheureusement à l'heure actuelle, vous ne pouvez pas avoir votre propre nom de domaine sécurisé via Github, il faudra passer par un hébergement tiers.
+Le plus connu étant [Github Pages](https://pages.github.com) si besoin. Malheureusement à l'heure actuelle, vous ne pouvez pas avoir votre propre nom de domaine sécurisé via Github, il faudra passer par un hébergement tiers.
 
 ### Simple pour écrire des articles ou des pages
 
@@ -57,15 +57,15 @@ Je m'emporte peut être un peu. Il y a quelques points noirs et pas des moindres
 
 Mon but étant de faire de ce blog aussi un espace d'échange, c'est problématique. Heureusement, il y a une pléthore de solutions disponibles.
 
-La plus utilisée (même sur des CMS comme WordPress) est sans doute [Disqus](https://disqus.com){:target="_blank"}. Vous avez déjà dû le voir sur de nombreux sites. Mettre en place disqus est un jeu d'enfant et l'expérience utilisateur est super agréable, mais il me pose plusieurs problèmes.
+La plus utilisée (même sur des CMS comme WordPress) est sans doute [Disqus](https://disqus.com). Vous avez déjà dû le voir sur de nombreux sites. Mettre en place disqus est un jeu d'enfant et l'expérience utilisateur est super agréable, mais il me pose plusieurs problèmes.
 
 Tout d'abord, il brise la simplicité de sauvegarde et de déploiement que je cherchais avec Jekyll. Les commentaires sont hébergés sur un service externe dont je n'ai aucun contrôle. Disqus est aussi affreusement lent, il a besoin de beaucoup de dépendances JavaScript et au final, je me retrouve avec les mêmes temps d'affichage que j'avais avec WordPress.
 
 Enfin, la vie privée des utilisateurs n'est pas respecté par Disqus qui traque les sites sur lequel vous allez, pas cool.
 
-Il existe des alternatives Open Source et beaucoup plus légère comme [Isso](https://posativ.org/isso/){:target="_blank"}, mais qui ne correspondent toujours pas à mes besoins.
+Il existe des alternatives Open Source et beaucoup plus légère comme [Isso](https://posativ.org/isso/), mais qui ne correspondent toujours pas à mes besoins.
 
-Pour ne pas me compliquer la vie, j'ai profité de la présence de PHP sur mon hébergeur pour faire un script simpliste qui m'envoie un email via un formulaire en bas de chaque article, je me suis inspiré d'un plugin existant : [jekyll-static-comments](https://github.com/mpalmer/jekyll-static-comments){:target="_blank"}. Une fois que je reçois les informations par email, je les ajoute dans un fichier ```_data```, ces fichiers qui sont gérés [nativement par Jekyll](https://jekyllrb.com/docs/datafiles/){:target="_blank"}.
+Pour ne pas me compliquer la vie, j'ai profité de la présence de PHP sur mon hébergeur pour faire un script simpliste qui m'envoie un email via un formulaire en bas de chaque article, je me suis inspiré d'un plugin existant : [jekyll-static-comments](https://github.com/mpalmer/jekyll-static-comments). Une fois que je reçois les informations par email, je les ajoute dans un fichier ```_data```, ces fichiers qui sont gérés [nativement par Jekyll](https://jekyllrb.com/docs/datafiles/).
 
 Lors de la génération du site, Jekyll récupère la liste des commentaires qui sont alors ajoutés de façon statique dans chaque article. Cela me permet de simplifier grandement la sauvegarde et le déploiement. En revanche, c'est une action que je dois faire à la main pour chaque commentaire, sauf si une personne me fait une Pull Request directement.
 
@@ -73,11 +73,11 @@ Cette solution ne limite pas le spam et c'est une expérience utilisateur moins 
 
 ## La gestion des assets et des templates
 
-Jekyll [intègre nativement](https://jekyllrb.com/docs/assets/){:target="_blank"} un support pour [Sass](http://sass-lang.com/guide){:target="_blank"} et de [CoffeeScript](http://coffeescript.org){:target="_blank"} (avec une gem) ce qui est vraiment pratique.
+Jekyll [intègre nativement](https://jekyllrb.com/docs/assets/) un support pour [Sass](http://sass-lang.com/guide) et de [CoffeeScript](http://coffeescript.org) (avec une gem) ce qui est vraiment pratique.
 
-Sass prend en charge les ```import``` et la minification ce qui n'est pas encore le cas en JavaScript. Ainsi, si vous voulez minifier votre JS ou utiliser des ```require```, il faudra obligatoirement passer par des outils comme [Webpack](https://webpack.js.org){:target="_blank"} ou [Gulp](https://gulpjs.com){:target="_blank"}.
+Sass prend en charge les ```import``` et la minification ce qui n'est pas encore le cas en JavaScript. Ainsi, si vous voulez minifier votre JS ou utiliser des ```require```, il faudra obligatoirement passer par des outils comme [Webpack](https://webpack.js.org) ou [Gulp](https://gulpjs.com).
 
-Pour la partie thème, Jekyll intègre le moteur de templates [Liquid](https://shopify.github.io/liquid/){:target="_blank"}. Je vous laisse le soin de lire la documentation pour voir toutes les possibilités, mais ce qu'il faut retenir c'est que vous pouvez utiliser des layouts pour chacune de vos pages et créer des morceaux d'HTML réutilisable pour chacune de vos pages. Ainsi, il est tout à fait possible de trouver dans un fichier ```post.html``` le code suivant :
+Pour la partie thème, Jekyll intègre le moteur de templates [Liquid](https://shopify.github.io/liquid/). Je vous laisse le soin de lire la documentation pour voir toutes les possibilités, mais ce qu'il faut retenir c'est que vous pouvez utiliser des layouts pour chacune de vos pages et créer des morceaux d'HTML réutilisable pour chacune de vos pages. Ainsi, il est tout à fait possible de trouver dans un fichier ```post.html``` le code suivant :
 
 {% raw %}
 ```html
@@ -93,9 +93,9 @@ Pour la partie thème, Jekyll intègre le moteur de templates [Liquid](https://s
 ```
 {% endraw %}
 
-Le contenu de votre article remplacera le {% raw %}```{{ content }}```{% endraw %} et ainsi ce layout sera réutilisable, mais utilisé uniquement lors de la compilation et pas à chaque chargement de page. Les possibilités sont infinies et si vous souhaitez voir un exemple concret, le code source de ce site est [disponible sur Github](https://github.com/guillaumebriday/guillaumebriday.fr){:target="_blank"}.
+Le contenu de votre article remplacera le {% raw %}```{{ content }}```{% endraw %} et ainsi ce layout sera réutilisable, mais utilisé uniquement lors de la compilation et pas à chaque chargement de page. Les possibilités sont infinies et si vous souhaitez voir un exemple concret, le code source de ce site est [disponible sur Github](https://github.com/guillaumebriday/guillaumebriday.fr).
 
-Une dernière fonctionnalité intéressante, pour les développeurs principalement, c'est la prise en charge d'[Highlight](https://jekyllrb.com/docs/templates/#code-snippet-highlighting){:target="_blank"}. Highlight permet de gérer la colorisation syntaxique des zones de code lors de la compilation ce qui évitera une certaine latence lorsque cela est fait en JavaScript au chargement des pages.
+Une dernière fonctionnalité intéressante, pour les développeurs principalement, c'est la prise en charge d'[Highlight](https://jekyllrb.com/docs/templates/#code-snippet-highlighting). Highlight permet de gérer la colorisation syntaxique des zones de code lors de la compilation ce qui évitera une certaine latence lorsque cela est fait en JavaScript au chargement des pages.
 
 J'espère avoir été clair sur les raisons qui m'ont poussé à effectuer ce changement, si vous avez des questions n'hésitez pas à les poser en commentaires.
 

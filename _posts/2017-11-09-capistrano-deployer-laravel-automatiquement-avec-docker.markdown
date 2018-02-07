@@ -4,26 +4,26 @@ title: "Capistrano : Déployer Laravel automatiquement avec Docker"
 categories: DevOps
 thumbnail: "2017/11/capistrano.jpg"
 ---
-Cet article est la seconde partie de notre mise en production d'un projet étape par étape. Cette fois-ci, nous allons automatiser le déploiement avec [Capistrano](http://capistranorb.com/){:target="_blank"} et [Docker-compose](https://github.com/docker/compose){:target="_blank"}.
+Cet article est la seconde partie de notre mise en production d'un projet étape par étape. Cette fois-ci, nous allons automatiser le déploiement avec [Capistrano](http://capistranorb.com/) et [Docker-compose](https://github.com/docker/compose).
 
-Vous pouvez retrouver la mise en place du serveur dans l'article précédent : [Ansible : Automatiser l'installation d'un serveur]({{ site.baseurl }}{% post_url 2017-11-09-ansible-automatiser-l-installation-d-un-serveur %}){:target="_blank"}.
+Vous pouvez retrouver la mise en place du serveur dans l'article précédent : [Ansible : Automatiser l'installation d'un serveur]({{ site.baseurl }}{% post_url 2017-11-09-ansible-automatiser-l-installation-d-un-serveur %}).
 
 {% include toc.html %}
 
 ## Introduction
 
-Capistrano est un outil écrit en [Ruby](https://github.com/ruby/ruby){:target="_blank"} qui permet d'automatiser des scripts de déploiement. Pour faire simple, il va nous permettre de mettre simplement et automatiquement notre application en production.
+Capistrano est un outil écrit en [Ruby](https://github.com/ruby/ruby) qui permet d'automatiser des scripts de déploiement. Pour faire simple, il va nous permettre de mettre simplement et automatiquement notre application en production.
 
 On peut s'en servir pour déployer des applications en Ruby bien-sûr, mais pas seulement. Comme pour Ansible, Capistrano va exécuter des commandes sur notre serveur, on peut donc l'utiliser pour n'importe quel langage. Lors d'un déploiement, Capistrano va créer une release de notre projet à chaque fois. Cela nous permettra de revenir très simplement à un état antérieur de notre application en une seule ligne de commande et d'avoir le moins de downtime possible entre les déploiements voire aucun.
 
-Je rappelle que notre exemple, nous allons déployer mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog){:target="_blank"}, qui est développé en PHP avec Laravel, dans [des containers avec Docker]({{ site.baseurl }}{% post_url 2017-07-10-comprendre-et-mettre-en-place-docker %}){:target="_blank"}.
+Je rappelle que notre exemple, nous allons déployer mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog), qui est développé en PHP avec Laravel, dans [des containers avec Docker]({{ site.baseurl }}{% post_url 2017-07-10-comprendre-et-mettre-en-place-docker %}).
 
 ## Comment installer Capistrano
 
 Pour installer Capistrano, vous allez avoir besoin de deux outils :
 
-+ [Ruby](https://www.ruby-lang.org/en/){:target="_blank"}
-+ [Bundler](http://bundler.io){:target="_blank"}
++ [Ruby](https://www.ruby-lang.org/en/)
++ [Bundler](http://bundler.io)
 
 Une fois installé sur votre host, il va falloir créer un ```Gemfile```, à la racine de votre projet, pour télécharger les dépendances Ruby de votre projet :
 
@@ -90,13 +90,13 @@ Ces variables peuvent être redéfinies dans les fichiers spécifiques aux envir
 
 Il est probable que votre dépôt ne soit pas accessible publiquement. Capistrano a donc besoin d'authentification à deux niveaux, le premier est entre votre machine et le serveur puis un second entre le serveur et le dépôt distant.
 
-J'ai déjà fait un article sur la [connexion via SSH]({{ site.baseurl }}{% post_url 2017-07-14-se-connecter-via-ssh-a-un-serveur-distant %}){:target="_blank"} si vous ne l'avez jamais fait. Comme pour Ansible, il faut que votre machine ait un accès SSH à votre serveur pour exécuter les commandes.
+J'ai déjà fait un article sur la [connexion via SSH]({{ site.baseurl }}{% post_url 2017-07-14-se-connecter-via-ssh-a-un-serveur-distant %}) si vous ne l'avez jamais fait. Comme pour Ansible, il faut que votre machine ait un accès SSH à votre serveur pour exécuter les commandes.
 
 Pour la connexion entre le serveur et le dépôt Git, il y a deux solutions.
 
 La plus complexe est de générer une clé SSH directement sur votre serveur et la lier à votre dépôt Git comme vous l'avez sûrement déjà fait entre votre machine et GitHub (par exemple). Je ne trouve pas ça très pratique, car il faut maintenir du coup deux clés SSH pour pas grand chose.
 
-La plus simple est d'utiliser le SSH Agent Forwarding comme l'explique [la documentation à ce sujet](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/){:target="_blank"}. Cela va permettre au serveur d'utiliser la clé SSH de votre machine pour établir la connexion, vous n'aurez donc plus rien à faire.
+La plus simple est d'utiliser le SSH Agent Forwarding comme l'explique [la documentation à ce sujet](http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/). Cela va permettre au serveur d'utiliser la clé SSH de votre machine pour établir la connexion, vous n'aurez donc plus rien à faire.
 
 Ensuite, on doit définir l'emplacement de notre application sur le serveur avec la variable ```deploy_to```. Par défaut, c'est dans le dossier ```/var/www/my_app_name```, mais vous pouvez la mettre où bon vous semble tant que vous avez les droits d'accès dessus.
 
@@ -154,9 +154,9 @@ La première ligne permet de définir le serveur sur lequel Capistrano doit se c
 
 ## Nos tâches
 
-Lorsque Capistrano lance la procédure de déploiement, il nous donne accès à un certain nombre de ```hooks``` qui sont tous définis dans le [Flow](http://capistranorb.com/documentation/getting-started/flow/){:target="_blank"}. Ils nous renseignent, par exemple, lorsqu'une release est sur le point d'être créé. Pour chacun de ces ```hooks```, on va pouvoir greffer une action avant ou après son déclenchement.
+Lorsque Capistrano lance la procédure de déploiement, il nous donne accès à un certain nombre de ```hooks``` qui sont tous définis dans le [Flow](http://capistranorb.com/documentation/getting-started/flow/). Ils nous renseignent, par exemple, lorsqu'une release est sur le point d'être créé. Pour chacun de ces ```hooks```, on va pouvoir greffer une action avant ou après son déclenchement.
 
-Dans mon cas, je vais créer une [tâche](http://capistranorb.com/documentation/getting-started/tasks/){:target="_blank"} pour chacune des commandes que j'aurais lancé si j'avais eu à le faire manuellement.
+Dans mon cas, je vais créer une [tâche](http://capistranorb.com/documentation/getting-started/tasks/) pour chacune des commandes que j'aurais lancé si j'avais eu à le faire manuellement.
 
 On peut regrouper les tâches dans des ```namespaces``` pour mieux les organiser. J'ai donc créé les ```namespaces``` :
 
@@ -208,7 +208,7 @@ Comme on ne connait pas à l'avance le chemin du dossier de la release que nous 
 
 Et enfin, on peut lister les commandes de la tâche. Dans notre cas, on veut ```execute``` une commande. Il y a plusieurs actions qui sont disponibles, mais nous n'en avons pas besoin d'autres ici.
 
-A la suite du ```execute```, on peut définir via des [Symbol](https://ruby-doc.org/core-2.4.2/Symbol.html){:target="_blank"} ou des chaînes de caractères standards pour les instructions qui comportent plus d'un mot. On peut séparer nos paramètres en autant de symboles que l'on souhaite ou tout mettre en une chaîne de caractères, c'est au choix.
+A la suite du ```execute```, on peut définir via des [Symbol](https://ruby-doc.org/core-2.4.2/Symbol.html) ou des chaînes de caractères standards pour les instructions qui comportent plus d'un mot. On peut séparer nos paramètres en autant de symboles que l'on souhaite ou tout mettre en une chaîne de caractères, c'est au choix.
 
 
 Maintenant que tout est prêt, on peut lancer notre commande pour déployer en production :
@@ -226,7 +226,7 @@ Si tout fonctionne comme prévu, vous devriez avoir quelque chose comme ça :
 
 Si vous ne connaissiez pas Capistrano j'espère que maintenant vous avez compris le fonctionnement. Je ne suis pas administrateur système donc il y a sûrement plusieurs façons de faire plus optimisées ce que je présente dans l'article, mais je tenais seulement partager ce que j'ai réussi à faire.
 
-Je ne parlerai pas [des rollbacks](http://capistranorb.com/documentation/getting-started/rollbacks/){:target="_blank"}, car le principe est le même, mais avec des hooks différentes. De plus, comme le dit la documentation la problématique vient plus souvent du code que du déploiement, donc corriger le problème et déployer de nouveau est souvent bien plus pertinent.
+Je ne parlerai pas [des rollbacks](http://capistranorb.com/documentation/getting-started/rollbacks/), car le principe est le même, mais avec des hooks différentes. De plus, comme le dit la documentation la problématique vient plus souvent du code que du déploiement, donc corriger le problème et déployer de nouveau est souvent bien plus pertinent.
 
 Dans mon cas, il était également plus simple d'utiliser les ```volumes``` de Docker plutôt que les ```linked_dirs``` ou ```linked_files```, c'est pour cela que vous n'en trouverez pas dans ce projet.
 

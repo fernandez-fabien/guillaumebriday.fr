@@ -4,25 +4,25 @@ layout: post
 categories: DevOps
 thumbnail: "2017/11/ansible.jpg"
 ---
-Cet article est la première partie de la mise en production d'un projet étape par étape avec plusieurs technologies. Dans cet article, je vais déployer mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog){:target="_blank"}. Il est développé avec PHP et [Laravel](https://laravel.com){:target="_blank"}, mais le principe restera relativement similaire avec d'autres langages ou frameworks, du moins pour cette partie.
+Cet article est la première partie de la mise en production d'un projet étape par étape avec plusieurs technologies. Dans cet article, je vais déployer mon projet [laravel-blog](https://github.com/guillaumebriday/laravel-blog). Il est développé avec PHP et [Laravel](https://laravel.com), mais le principe restera relativement similaire avec d'autres langages ou frameworks, du moins pour cette partie.
 
 {% include toc.html %}
 
 ## Présentation
-Tout l'environnement de développement du projet est fait avec [Docker](https://docker.com){:target="_blank"} et nous allons nous servir de la même technologie pour la mise en staging puis production. En effet, cela nous permettra de simplifier grandement la mise en place des technologies côté serveur puisque tout passera par des containers.
+Tout l'environnement de développement du projet est fait avec [Docker](https://docker.com) et nous allons nous servir de la même technologie pour la mise en staging puis production. En effet, cela nous permettra de simplifier grandement la mise en place des technologies côté serveur puisque tout passera par des containers.
 
-Si ces notions sont encore floues pour vous, j'ai fait [un article à propos de Docker]({{ site.baseurl }}{% post_url 2017-07-10-comprendre-et-mettre-en-place-docker %}){:target="_blank"} pour mieux comprendre de quoi on parle.
+Si ces notions sont encore floues pour vous, j'ai fait [un article à propos de Docker]({{ site.baseurl }}{% post_url 2017-07-10-comprendre-et-mettre-en-place-docker %}) pour mieux comprendre de quoi on parle.
 
 Pour ce qui est de la mise en place côté serveur, nous procéderons en deux étapes :
 
-1. Mettre en place les outils sur le serveur avec [Ansible](https://www.ansible.com/){:target="_blank"}.
-2. Déploiement automatisé du projet avec [Capistrano](http://capistranorb.com/){:target="_blank"} et [Docker-compose](https://github.com/docker/compose){:target="_blank"}.
+1. Mettre en place les outils sur le serveur avec [Ansible](https://www.ansible.com/).
+2. Déploiement automatisé du projet avec [Capistrano](http://capistranorb.com/) et [Docker-compose](https://github.com/docker/compose).
 
 Ces outils ont chacun un rôle bien défini, mais ils vont nous permettre d'automatiser et de simplifier les étapes de mise en production et d'installation de serveurs. On parle alors d'industrialisation.
 
 ## Introduction à Ansible
 
-Ansible est un outil disponible en ligne de commande. Son principal objectif est d'automatiser la configuration de système et le déploiement de logiciels. Vous trouverez plus d'informations sur [la documentation officielle](http://docs.ansible.com/ansible/latest/index.html){:target="_blank"}, mais je vais essayer de la résumer rapidement.
+Ansible est un outil disponible en ligne de commande. Son principal objectif est d'automatiser la configuration de système et le déploiement de logiciels. Vous trouverez plus d'informations sur [la documentation officielle](http://docs.ansible.com/ansible/latest/index.html), mais je vais essayer de la résumer rapidement.
 
 Ansible s'installe sur votre machine et non sur le serveur. Une fois Ansible installé sur votre machine et configuré correctement, il se connectera en SSH au serveur et il exécutera les commandes que vous lui avez spécifié au format ```.yml``` dans un fichier appelé le ```Playbook```.
 
@@ -65,9 +65,9 @@ Il existe un groupe par défaut : ```all```. Ce groupe permet de définir tous l
 
 C'est le composent principal d'Ansible. C'est dans ce fichier qu'on va définir la configuration et les commandes à exécuter sur notre serveur. On pourra y rajouter des informations et des conditions particulières. Ansible permet de rendre abstrait un certain nombre de paramètres et permet ainsi d'avoir une grande lisibilité dans le fichier.
 
-La documentation est disponible à [cette adresse](http://docs.ansible.com/ansible/latest/playbooks.html){:target="_blank"}.
+La documentation est disponible à [cette adresse](http://docs.ansible.com/ansible/latest/playbooks.html).
 
-Pour créer un playbook, il suffit de créer un fichier ```playbook.yml```. Pour l'exemple, je vais essayer d'installer [Vim](http://www.vim.org/){:target="_blank"}.
+Pour créer un playbook, il suffit de créer un fichier ```playbook.yml```. Pour l'exemple, je vais essayer d'installer [Vim](http://www.vim.org/).
 
 ```yaml
 ---
@@ -186,7 +186,7 @@ La structure de votre projet devrait donc ressembler à cela  :
 
 Le nom des dossiers a une importance. Si vous avez un fichier ```main.yml``` dans le dossier ```handlers``` d'un ```role``` vous n'aurez pas à repréciser que c'est un ```handler```.
 
-J'ai rajouté un role ```tools``` pour avoir des outils pratiques lors de la maintenance de notre serveur. Je pense à [Vim](http://www.vim.org/){:target="_blank"}, [Git](https://git-scm.com/){:target="_blank"}, htop, etc.
+J'ai rajouté un role ```tools``` pour avoir des outils pratiques lors de la maintenance de notre serveur. Je pense à [Vim](http://www.vim.org/), [Git](https://git-scm.com/), htop, etc.
 
 Nous verrons en détail le role ```app``` dans les templates.
 
@@ -194,9 +194,9 @@ Nous verrons en détail le role ```app``` dans les templates.
 
 On va passer à la partie qui nous concerne le plus, l'installation de Docker qui nous servira lors du déploiement avec Capistrano.
 
-Je me suis servi de la [documentation officielle](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository){:target="_blank"} pour l'installation.
+Je me suis servi de la [documentation officielle](https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#install-using-the-repository) pour l'installation.
 
-Pour les outils tout d'abord, c'est très simple. J'ai fait une liste des outils qui me seront utiles pour gérer le serveur et d'autres qui sont indispensables à l'installation de Docker. Plutôt que de faire une tâche par service, je vais utiliser [les boucles d'Ansible](http://docs.ansible.com/ansible/latest/playbooks_loops.html){:target="_blank"}.
+Pour les outils tout d'abord, c'est très simple. J'ai fait une liste des outils qui me seront utiles pour gérer le serveur et d'autres qui sont indispensables à l'installation de Docker. Plutôt que de faire une tâche par service, je vais utiliser [les boucles d'Ansible](http://docs.ansible.com/ansible/latest/playbooks_loops.html).
 
 {% raw %}
 ```yaml
@@ -297,7 +297,7 @@ Généralement ces informations sont stockées dans des fichiers de configuratio
 
 Pour ne pas divulguer ces informations mais malgré tout versionner notre code, on va pouvoir utiliser les templates.
 
-Par défaut, Ansible utilise [jinja2](http://docs.ansible.com/ansible/latest/playbooks_templating.html){:target="_blank"} pour générer ces templates.
+Par défaut, Ansible utilise [jinja2](http://docs.ansible.com/ansible/latest/playbooks_templating.html) pour générer ces templates.
 
 On va ainsi pouvoir créer des templates avec l'extension ```.j2``` et Ansible les convertira au moment du provisionnement. Dans notre cas, on va définir le fichier ```.env``` et ```docker-compose.yml``` et définir les valeurs à cacher dans notre fichier ```host``` qui n'est pas accessible publiquement.
 
@@ -404,7 +404,7 @@ Tout semble correct, on peut maintenant passer à la partie déploiement automat
 
 ## Comment tester ? (optionnel)
 
-Si vous n'avez pas de serveur à disposition, vous pouvez vous entrainer dans une machine virtuelle. Pour cela, on va utiliser [Vagrant](https://www.vagrantup.com){:target="_blank"}. Ce n'est pas un article sur Vagrant donc je ne vais pas expliquer son fonctionnement ici, mais voici la configuration à utiliser.
+Si vous n'avez pas de serveur à disposition, vous pouvez vous entrainer dans une machine virtuelle. Pour cela, on va utiliser [Vagrant](https://www.vagrantup.com). Ce n'est pas un article sur Vagrant donc je ne vais pas expliquer son fonctionnement ici, mais voici la configuration à utiliser.
 
 Dans un nouveau dossier, il faut créer un fichier ```Vagrantfile``` :
 
@@ -429,7 +429,7 @@ Et lancez la commande :
 $ vagrant up
 ```
 
-J'ai volontairement omis la partie sur le [Provisionning d'Ansible](https://www.vagrantup.com/docs/provisioning/ansible.html){:target="_blank"} car l'idée est de simulé un serveur distant avec un accès SSH. Et c'est une fois le serveur disponible qu'on lancera les commandes avec Ansible pour le provisionner.
+J'ai volontairement omis la partie sur le [Provisionning d'Ansible](https://www.vagrantup.com/docs/provisioning/ansible.html) car l'idée est de simulé un serveur distant avec un accès SSH. Et c'est une fois le serveur disponible qu'on lancera les commandes avec Ansible pour le provisionner.
 
 Vagrant me sert uniquement à lancer la machine virtuelle de simulation. Pour plus de "réalisme" vous pouvez changer le paramètre ```Host 192.168.50.4``` par ```Host example.com``` dans votre configuration SSH et ajoutez la ligne suivante à la fin de votre fichier ```/etc/hosts``` :
 
@@ -443,19 +443,19 @@ Bien entendu, vous pouvez changer ```example.com``` par la vraie adresse que pos
 
 Attention tout de même, Docker doit être exécuté avec ```root``` donc vous devez ajouter ```sudo``` devant chaque commande ou bien lancer ```sudo su``` en début de session.
 
-Pour que tout fonctionne, vous devez configurer les accès SSH à votre machine virtuelle comme c'est indiqué sur mon [précédent article à ce sujet]({{ site.baseurl }}{% post_url 2017-10-19-utiliser-la-commande-ssh-pour-entrer-dans-une-machine-vagrant %}){:target="_blank"}.
+Pour que tout fonctionne, vous devez configurer les accès SSH à votre machine virtuelle comme c'est indiqué sur mon [précédent article à ce sujet]({{ site.baseurl }}{% post_url 2017-10-19-utiliser-la-commande-ssh-pour-entrer-dans-une-machine-vagrant %}).
 
 ## Conclusion
 
-Bien entendu, on pourrait aller beaucoup plus loin avec par exemple l'ajout d'outils supplémentaires, l'utilisation des [templates](http://docs.ansible.com/ansible/latest/template_module.html){:target="_blank"} ou le déploiement multi-serveur.
+Bien entendu, on pourrait aller beaucoup plus loin avec par exemple l'ajout d'outils supplémentaires, l'utilisation des [templates](http://docs.ansible.com/ansible/latest/template_module.html) ou le déploiement multi-serveur.
 
 Je ferai bien entendu évoluer le projet au fur et à mesure, mais avec ça, on peut déjà commencer notre mise en production.
 
-L'ensemble du projet est disponible sur mon dépôt GitHub : [my-ansible-playbook](https://github.com/guillaumebriday/my-ansible-playbook){:target="_blank"}.
+L'ensemble du projet est disponible sur mon dépôt GitHub : [my-ansible-playbook](https://github.com/guillaumebriday/my-ansible-playbook).
 
 Attention, le contenu a pu évoluer entre la rédaction de l'article et le moment où vous le lisez.
 
-Dans le prochain article, nous verrons donc comment [automatiser le déploiement avec Capistrano]({{ site.baseurl }}{% post_url 2017-11-09-capistrano-deployer-laravel-automatiquement-avec-docker %}){:target="_blank"} sur notre serveur qui est maintenant prêt.
+Dans le prochain article, nous verrons donc comment [automatiser le déploiement avec Capistrano]({{ site.baseurl }}{% post_url 2017-11-09-capistrano-deployer-laravel-automatiquement-avec-docker %}) sur notre serveur qui est maintenant prêt.
 
 Si vous avez des suggestions ou des questions, n'hésitez pas dans les commentaires !
 
