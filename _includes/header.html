@@ -19,7 +19,7 @@
             {% endfor %}
           </div>
 
-          <a class="header-link sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ site.baseurl }}{% link search.html %}">
+          <a class="header-link sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ site.baseurl }}{% link search.html %}" aria-label="Rechercher">
             <i class="fa fa-search" aria-hidden="true"></i>
           </a>
         </div>
