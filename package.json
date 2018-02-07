@@ -14,11 +14,20 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "axios": "^0.17.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
     "font-awesome": "^4.7.0",
     "progressbar.js": "^1.0.1",
     "scrolltrigger-classes": "^0.3.6",
     "simple-jekyll-search": "^1.5.0",
-    "turbolinks": "^5.0.3"
+    "turbolinks": "^5.0.3",
+    "vee-validate": "^2.0.3",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "vue-turbolinks": "^2.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

@@ -4,38 +4,9 @@
   </p>
 
 {% else if %}
-  <form method="POST" action="{{ site.baseurl }}/comments/submit.php">
-    <input type="hidden" name="post_id" value="{{ page.id }}" />
-    <input type="hidden" name="return_url" value="{{ site.baseurl }}{{ page.url }}" />
 
-    <p class="text-sm">
-      Votre adresse de messagerie ne sera pas publiée.<br />
-      Les champs obligatoires sont indiqués avec <span class="text-red">*</span>.
-    </p>
+  <div id="app">
+    <comment-form post_id="{{ page.id }}" endpoint="{{ site.baseurl }}/comments/submit.php"></comment-form>
+  </div>
 
-    <p>
-      <label for="name">Nom <span class="text-red">*</span></label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="name" name="name" type="text" required />
-    </p>
-
-    <p>
-      <label for="email">Adresse de messagerie <span class="text-red">*</span></label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="email" name="email" type="email" required />
-    </p>
-
-    <p>
-      <label for="url">Site web</label>
-      <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="url" name="url" type="text" />
-    </p>
-
-    <p>
-      <label for="comment">Commentaire <span class="text-red">*</span></label>
-      <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" id="comment" name="comment" rows="8" required></textarea>
-      <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
-    </p>
-
-    <p>
-      <input class="bg-white border border-red hover:bg-red hover:text-white cursor-pointer text-red shadow w-full py-2 px-4 rounded" type="submit" value="Laisser un commentaire">
-    </p>
-  </form>
 {% endif %}

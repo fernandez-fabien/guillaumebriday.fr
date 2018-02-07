@@ -1,6 +1,6 @@
 # guillaumebriday.fr
 
-Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Jekyll](http://jekyllrb.com/), [Webpack](https://webpack.js.org/) and [Tailwind CSS](https://tailwindcss.com/).
+Source code of [guillaumebriday.fr](https://guillaumebriday.fr) built with [Jekyll](http://jekyllrb.com/), [Webpack](https://webpack.js.org/), [Tailwind CSS](https://tailwindcss.com/) and [Vue.js](https://vuejs.org/).
 
 ## Installation
 
