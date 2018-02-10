@@ -18,28 +18,28 @@
 
       <div class="my-4">
         <label for="name">Nom <span class="text-red">*</span></label>
-        <input v-model="form.name" :disabled="isPosted" v-validate="'required'" data-vv-as="Le nom" :class="{'border-red' : errors.has('name') }" class="text-input" name="name" id="name" type="text" required />
+        <input v-model="form.name" :disabled="isPosted" v-validate="'required'" data-vv-as="Le nom" :class="{'border-red' : errors.has('name') }" class="text-input no-outline" name="name" id="name" type="text" required />
 
         <div v-if="errors.has('name')" class="text-red text-xs italic mt-2">{{ errors.first('name') }}</div>
       </div>
 
       <div class="my-4">
         <label for="email">Email <span class="text-red">*</span></label>
-        <input v-model="form.email" v-validate="'required|email'" data-vv-as="L'email" :class="{'border-red' : errors.has('email') }" class="text-input" name="email" id="email" type="email" required />
+        <input v-model="form.email" v-validate="'required|email'" data-vv-as="L'email" :class="{'border-red' : errors.has('email') }" class="text-input no-outline" name="email" id="email" type="email" required />
 
         <div v-if="errors.has('email')" class="text-red text-xs italic mt-2">{{ errors.first('email') }}</div>
       </div>
 
       <div class="my-4">
         <label for="website">Site web</label>
-        <input v-model="form.website" v-validate="'url'" data-vv-as="Le site web" :class="{'border-red' : errors.has('website') }" class="text-input" name="website" id="website" type="text" />
+        <input v-model="form.website" v-validate="'url'" data-vv-as="Le site web" :class="{'border-red' : errors.has('website') }" class="text-input no-outline" name="website" id="website" type="text" />
 
         <div v-if="errors.has('website')" class="text-red text-xs italic mt-2">{{ errors.first('website') }}</div>
       </div>
 
       <div class="my-4">
         <label for="content">Commentaire <span class="text-red">*</span></label>
-        <textarea v-model="form.content" v-validate="'required'" data-vv-as="Le commentaire" :class="{'border-red' : errors.has('content') }" class="text-input" name="content" id="content" rows="8" required></textarea>
+        <textarea v-model="form.content" v-validate="'required'" data-vv-as="Le commentaire" :class="{'border-red' : errors.has('content') }" class="text-input no-outline" name="content" id="content" rows="8" required></textarea>
 
         <div v-if="errors.has('content')" class="text-red text-xs italic mt-2">{{ errors.first('content') }}</div>
 
