@@ -145,7 +145,7 @@ Pour reprendre notre exemple avec la liste des extensions de VSCode, j'utilise u
 Pour exécuter le fichier, il faut d'abord se donner les droits :
 
 ```bash
-$ chmod -x package.sh
+$ chmod +x package.sh
 ```
 
 Puis l'appeler :
