@@ -3,19 +3,17 @@ layout: resume
 title: "Mon profil"
 permalink: mon-profil
 knowledges:
-  - Sass
   - Git
   - TravisCI / GitLab CI
-  - Gulp
-  - Bootstrap
+  - Ansible / Capistrano
+  - Docker
+  - Webpack
   - NPM
-  - macOS
-  - Linux
-  - REST
+  - macOS / Linux
+  - REST / API
   - ElasticSearch
-  - API
-  - Jekyll
-  - WordPress
+  - Bootstrap / Tailwind CSS
+  - WordPress / Jekyll
 ---
 
 {% include resume/about.html %}

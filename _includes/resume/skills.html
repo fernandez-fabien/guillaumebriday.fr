@@ -23,17 +23,17 @@
                    percent = "95" %}
 
         {% include resume/components/skill.html
-                   title = "CSS"
+                   title = "CSS / Sass"
                    percent = "90" %}
 
         {% include resume/components/skill.html
-                   title = "JavaScript / CoffeeScript / Jquery"
+                   title = "JavaScript / CoffeeScript / Vue.js"
                    percent = "80" %}
       </div>
 
       <div class="w-full md:w-1/2 sm:px-8">
         <h3 class="text-red mb-4">Connaissances</h3>
-        <ul class="list-reset">
+        <ul class="list-reset leading-loose">
           {% for knowledge in page.knowledges %}
             <li><i class="pr-3 fa fa-check"></i>{{ knowledge }}</li>
           {% endfor %}
