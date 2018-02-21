@@ -60,5 +60,6 @@ exclude:
   - .eslint.js
   - postcss.config.js
   - tailwind.js
+  - LICENSE
 include:
   - .htaccess
