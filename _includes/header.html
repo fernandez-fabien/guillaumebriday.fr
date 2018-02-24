@@ -3,7 +3,9 @@
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 
-    <a class="block text-5xl my-8 font-semibold text-black" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <div class="my-8">
+      <a class="text-5xl font-semibold text-black" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
 
     {% if page_paths %}
       <nav class="my-8 text-grey border-b-2">
