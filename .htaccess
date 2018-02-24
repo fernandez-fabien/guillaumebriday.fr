@@ -34,6 +34,18 @@ RewriteRule (.*) https://%{SERVER_NAME}/$1 [QSA,L,R=301]
 </IfModule>
 
 # ----------------------------------------------------------------------
+# Extra Security Headers
+# ----------------------------------------------------------------------
+
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+  Header always append X-Frame-Options SAMEORIGIN
+  Header set X-Content-Type-Options nosniff
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header set Referrer-Policy "strict-origin"
+</IfModule>
+
+# ----------------------------------------------------------------------
 # Page redirects
 # ----------------------------------------------------------------------
 
