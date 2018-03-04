@@ -290,3 +290,31 @@
   date: 2018-01-19 18:39:45
   content: |
     Article clair même s’il vaut mieux s’y connaitre un minimum en réseau pour le comprendre! Je réalise à peu près la même chose avec un routeur Netgear connecté derrière la box, mais suis intéressé par ce routeur Synology... intéressant qu’un DDNS soit proposé, c’est dingue qu’un FAI comme Orange ne le propose toujours pas... ça permettrait de pallier aux IP qui ne sont toujours pas fixes (gratuitement) pour les particuliers.
+
+- id: 24
+  author: Daniel
+  date: 2018-02-28 13:45:23
+  content: |
+    Bonjour Guillaume,
+
+    Merci pour ce tuto. Je suis dans la même configuration que toi:
+    - Livebox pro v4 fibre: quand je suis connecté dessus en ethernet ou wifi n, un speed test donne 200Mb/s en DOWN et 200Mb/s en UP) -> OK
+    - Une fois mon routeur rt1900ac (config basique) branché sur la livebox, les débits sont imcompréhensibles:
+    speed test avec mon pc connecté en wifi n au RT: 20Mb/s en DOWN et en UP
+    speed test avec mon pc connecté en ethernet (Cat6) au RT: 20Mb/s (environ) en DOWN et 200Mb/s en UP :O
+
+    Si tu as une idée, je suis preneur
+
+- id: 25
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2018-03-04 20:27:00
+  content: |
+    Bonjour Daniel,
+
+    As-tu regardé du côté des CTF ? J'avais des problèmes similaires et ça venait de cette config.
+
+    J'en parle dans l'edit 2 si besoin.
+
+
+

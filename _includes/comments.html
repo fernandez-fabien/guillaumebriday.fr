@@ -1,4 +1,4 @@
-{% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+{% capture comment_id %}comments{{ page.id | replace: '/', '-' | replace: '+', '' }}{% endcapture %}
 
 {% if site.comments_form or site.data[comment_id] %}
   <h2 id="comments"><i class="fa fa-comments" aria-hidden="true"></i> {{ site.data[comment_id] | size | pluralize: "commentaire" }}</h2>
