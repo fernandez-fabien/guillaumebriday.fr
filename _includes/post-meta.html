@@ -1,4 +1,4 @@
-{% capture comment_id %}comments{{ page.id | replace: '/', '-' }}{% endcapture %}
+{% capture comment_id %}comments{{ page.id | replace: '/', '-' | replace: '+', '' }}{% endcapture %}
 
 <ul class="list-reset mb-4 text-sm">
   <li class="block sm:inline-block mr-3 text-grey-darker">
