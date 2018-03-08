@@ -111,12 +111,6 @@ if (inProduction) {
         NODE_ENV: '"production"'
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      parallel: true,
-      compress: {
-        warnings: false
-      }
-    }),
     new PurgecssPlugin({
       // Specify the locations of any files you want to scan for class names.
       paths: glob.sync([
