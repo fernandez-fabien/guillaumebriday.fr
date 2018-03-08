@@ -10,7 +10,7 @@
       <span class="block sm:inline">Votre commentaire a été envoyé avec succès.</span>
     </div>
 
-    <form v-else @submit.prevent="submit" @keydown="form.errors.clear($event.target.name)">
+    <form v-else @submit.prevent="submit">
       <p class="text-sm">
         Votre adresse de messagerie ne sera pas publiée.<br />
         Les champs obligatoires sont indiqués avec <span class="text-red">*</span>.
