@@ -316,5 +316,16 @@
 
     J'en parle dans l'edit 2 si besoin.
 
+- id: 26
+  author: Emmanuel
+  date: 2018-03-08 08:48:39
+  content: |
+    Bonjour à vous, et comme les autres, merci pour ce tuto et ces informations :)
+    Pour ma part, j'ai configuré un syno 2600 derrière une livebox.
+    Le système est opérationnel et tous mes éléments présent dans le réseau 192.168.2/24 du routeur syno ont bien accès au web et tout transite correctement.
+    Malheureusement, lorsque je tente d’accéder depuis l'extérieur à des éléments interne (derrière le syno), je suis tout de même dans l'obligation d'ouvrir les ports depuis la livebox vers le routeur malgré que celui-ci soit mis en DMZ sur cette dernière.
+    Je me dis que peut-être vous aviez rencontré cet anomalie ?
 
+    J'avais déjà lu que la livebox ne savait pas gérer correctement la DMZ, il semble que ce soit le cas pour moi, ou alors, il y a un paramétrage de son côté que j'ai oublié :/
 
+    Par avance merci de votre retour :)
