@@ -3,7 +3,7 @@
 var path = require('path')
 var glob = require('glob-all')
 var webpack = require('webpack')
-var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var MiniCssExtractPlugin = require('mini-css-extract-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -32,21 +32,16 @@ module.exports = {
     rules: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader',
-        options: {
-          extractCSS: true
-        }
+        loader: 'vue-loader'
       },
       {
         test: /\.s[ac]ss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {loader: 'css-loader', options: {importLoaders: 2}},
-            'postcss-loader',
-            'sass-loader'
-          ],
-          fallback: 'style-loader'
-        })
+        use: [
+          MiniCssExtractPlugin.loader,
+          {loader: 'css-loader', options: {importLoaders: 2}},
+          'postcss-loader',
+          'sass-loader'
+        ]
       },
       {
         test: /\.(js|vue)$/,
@@ -85,7 +80,7 @@ module.exports = {
   },
   devtool: '#eval-source-map',
   plugins: [
-    new ExtractTextPlugin({
+    new MiniCssExtractPlugin({
       filename: 'css/[name].[hash].css'
     }),
     new CopyWebpackPlugin([
