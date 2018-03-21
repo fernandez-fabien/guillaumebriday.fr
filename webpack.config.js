@@ -17,6 +17,7 @@ class TailwindExtractor {
 }
 
 module.exports = {
+  mode: 'development',
   entry: {
     app: [
       './assets/javascripts/app.js',
@@ -101,11 +102,6 @@ module.exports = {
 if (inProduction) {
   module.exports.devtool = false
   module.exports.plugins = (module.exports.plugins || []).concat([
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: '"production"'
-      }
-    }),
     new PurgecssPlugin({
       // Specify the locations of any files you want to scan for class names.
       paths: glob.sync([
