@@ -56,6 +56,7 @@ exclude:
   - node_modules
   - assets/javascripts
   - assets/styles
+  - assets/head.html
   - webpack.config.js
   - .eslint.js
   - postcss.config.js
