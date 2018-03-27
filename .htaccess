@@ -57,12 +57,48 @@ RewriteRule ^(.*)$ https://guillaumebriday.fr/$1 [L,R=301]
 Redirect 301 /amazon https://www.amazon.fr/?tag=guillaumebrid-21
 Redirect 301 /lab/pixel https://guillaumebriday.github.io/dpi.js/
 Redirect 301 /coinbase https://www.coinbase.com/join/59abd8d4e7be8202c8825dc1
-Redirect 301 /blog/ https://guillaumebriday.fr/
+Redirect 301 /blog https://guillaumebriday.fr/
 
+Redirect 301 /tutoriel/2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques.html https://guillaumebriday.fr/comment-jutilise-git-mes-astuces-et-bonnes-pratiques
 Redirect 301 /2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques/ https://guillaumebriday.fr/comment-jutilise-git-mes-astuces-et-bonnes-pratiques
+
 Redirect 301 /2016/11/18/un-mac-pour-le-prix-de-deux/ https://guillaumebriday.fr/un-mac-pour-le-prix-de-deux
+
+Redirect 301 /about/public/CV.pdf https://guillaumebriday.fr/assets/CV-Guillaume-Briday.pdf
+Redirect 301 "/assets/CV - Guillaume Briday.pdf" https://guillaumebriday.fr/assets/CV-Guillaume-Briday.pdf
+
+Redirect 301 /2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-un-livebox-orange/ https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
 Redirect 301 /2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange/ https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
+Redirect 301 /configurer-un-routeur-synology-rt1900ac https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
+
 Redirect 301 /2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology/ https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
+Redirect 301 /installer-ruby-on-rails-5-avec-docker-et-un-nas-synology https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
+Redirect 301 /tutoriel/web/rails/2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology.html https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
+
+Redirect 301 /rails-5-authentification-avec-token https://guillaumebriday.fr/ruby-on-rails-authentification-avec-token
+
+Redirect 301 /rails-recherche-avec-elasticsearch-ansible-et-vagrant https://guillaumebriday.fr/ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant
+Redirect 301 /2016/07/28/rails-recherche-avec-elasticsearch-ansible-et-vagrant/ https://guillaumebriday.fr/ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant
+
+Redirect 301 /2016/05/15/installer-ruby-on-rails-5-0-rpi-3/ https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-raspberry-pi-3
+Redirect 301 /installer-ruby-on-rails-5-0-rpi-3 https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-raspberry-pi-3
+
+Redirect 301 /blend-web-mix-2015 https://guillaumebriday.fr/prise-de-notes-blend-web-mix-2015
+
+Redirect 301 /photos/DSC3180 https://guillaumebriday.fr/photos/brooklyn-bridge
+Redirect 301 /photos/DSC4550 https://guillaumebriday.fr/photos/tete-de-mort-en-converse
+Redirect 301 /photos/DSC7515 https://guillaumebriday.fr/photos/tour-eiffel-3
+Redirect 301 /photos/DSC5432 https://guillaumebriday.fr/photos/parc-marin-du-saguenay-saint-laurent-2
+Redirect 301 /photos/DSC5759 https://guillaumebriday.fr/photos/aeroport-de-paris-charles-de-gaulle
+Redirect 301 /photos/DSC6329 https://guillaumebriday.fr/photos/cloche-a-rome
+Redirect 301 /photos/DSC6032 https://guillaumebriday.fr/photos/automne-au-parc-de-la-tete-d-or
+Redirect 301 /photos/DSC2364 https://guillaumebriday.fr/photos/building-a-new-york
+Redirect 301 /photos/DSC4418 https://guillaumebriday.fr/photos/big-apple
+Redirect 301 /photos/DSC4136 https://guillaumebriday.fr/photos/grand-central-terminal
+Redirect 301 /photos/DSC2758 https://guillaumebriday.fr/photos/one-world-trade-center
+Redirect 301 /photos/DSC6577 https://guillaumebriday.fr/photos/galerie-a-turin
+Redirect 301 /photos/DSC2804 https://guillaumebriday.fr/photos/building-on-5th-avenue
+Redirect 301 /photos/DSC4623 https://guillaumebriday.fr/photos/fleur-au-memorial-du-11-septembre
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
