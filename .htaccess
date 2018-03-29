@@ -70,6 +70,7 @@ Redirect 301 "/assets/CV - Guillaume Briday.pdf" https://guillaumebriday.fr/asse
 Redirect 301 /2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-un-livebox-orange/ https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
 Redirect 301 /2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange/ https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
 Redirect 301 /configurer-un-routeur-synology-rt1900ac https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
+Redirect 301 /presentation/tutoriel/2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange.html https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
 
 Redirect 301 /2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology/ https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
 Redirect 301 /installer-ruby-on-rails-5-avec-docker-et-un-nas-synology https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
@@ -109,6 +110,10 @@ Redirect 301 /photos/DSC1330 https://guillaumebriday.fr/photos/maison-bleue-dans
 Redirect 301 /photos/DSC7665 https://guillaumebriday.fr/photos/cathedrale-notre-dame-de-paris
 Redirect 301 /photos/DSC6330 https://guillaumebriday.fr/photos/pizza-a-rome
 Redirect 301 /photos/DSC1131 https://guillaumebriday.fr/photos/route-quebecoise
+Redirect 301 /photos/DSC7453 https://guillaumebriday.fr/photos/tour-eiffel
+Redirect 301 /photos/DSC3465 https://guillaumebriday.fr/photos/tire-d-erable
+Redirect 301 /photos/DSC0820 https://guillaumebriday.fr/photos/mes-pieds-dans-la-neige
+Redirect 301 /photos/DSC5582 https://guillaumebriday.fr/photos/ecureuil-a-quebec
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
