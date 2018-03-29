@@ -133,8 +133,8 @@ On est d'accord que le projet semble plus intéressant maintenant, non ?
 
 Je ne fais pas plus long, si vous avez des remarques ou des contributions à apporter n'hésitez pas à le faire dans les commentaires ou sur les dépôts Github que j'ai créé pour le projet :
 
-[todolist-frontend](https://github.com/guillaumebriday/todolist-frontend)
+[todolist-frontend](https://github.com/guillaumebriday/todolist-frontend-vuejs)
 
-[todolist-backend](https://github.com/guillaumebriday/todolist-backend)
+[todolist-backend](https://github.com/guillaumebriday/todolist-backend-laravel)
 
 Merci !

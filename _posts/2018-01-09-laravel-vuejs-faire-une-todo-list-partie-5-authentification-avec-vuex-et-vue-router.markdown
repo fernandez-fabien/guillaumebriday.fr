@@ -281,7 +281,7 @@ Le composant principal ```Login``` :
       </div>
     </form>
   <p class="text-center text-grey text-xs">
-    Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend" class="text-grey">GitHub</a>.
+    Source code available on <a href="https://github.com/guillaumebriday/todolist-frontend-vuejs" class="text-grey">GitHub</a>.
   </p>
   </div>
 </div>
@@ -397,7 +397,7 @@ On peut également ajouter un script dans notre ```package.json``` :
 ```
 ## Conclusion
 
-Je peux maintenant commencer à traiter le coeur de l'application, à savoir la gestion des tâches. Vous pouvez trouver le code sur [guillaumebriday/todolist-frontend](https://github.com/guillaumebriday/todolist-frontend) directement.
+Je peux maintenant commencer à traiter le coeur de l'application, à savoir la gestion des tâches. Vous pouvez trouver le code sur [guillaumebriday/todolist-frontend-vuejs](https://github.com/guillaumebriday/todolist-frontend-vuejs) directement.
 
 Si vous avez des suggestions, des questions ou des remarques, n'hésitez pas.
 

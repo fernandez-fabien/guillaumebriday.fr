@@ -205,6 +205,6 @@ Il y a beaucoup d'autres méthodes disponibles pour s'amuser avec les ```Resourc
 
 ## Conclusion
 
-Les modifications sont déjà sur [le dépôt GitHub](https://github.com/guillaumebriday/todolist-backend).
+Les modifications sont déjà sur [le dépôt GitHub](https://github.com/guillaumebriday/todolist-backend-laravel).
 
 On va désormais pouvoir mettre en place la gestion des tâches !

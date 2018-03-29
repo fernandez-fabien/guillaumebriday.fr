@@ -282,9 +282,4 @@ notifications:
 
 La configuration est amenée à encore évoluer au cours des développements bien-sûr.
 
-Tout est disponible sur le dépôt GitHub : [guillaumebriday/todolist-frontend](https://github.com/guillaumebriday/todolist-frontend).
-
-
-
-
-
+Tout est disponible sur le dépôt GitHub : [guillaumebriday/todolist-frontend-vuejs](https://github.com/guillaumebriday/todolist-frontend-vuejs).
