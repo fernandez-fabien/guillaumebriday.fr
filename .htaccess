@@ -114,6 +114,8 @@ Redirect 301 /photos/DSC7453 https://guillaumebriday.fr/photos/tour-eiffel
 Redirect 301 /photos/DSC3465 https://guillaumebriday.fr/photos/tire-d-erable
 Redirect 301 /photos/DSC0820 https://guillaumebriday.fr/photos/mes-pieds-dans-la-neige
 Redirect 301 /photos/DSC5582 https://guillaumebriday.fr/photos/ecureuil-a-quebec
+Redirect 301 /photos/DSC3953 https://guillaumebriday.fr/photos/tour-de-la-cite-de-l-energie-a-shawinigan
+Redirect 301 /photos/DSC2357 https://guillaumebriday.fr/photos/drapeau-americain-a-new-york-2
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
