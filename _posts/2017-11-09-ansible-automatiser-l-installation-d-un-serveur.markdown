@@ -451,7 +451,7 @@ Bien entendu, on pourrait aller beaucoup plus loin avec par exemple l'ajout d'ou
 
 Je ferai bien entendu évoluer le projet au fur et à mesure, mais avec ça, on peut déjà commencer notre mise en production.
 
-L'ensemble du projet est disponible sur mon dépôt GitHub : [my-ansible-playbook](https://github.com/guillaumebriday/my-ansible-playbook).
+L'ensemble du projet est disponible sur mon dépôt GitHub : [traefik-docker-ansible](https://github.com/guillaumebriday/traefik-docker-ansible).
 
 Attention, le contenu a pu évoluer entre la rédaction de l'article et le moment où vous le lisez.
 
@@ -460,3 +460,9 @@ Dans le prochain article, nous verrons donc comment [automatiser le déploiement
 Si vous avez des suggestions ou des questions, n'hésitez pas dans les commentaires !
 
 Merci.
+
+**EDIT** du {{ '04/04/2018' | localize: ":excerpt" }} :
+
+J'ai beaucoup changé la configuration depuis la rédaction de cet article.
+
+[5380485](https://github.com/guillaumebriday/traefik-docker-ansible/tree/538048531fd019ab57fc53c903277e6929617a47) est le dernier commit encore pertinent. L'article sur la nouvelle architecture est en cours d'écriture.
