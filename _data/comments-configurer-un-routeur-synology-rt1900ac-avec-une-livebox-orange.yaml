@@ -329,3 +329,11 @@
     J'avais déjà lu que la livebox ne savait pas gérer correctement la DMZ, il semble que ce soit le cas pour moi, ou alors, il y a un paramétrage de son côté que j'ai oublié :/
 
     Par avance merci de votre retour :)
+
+- id: 27
+  author: Octavi
+  date: 2018-04-17 10:03:22
+  content: |
+    Bonjour, j'ai suivi tout le tutoriel et tout fonctionne bien, sauf que je ne peux accéder à aucun périphérique de l'extérieur. J'ai ouvert plusieurs ports comme le 5001 pour le NAS et il n'y a aucun moyen. J'utilise DynDNS et il est bien configuré car il me marque bien. Je ne sais pas pourquoi mais j'ai un double NAT, je ne comprends pas pourquoi puisque la LIvebox est en mode DMZ pointant vers la RT1900AC. J'ai Internet dans tous les appareils avec câble et avec Wifi. Que pourrait-il être? Y a-t-il une solution?
+
+    Merci beaucoup pour votre travail, c'est génial.
