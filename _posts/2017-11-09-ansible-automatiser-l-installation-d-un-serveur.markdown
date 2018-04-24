@@ -451,7 +451,7 @@ Bien entendu, on pourrait aller beaucoup plus loin avec par exemple l'ajout d'ou
 
 Je ferai bien entendu évoluer le projet au fur et à mesure, mais avec ça, on peut déjà commencer notre mise en production.
 
-L'ensemble du projet est disponible sur mon dépôt GitHub : [traefik-docker-ansible](https://github.com/guillaumebriday/traefik-docker-ansible).
+L'ensemble du projet est disponible sur mon dépôt GitHub : [traefik-docker-ansible](https://github.com/guillaumebriday/traefik-docker-ansible/tree/99c77eb90fe037955e67a0731ef4f3cf6fe3c447).
 
 Attention, le contenu a pu évoluer entre la rédaction de l'article et le moment où vous le lisez.
 
