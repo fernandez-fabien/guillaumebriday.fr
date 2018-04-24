@@ -11,13 +11,13 @@
       <nav class="my-8 text-grey border-b-2">
         <div class="-my-2px flex justify-between">
           <div>
-            <a class="header-link sm:text-base md:text-lg {% if page.layout == 'post' or page.url == '/' %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ '/' | relative_url }}">Blog</a>
+            <a class="hidden sm:inline-block header-link sm:text-base md:text-lg {% if page.layout == 'post' or page.url == '/' %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ '/' | relative_url }}">Blog</a>
 
             {% for path in page_paths %}
               {% assign my_page = site.pages | where: "path", path | first %}
               {% unless my_page.exclude %}
                 {% if my_page.title %}
-                <a class="header-link sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                <a class="header-link inline-block sm:text-base md:text-lg {% if page.url == my_page.url %}text-black border-red{% else %}text-grey-darker{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
                 {% endif %}
               {% endunless %}
             {% endfor %}
