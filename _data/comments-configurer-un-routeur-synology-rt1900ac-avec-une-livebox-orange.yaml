@@ -337,3 +337,20 @@
     Bonjour, j'ai suivi tout le tutoriel et tout fonctionne bien, sauf que je ne peux accéder à aucun périphérique de l'extérieur. J'ai ouvert plusieurs ports comme le 5001 pour le NAS et il n'y a aucun moyen. J'utilise DynDNS et il est bien configuré car il me marque bien. Je ne sais pas pourquoi mais j'ai un double NAT, je ne comprends pas pourquoi puisque la LIvebox est en mode DMZ pointant vers la RT1900AC. J'ai Internet dans tous les appareils avec câble et avec Wifi. Que pourrait-il être? Y a-t-il une solution?
 
     Merci beaucoup pour votre travail, c'est génial.
+
+- id: 28
+  author: Rank Xerox
+  date: 2018-04-18 20:02:15
+  content: |
+    Bonjour,
+
+    Merci pour ce tuto, sans lequel, je n'aurais pas réussi à configurer le routeur Syno avec ma Livebox.
+
+    Il me reste un problème qui concerne l'IP V6 (en http). En étant connecté directement en filaire sur la LB, l'accès aux adresses IPV6 est nickel, si par contre, je suis connecté coté RT1900ac, toujours en filaire, je n'ai plus d'accès. Avec un navigateur, j'ai le message "La connexion a échoué" sans la moindre attente.
+
+    Côté RT1900ac, et configuration "réseau local", l'activation est impossible. La liste déroulante "prefixe" est vide. Je connais celui de ma box, mais rien pour le saisir.  Dans la partie configuration "internet", le mode est auto, mais ne donne rien. J'ai essayé le mode "manuel" en entrant le prefixe fournir par la LB (/56) et l'adresse WAN IPV6, mais j'ai un message d'erreur (adresse déja prise).
+
+    Donc, je ne sais pas trop comment configurer l'IPV6 sur le RT1900ac.
+
+    Merci pour avance tous conseils, éclairages, ...
+    l'IP V6 est configuré en "auto", mais cela ne fonctionne pas.
