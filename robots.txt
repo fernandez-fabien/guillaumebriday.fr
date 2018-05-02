@@ -2,6 +2,6 @@
 ---
 
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: {{ "sitemap.xml" | absolute_url }}
