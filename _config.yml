@@ -79,5 +79,6 @@ exclude:
   - postcss.config.js
   - tailwind.js
   - LICENSE
+  - build/
 include:
   - .htaccess
