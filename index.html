@@ -4,7 +4,7 @@ layout: default
 
 <ul class="list-reset">
   {% for page in paginator.posts %}
-    <li class="mb-6" itemscope itemtype="http://schema.org/Article">
+    <li class="mb-6" itemscope itemtype="http://schema.org/BlogPosting">
       <h2 class="font-semibold m-0">
         <a href="{{ page.url | relative_url }}">
           <span itemprop="name">{{ page.title | escape }}</span>

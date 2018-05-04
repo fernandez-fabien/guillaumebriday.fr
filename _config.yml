@@ -16,6 +16,21 @@ paypal: guillaumebriday
 linkedin: guillaumebriday
 author: Guillaume Briday
 
+twitter:
+  username: guillaumebriday
+
+author:
+  name: Guillaume Briday
+  twitter: guillaumebriday
+
+social:
+  name: Guillaume Briday
+  links:
+    - https://twitter.com/guillaumebriday
+    - https://www.linkedin.com/in/guillaumebriday
+    - https://github.com/guillaumebriday
+    - https://instagram.com/guillaumebriday
+
 # Locale
 timezone: Europe/Paris
 locale: fr

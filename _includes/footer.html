@@ -1,8 +1,8 @@
 <div class="bg-black text-white px-3 py-6">
   <footer class="container mx-auto max-w-xl flex flex-wrap md:flex-no-wrap">
     <div class="mb-6 mr-6">
-      {% if site.author %}
-        {{ site.author | escape }}
+      {% if site.author.name %}
+        {{ site.author.name | escape }}
       {% else %}
         {{ site.title | escape }}
       {% endif %}

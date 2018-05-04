@@ -1,4 +1,4 @@
-<ul class="list-reset flex-no-shrink" itemscope itemtype="http://schema.org/Person">
+<ul class="list-reset flex-no-shrink">
   <li class="mb-3">
     <a class="text-grey hover:text-grey-lightest" href="{{ "/feed.xml" | relative_url }}">
       <i class="fa fa-rss" aria-hidden="true"></i> RSS </a>
@@ -13,21 +13,21 @@
 
   {% if site.twitter_username %}
   <li class="mb-3">
-    <a class="text-grey hover:text-grey-lightest" href="https://twitter.com/{{ site.twitter_username }}" itemprop="sameAs">
+    <a class="text-grey hover:text-grey-lightest" href="https://twitter.com/{{ site.twitter_username }}">
       <i class="fa fa-twitter" aria-hidden="true"></i> Twitter </a>
   </li>
   {% endif %}
 
   {% if site.instagram_username %}
   <li class="mb-3">
-    <a class="text-grey hover:text-grey-lightest" href="https://instagram.com/{{ site.instagram_username }}" itemprop="sameAs">
+    <a class="text-grey hover:text-grey-lightest" href="https://instagram.com/{{ site.instagram_username }}">
       <i class="fa fa-instagram" aria-hidden="true"></i> Instagram </a>
   </li>
   {% endif %}
 
   {% if site.linkedin %}
   <li class="mb-3">
-    <a class="text-grey hover:text-grey-lightest" href="https://www.linkedin.com/in/{{ site.linkedin }}" itemprop="sameAs">
+    <a class="text-grey hover:text-grey-lightest" href="https://www.linkedin.com/in/{{ site.linkedin }}">
       <i class="fa fa-linkedin" aria-hidden="true"></i> LinkedIn </a>
   </li>
   {% endif %}
