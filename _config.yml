@@ -34,6 +34,7 @@ social:
 # Locale
 timezone: Europe/Paris
 locale: fr
+lang: fr_FR
 
 # Collections
 collections:
