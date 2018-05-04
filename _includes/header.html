@@ -1,10 +1,18 @@
+{% capture site_title %}
+<a class="text-5xl font-semibold text-black" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+{% endcapture %}
+
 <div class="border-t-4 border-red">
   <header class="container mx-auto max-w-xl px-3">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 
     <div class="my-8">
-      <a class="text-5xl font-semibold text-black" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+      {% if page.url == '/' or page.layout == 'resume' %}
+        <h1>{{ site_title }}</h1>
+      {% else %}
+        {{ site_title }}
+      {% endif %}
     </div>
 
     {% if page_paths %}
