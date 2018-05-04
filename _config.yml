@@ -42,9 +42,10 @@ permalink: /:title
 plugins:
   - jekyll-feed
   - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - octopress-minify-html
   - liquid_pluralize
+  - octopress-minify-html
 
 # Folders and formatting
 exclude:
