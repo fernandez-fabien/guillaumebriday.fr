@@ -130,6 +130,7 @@ Redirect 301 /photos/DSC5650 https://guillaumebriday.fr/photos/rue-du-vieux-queb
 Redirect 301 /photos/DSC7400 https://guillaumebriday.fr/photos/insecte-sur-une-plante
 Redirect 301 /photos/DSC4154 https://guillaumebriday.fr/photos/grand-central-terminal-2
 Redirect 301 /photos/DSC1130 https://guillaumebriday.fr/photos/foret-quebecoise
+Redirect 301 /photos/DSC7506 https://guillaumebriday.fr/photos/tour-eiffel-2
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
