@@ -8,7 +8,7 @@ layout: default
 </p>
 
 <div itemscope itemtype="http://schema.org/ImageObject">
-  <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" itemprop="contentUrl" />
+  <img src="{{ page.name | prepend: '/assets/images/gallery/' | prepend: site.baseurl }}" alt="{{ page.alt }}" itemprop="contentUrl" data-action="zoom" />
 
   {% if page.exif %}
     <ul class="list-reset my-6 flex justify-between flex-col md:flex-row ">
