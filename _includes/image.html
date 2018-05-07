@@ -18,9 +18,15 @@
     {% endif %}
 {% endcapture %}
 
+{% capture zoom %}
+    {% unless include.dataZoom == false %}
+        zoom
+    {% endunless %}
+{% endcapture %}
+
 <div class="text-center mb-3" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="{{ url }}" title="{{ include.title }}" data-caption="{{ include.caption }}">
-        <img src="{{ image_url }}" alt="{{ include.alt }}" itemprop="contentUrl" />
+    <a href="{{ url | strip }}" title="{{ include.title | strip }}" data-caption="{{ include.caption | strip }}">
+        <img src="{{ image_url | strip }}" alt="{{ alt | strip }}" itemprop="contentUrl" data-action="{{ zoom | strip }}" />
     </a>
 
     {% if include.caption %}
