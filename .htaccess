@@ -84,6 +84,7 @@ Redirect 301 /installer-ruby-on-rails-5-avec-docker-et-un-nas-synology https://g
 Redirect 301 /tutoriel/web/rails/2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology.html https://guillaumebriday.fr/ruby-on-rails-installation-sur-un-nas-synology-avec-docker
 
 Redirect 301 /rails-5-authentification-avec-token https://guillaumebriday.fr/ruby-on-rails-authentification-avec-token
+Redirect 301 /2016/07/22/rails-5-authentification-avec-token/ https://guillaumebriday.fr/ruby-on-rails-authentification-avec-token
 
 Redirect 301 /rails-recherche-avec-elasticsearch-ansible-et-vagrant https://guillaumebriday.fr/ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant
 Redirect 301 /2016/07/28/rails-recherche-avec-elasticsearch-ansible-et-vagrant/ https://guillaumebriday.fr/ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant
@@ -131,6 +132,8 @@ Redirect 301 /photos/DSC7400 https://guillaumebriday.fr/photos/insecte-sur-une-p
 Redirect 301 /photos/DSC4154 https://guillaumebriday.fr/photos/grand-central-terminal-2
 Redirect 301 /photos/DSC1130 https://guillaumebriday.fr/photos/foret-quebecoise
 Redirect 301 /photos/DSC7506 https://guillaumebriday.fr/photos/tour-eiffel-2
+Redirect 301 /photos/DSC2365 https://guillaumebriday.fr/photos/building-a-new-york-2
+Redirect 301 /photos/DSC4931 https://guillaumebriday.fr/photos/building-a-new-york-3
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
