@@ -134,6 +134,8 @@ Redirect 301 /photos/DSC1130 https://guillaumebriday.fr/photos/foret-quebecoise
 Redirect 301 /photos/DSC7506 https://guillaumebriday.fr/photos/tour-eiffel-2
 Redirect 301 /photos/DSC2365 https://guillaumebriday.fr/photos/building-a-new-york-2
 Redirect 301 /photos/DSC4931 https://guillaumebriday.fr/photos/building-a-new-york-3
+Redirect 301 /photos/DSC1333 https://guillaumebriday.fr/photos/bus-d-ecoliers
+Redirect 301 /photos/DSC1031 https://guillaumebriday.fr/photos/gare-de-shawinigan
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
