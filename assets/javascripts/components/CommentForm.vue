@@ -46,7 +46,7 @@
         <em>Les commentaires sont formatés en <a href="https://daringfireball.net/projects/markdown/syntax/">markdown</a>.</em>
       </div>
 
-      <div v-if="!isPosted" :disabled="isDisabled" class="flex justify-end">
+      <div v-if="!isPosted" class="flex justify-end">
         <button :class="{ 'opacity-50 cursor-not-allowed': isDisabled }" class="bg-white border border-indigo hover:bg-indigo hover:text-white cursor-pointer text-indigo shadow py-2 px-4 rounded w-full sm:w-auto" type="submit">
           <i v-if="isLoading" class="fa fa-spinner fa-spin fa-fw"></i>
           Laisser un commentaire
@@ -79,7 +79,7 @@ export default {
 
   computed: {
     isDisabled () {
-      return this.errors.any() || this.form.name === '' || this.form.email === '' || this.form.content === ''
+      return this.isLoading || this.errors.any() || this.form.name === '' || this.form.email === '' || this.form.content === ''
     }
   },
 
