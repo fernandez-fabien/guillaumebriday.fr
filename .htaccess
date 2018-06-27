@@ -136,6 +136,9 @@ Redirect 301 /photos/DSC2365 https://guillaumebriday.fr/photos/building-a-new-yo
 Redirect 301 /photos/DSC4931 https://guillaumebriday.fr/photos/building-a-new-york-3
 Redirect 301 /photos/DSC1333 https://guillaumebriday.fr/photos/bus-d-ecoliers
 Redirect 301 /photos/DSC1031 https://guillaumebriday.fr/photos/gare-de-shawinigan
+Redirect 301 /photos/DSC2682 https://guillaumebriday.fr/photos/neons
+Redirect 301 /photos/DSC2330 https://guillaumebriday.fr/photos/drapeau-americain-a-new-york
+Redirect 301 /photos/DSC3276 https://guillaumebriday.fr/photos/brooklyn-bridge-3
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
