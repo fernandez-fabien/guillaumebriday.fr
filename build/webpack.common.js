@@ -5,6 +5,7 @@ let path = require('path')
 let MiniCssExtractPlugin = require('mini-css-extract-plugin')
 let CopyWebpackPlugin = require('copy-webpack-plugin')
 let HtmlWebpackPlugin = require('html-webpack-plugin')
+let { VueLoaderPlugin } = require('vue-loader')
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -30,12 +31,17 @@ module.exports = {
         loader: 'vue-loader'
       },
       {
-        test: /\.s[ac]ss$/,
+        test: /\.sass$/,
         use: [
           MiniCssExtractPlugin.loader,
           {loader: 'css-loader', options: {importLoaders: 2}},
           'postcss-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              indentedSyntax: true
+            }
+          }
         ]
       },
       {
@@ -74,6 +80,7 @@ module.exports = {
     hints: false
   },
   plugins: [
+    new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
       filename: 'css/[name].[hash].css'
     }),
