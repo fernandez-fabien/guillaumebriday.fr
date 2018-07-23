@@ -1,0 +1,12 @@
+- id: 1
+  author: Alec Eiffel
+  date: 2018-07-05 17:27:35
+  content: |
+    Je suppose que ces options ne fonctionnent pas sous Windows ?
+
+- id: 2
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2018-07-22 23:50:00
+  content: |
+    Salut Alec, à vérifier sur la documentation mais je crois bien que si.
