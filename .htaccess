@@ -62,11 +62,19 @@ Redirect 301 /Blog https://guillaumebriday.fr/
 Redirect 301 /author/ziiceagle/ https://guillaumebriday.fr/
 Redirect 301 /index.php https://guillaumebriday.fr/
 Redirect 301 /Guillaume/About.php https://guillaumebriday.fr/a-propos/
+Redirect 301 /about/ https://guillaumebriday.fr/a-propos/
 
 Redirect 301 /Timer/ https://guillaumebriday.fr/lab/timer/
 
 Redirect 301 /tutoriel/2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques.html https://guillaumebriday.fr/comment-jutilise-git-mes-astuces-et-bonnes-pratiques
 Redirect 301 /2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques/ https://guillaumebriday.fr/comment-jutilise-git-mes-astuces-et-bonnes-pratiques
+
+Redirect 301 /2017/04/09/comment-je-sauvegarde-mes-donnees/ https://guillaumebriday.fr/comment-je-sauvegarde-mes-donnees
+Redirect 301 /2016/08/10/astuce-changement-rapidement-de-fenetres-dune-meme-application/ https://guillaumebriday.fr/changer-de-fenetres-d-une-meme-application-sur-macOS
+
+Redirect 301 /configurer-un-routeur-synology https://guillaumebriday.fr/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange
+
+Redirect 301 /web/2017/04/29/blend-web-mix-2016.html https://guillaumebriday.fr/prise-de-notes-blend-web-mix-2016
 
 Redirect 301 /2016/11/18/un-mac-pour-le-prix-de-deux/ https://guillaumebriday.fr/un-mac-pour-le-prix-de-deux
 
@@ -139,6 +147,7 @@ Redirect 301 /photos/DSC1031 https://guillaumebriday.fr/photos/gare-de-shawiniga
 Redirect 301 /photos/DSC2682 https://guillaumebriday.fr/photos/neons
 Redirect 301 /photos/DSC2330 https://guillaumebriday.fr/photos/drapeau-americain-a-new-york
 Redirect 301 /photos/DSC3276 https://guillaumebriday.fr/photos/brooklyn-bridge-3
+Redirect 301 /photos/DSC7517 https://guillaumebriday.fr/photos/tour-eiffel-4
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
