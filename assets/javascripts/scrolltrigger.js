@@ -1,6 +1,6 @@
 import ScrollTrigger from 'scrolltrigger-classes'
 
-document.addEventListener('turbolinks:load', function () {
+document.addEventListener('turbolinks:load', () => {
   var trigger = new ScrollTrigger(
     {
       centerVertical: true,

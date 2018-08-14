@@ -1,6 +1,6 @@
 import ProgressBar from 'progressbar.js'
 
-document.addEventListener('turbolinks:load', function () {
+document.addEventListener('turbolinks:load', () => {
   var elements = document.querySelectorAll('.progressbar-container')
   window.scope = {}
 
@@ -29,7 +29,7 @@ document.addEventListener('turbolinks:load', function () {
     })
   }
 
-  window.scope.animate_progress_bar = function () {
+  window.scope.animate_progress_bar = () => {
     for (var i = 0, len = elements.length; i < len; i++) {
       var element = elements[i]
 
