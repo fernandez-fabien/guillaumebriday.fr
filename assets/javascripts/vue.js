@@ -9,13 +9,14 @@ Vue.use(TurbolinksAdapter)
 Validator.localize('fr', fr)
 Vue.use(VeeValidate)
 
-Vue.component('comment-form', CommentForm)
-
 /* eslint-disable no-new */
 document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('#app')) {
     new Vue({
-      el: '#app'
+      el: '#app',
+      components: {
+        CommentForm
+      }
     })
   }
 })
