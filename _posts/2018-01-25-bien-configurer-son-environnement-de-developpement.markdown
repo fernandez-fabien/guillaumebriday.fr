@@ -157,7 +157,7 @@ Hello World
 
 Désormais, toutes vos extensions vont s'installent les unes après les autres.
 
-Les possibilités sont infinies, mais je vais donner quelques exemples. Je m'en sers pour configurer Brew avec tous [mes packages et logiciels](https://github.com/guillaumebriday/dotfiles/blob/master/brew/brew.sh), également configurer [macOS directement](https://github.com/guillaumebriday/dotfiles/blob/master/macOS/.macos) et télécharger des applications depuis le [Mac App Store](https://github.com/guillaumebriday/dotfiles/blob/master/macOS/mas.sh).
+Les possibilités sont infinies, mais je vais donner quelques exemples. Je m'en sers pour configurer Brew avec tous [mes packages et logiciels](https://github.com/guillaumebriday/dotfiles/blob/master/brew/Brewfile), également configurer [macOS directement](https://github.com/guillaumebriday/dotfiles/blob/master/macOS/.macos) et télécharger des applications depuis le [Mac App Store](https://github.com/guillaumebriday/dotfiles/blob/master/macOS/mas.sh).
 
 On pourrait aller encore plus loin et avoir un seul fichier qui exécute tout d'un coup. On perdrait alors la possibilité de lancer la configuration indépendemment et je trouve ça trop contraignant.
 
@@ -180,3 +180,7 @@ Pensez bien à tenir à jour votre configuration, vous serez bien content le jou
 Si vous avez des suggestions ou des questions, n’hésitez pas dans les commentaires.
 
 Merci !
+
+EDIT:
+
+Désormais, plutôt que de copier manuellement les fichiers à la main à chaque modification, j'utilise [des liens symboliques](https://github.com/guillaumebriday/dotfiles/commit/9ed8348c5b99349d095c3fe315618972195ae60c). Cela me permet de modifier les fichiers directement dans mon dépôt Git et les modifications seront directement appliquées partout.
