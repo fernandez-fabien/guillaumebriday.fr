@@ -9,7 +9,8 @@
     "watch": "npm run development -- --watch",
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js --mode production --no-progress --hide-modules",
-    "lint": "eslint --ext .js assets/javascripts"
+    "lint": "eslint --ext .js assets/javascripts",
+    "build:production": "npm run production; JEKYLL_ENV=production jekyll build"
   },
   "dependencies": {
     "animate.css": "^3.7.0",
