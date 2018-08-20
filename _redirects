@@ -1,4 +1,4 @@
-https://guillaumebriday.netlify.com/* /:splat 301!
+https://guillaumebriday.netlify.com/* https://guillaumebriday.fr/:splat 301!
 
 # ----------------------------------------------------------------------
 # Page redirects                                                       |
