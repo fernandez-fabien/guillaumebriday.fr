@@ -60,7 +60,7 @@
 import Form from '../utils/Form'
 
 export default {
-  props: ['post_id', 'endpoint'],
+  props: ['post_id'],
 
   data () {
     return {
@@ -91,7 +91,7 @@ export default {
 
       this.isLoading = true
 
-      this.form.post(this.endpoint)
+      this.form.post('/')
         .then(response => {
           this.isLoading = false
           this.isPosted = true
