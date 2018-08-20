@@ -80,5 +80,6 @@ exclude:
   - tailwind.js
   - LICENSE
   - build/
+  - netlify.toml
 include:
-  - .htaccess
+  - _redirects

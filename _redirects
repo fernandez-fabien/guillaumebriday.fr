@@ -1,0 +1,101 @@
+https://guillaumebriday.netlify.com/* /:splat 301!
+
+# ----------------------------------------------------------------------
+# Page redirects                                                       |
+# ----------------------------------------------------------------------
+
+/amazon https://www.amazon.fr/?tag=guillaumebrid-21 301
+/lab/pixel https://guillaumebriday.github.io/dpi.js/ 301
+/coinbase https://www.coinbase.com/join/59abd8d4e7be8202c8825dc1 301
+/blog / 301
+/Blog / 301
+/author/ziiceagle/ / 301
+/index.php / 301
+/Guillaume/About.php /a-propos/ 301
+/about/ /a-propos/ 301
+
+/tutoriel/2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques.html /comment-jutilise-git-mes-astuces-et-bonnes-pratiques 301
+/2016/11/07/comment-jutilise-git-mes-astuces-et-bonnes-pratiques/ /comment-jutilise-git-mes-astuces-et-bonnes-pratiques 301
+
+/2017/04/09/comment-je-sauvegarde-mes-donnees/ /comment-je-sauvegarde-mes-donnees 301
+/2016/08/10/astuce-changement-rapidement-de-fenetres-dune-meme-application/ /changer-de-fenetres-d-une-meme-application-sur-macOS 301
+
+/configurer-un-routeur-synology /configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange 301
+
+/web/2017/04/29/blend-web-mix-2016.html /prise-de-notes-blend-web-mix-2016 301
+
+/2016/11/18/un-mac-pour-le-prix-de-deux/ /un-mac-pour-le-prix-de-deux 301
+/about/public/CV.pdf /assets/CV-Guillaume-Briday.pdf 301
+
+/2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-un-livebox-orange/ /configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange 301
+/2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange/ /configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange 301
+/configurer-un-routeur-synology-rt1900ac /configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange 301
+/presentation/tutoriel/2016/08/01/configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange.html /configurer-un-routeur-synology-rt1900ac-avec-une-livebox-orange 301
+
+/2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology/ /ruby-on-rails-installation-sur-un-nas-synology-avec-docker 301
+/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology /ruby-on-rails-installation-sur-un-nas-synology-avec-docker 301
+/tutoriel/web/rails/2016/06/18/installer-ruby-on-rails-5-avec-docker-et-un-nas-synology.html /ruby-on-rails-installation-sur-un-nas-synology-avec-docker 301
+
+/rails-5-authentification-avec-token /ruby-on-rails-authentification-avec-token 301
+/2016/07/22/rails-5-authentification-avec-token/ /ruby-on-rails-authentification-avec-token 301
+
+/rails-recherche-avec-elasticsearch-ansible-et-vagrant /ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant 301
+/2016/07/28/rails-recherche-avec-elasticsearch-ansible-et-vagrant/ /ruby-on-rails-recherche-avec-elasticsearch-ansible-et-vagrant 301
+
+/2016/05/15/installer-ruby-on-rails-5-0-rpi-3/ /ruby-on-rails-installation-sur-un-raspberry-pi-3 301
+/installer-ruby-on-rails-5-0-rpi-3 /ruby-on-rails-installation-sur-un-raspberry-pi-3 301
+
+/blend-web-mix-2015 /prise-de-notes-blend-web-mix-2015 301
+/blend-web-mix-2016 /prise-de-notes-blend-web-mix-2016 301
+
+/astuce-changement-rapidement-de-fenetres-dune-meme-application /changer-de-fenetres-d-une-meme-application-sur-macOS 301
+
+/photos/DSC3180 /photos/brooklyn-bridge 301
+/photos/DSC4550 /photos/tete-de-mort-en-converse 301
+/photos/DSC7515 /photos/tour-eiffel-3 301
+/photos/DSC5432 /photos/parc-marin-du-saguenay-saint-laurent-2 301
+/photos/DSC5759 /photos/aeroport-de-paris-charles-de-gaulle 301
+/photos/DSC6329 /photos/cloche-a-rome 301
+/photos/DSC6032 /photos/automne-au-parc-de-la-tete-d-or 301
+/photos/DSC2364 /photos/building-a-new-york 301
+/photos/DSC4418 /photos/big-apple 301
+/photos/DSC4136 /photos/grand-central-terminal 301
+/photos/DSC2758 /photos/one-world-trade-center 301
+/photos/DSC6577 /photos/galerie-a-turin 301
+/photos/DSC2804 /photos/building-on-5th-avenue 301
+/photos/DSC4623 /photos/fleur-au-memorial-du-11-septembre 301
+/photos/DSC4546 /photos/one-world-trade-center-dans-le-brouillard 301
+/photos/DSC5390 /photos/parc-marin-du-saguenay-saint-laurent 301
+/photos/DSC1030 /photos/shawinigan-au-coucher-du-soleil 301
+/photos/DSC5319 /photos/lac-quebecois 301
+/photos/DSC6941 /photos/grange-au-quebec 301
+/photos/DSC4551 /photos/briques-de-lego-rouge 301
+/photos/DSC1330 /photos/maison-bleue-dans-la-neige 301
+/photos/DSC7665 /photos/cathedrale-notre-dame-de-paris 301
+/photos/DSC6330 /photos/pizza-a-rome 301
+/photos/DSC1131 /photos/route-quebecoise 301
+/photos/DSC7453 /photos/tour-eiffel 301
+/photos/DSC3465 /photos/tire-d-erable 301
+/photos/DSC0820 /photos/mes-pieds-dans-la-neige 301
+/photos/DSC5582 /photos/ecureuil-a-quebec 301
+/photos/DSC3953 /photos/tour-de-la-cite-de-l-energie-a-shawinigan 301
+/photos/DSC2357 /photos/drapeau-americain-a-new-york-2 301
+/photos/DSC5650 /photos/rue-du-vieux-quebec 301
+/photos/DSC7400 /photos/insecte-sur-une-plante 301
+/photos/DSC4154 /photos/grand-central-terminal-2 301
+/photos/DSC1130 /photos/foret-quebecoise 301
+/photos/DSC7506 /photos/tour-eiffel-2 301
+/photos/DSC2365 /photos/building-a-new-york-2 301
+/photos/DSC4931 /photos/building-a-new-york-3 301
+/photos/DSC1333 /photos/bus-d-ecoliers 301
+/photos/DSC1031 /photos/gare-de-shawinigan 301
+/photos/DSC2682 /photos/neons 301
+/photos/DSC2330 /photos/drapeau-americain-a-new-york 301
+/photos/DSC3276 /photos/brooklyn-bridge-3 301
+/photos/DSC7517 /photos/tour-eiffel-4 301
+
+# ----------------------------------------------------------------------
+# | Custom error messages/pages                                        |
+# ----------------------------------------------------------------------
+
+/* /404 404

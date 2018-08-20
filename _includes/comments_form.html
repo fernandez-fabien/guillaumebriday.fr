@@ -6,7 +6,15 @@
 {% else if %}
 
   <div id="app">
-    <comment-form post_id="{{ page.id }}" endpoint="{{ site.baseurl }}/comments/submit.php"></comment-form>
+    <form name="comment" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="email" name="email" />
+        <input type="text" name="website" />
+        <input type="text" name="post_id" />
+        <textarea name="content"></textarea>
+    </form>
+
+    <comment-form post_id="{{ page.id }}"></comment-form>
   </div>
 
 {% endif %}
