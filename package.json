@@ -21,6 +21,7 @@
     "font-awesome": "^4.7.0",
     "medium-zoom": "^0.4.0",
     "progressbar.js": "^1.0.1",
+    "qs": "^6.5.2",
     "scrolltrigger-classes": "^0.3.6",
     "simple-jekyll-search": "^1.7.0",
     "turbolinks": "^5.1.1",
