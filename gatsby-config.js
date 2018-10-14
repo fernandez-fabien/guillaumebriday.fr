@@ -23,6 +23,12 @@ module.exports = {
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-54003772-2`,
+      },
+    },
+    {
       resolve: `gatsby-plugin-sass`,
       options: {
         postCssPlugins: [
