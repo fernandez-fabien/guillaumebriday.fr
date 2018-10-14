@@ -354,3 +354,28 @@
 
     Merci pour avance tous conseils, éclairages, ...
     l'IP V6 est configuré en "auto", mais cela ne fonctionne pas.
+
+- id: 29
+  author: Rank Xerox
+  date: 2018-10-09 11:30:00
+  content: |
+    Bonjour Guillaume;
+
+    Merci beaucoup pour ce tuto, très utile :)
+
+    A toutes fins utiles : une MaJ des RT2600ac et RT1900ac a été publiée le 4 octobre (firmware 1.2) et semble permettre de remplacer la livebox en DHCP au lieu du PPOE.
+
+    Le nouveau wizzard de configuration permet de configurer l'option 12, l'option 60, l'option 61 et peut être l'option 90 :)
+
+    Penses-tu pouvoir tester ce nouveau firmware et nous faire un retour via une nouvelle update ?
+
+- id: 30
+  author: Guillaume Briday
+  author-url: https://guillaumebriday.fr/
+  date: 2018-10-14 23:25:00
+  content: |
+    Salut Rank !
+
+    J'ai vu les nouveautés, mais je n'ai pas encore pu jouer avec malheureusement !
+
+    Je vais tester dès que j'aurais de nouveau une box chez moi et je ferais un retour si je trouve des trucs intéressant à dire dessus oui !
