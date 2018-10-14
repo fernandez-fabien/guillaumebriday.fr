@@ -2,7 +2,9 @@ const tailwindcss = require('tailwindcss')
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: `Guillaume Briday`,
+    description: `Ce blog est à propos des nouvelles technologies, de mes humeurs, de développement Web, de photos... En bref, de tout ce dont j'ai envie de parler.`,
+    siteUrl: `https://guillaumebriday.fr`
   },
   plugins: [
     'gatsby-plugin-react-helmet',
