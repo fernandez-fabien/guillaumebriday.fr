@@ -1,3 +1,5 @@
+const tailwindcss = require('tailwindcss')
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -17,5 +19,14 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [
+          tailwindcss('./tailwind.js'),
+          require('autoprefixer')
+        ]
+      },
+    },
   ],
 }
