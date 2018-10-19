@@ -6,7 +6,7 @@
 {% else if %}
 
   <div id="app">
-    <form name="comment" netlify netlify-honeypot="bot-field" hidden>
+    <form name="comment" method="post" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
         <input type="email" name="email" />
         <input type="text" name="website" />
