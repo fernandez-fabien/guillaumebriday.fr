@@ -93,6 +93,7 @@ https://guillaumebriday.netlify.com/* https://guillaumebriday.fr/:splat 301!
 /photos/DSC2330 /photos/drapeau-americain-a-new-york 301
 /photos/DSC3276 /photos/brooklyn-bridge-3 301
 /photos/DSC7517 /photos/tour-eiffel-4 301
+/photos/DSC3273 /photos/brooklyn-bridge-2 301
 
 # ----------------------------------------------------------------------
 # | Custom error messages/pages                                        |
