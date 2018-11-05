@@ -25,7 +25,7 @@ Pour la suite, je vais prendre les exemples de la documentation en l'adaptant au
 
 ## Créer une Resource
 
-Pour le moment, la seule ressource que je renvoie dans l'application est les utilisateurs.
+Pour le moment, la seule ressource que je renvoie dans l'application correspond aux utilisateurs.
 
 ```bash
 $ php artisan make:resource UserResource
@@ -114,7 +114,7 @@ On aura alors un tableau de ```User``` formaté comme précédemment :
 
 Pour optimiser les temps de chargement, on peut paginer nos requêtes. Si vous n'avez pas beaucoup de données, la différence sera négligeable, mais il peut rapidement y avoir une différence importante.
 
-Laravel mâche complètement le travail pour nous. En effet, il suffit d'utiliser la pagination comme on le fait habituellement et de l'envoyer à notre ```UserResource```. Le résultat sera un peu différence des collections standards.
+Laravel mâche complètement le travail pour nous. En effet, il suffit d'utiliser la pagination comme on le fait habituellement et de l'envoyer à notre ```UserResource```. Le résultat sera un peu différent des collections standards.
 
 ```php
 use App\User;

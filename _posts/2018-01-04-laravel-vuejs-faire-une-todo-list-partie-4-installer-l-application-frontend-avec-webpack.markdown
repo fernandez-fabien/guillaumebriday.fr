@@ -21,7 +21,7 @@ Avant ce projet, j'utilisais Webpack qu'avec [Laravel Mix](https://github.com/Je
 
 ## Webpack
 
-Côté frontend, Webpack va s'occuper de tout. Il va nous fournir un serveur avec du [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) et manager nos dépendances dans un environnement de production et développement. Il est de loin l'outil le plus puissant à ce jour, mais il n'est pas facile à prendre en main aux premiers abords.
+Côté frontend, Webpack va s'occuper de tout. Il va nous fournir un serveur avec du [Hot Module Replacement](https://webpack.js.org/concepts/hot-module-replacement/) et manager nos dépendances dans un environnement de production et développement. Il est de loin l'outil le plus puissant à ce jour, mais il n'est pas facile à prendre en main au premier abord.
 
 Je ne vais pas expliquer comment fonctionne Webpack, pour cela je vous invite à lire la page [Concepts](https://webpack.js.org/concepts/) de la documentation officielle qui est très pratique. Je vais plutôt détailler les modifications et les ajouts que j'ai fait à la configuration Webpack pour les besoins du projet et pour voir plus en détails certains points.
 
@@ -103,7 +103,7 @@ On va bien-sûr utiliser [vue-loader](https://vue-loader.vuejs.org/en/) pour pou
 
 J'utilise toujours [Sass](http://sass-lang.com) pour écrire mon CSS. J'utilise simplement le [sass-loader](https://github.com/webpack-contrib/sass-loader) avec un test sur les fichiers ```.sass``` ou ```.scss```.
 
-J'ai envie que le CSS final soit extrait dans un fichier ```app.css``` à part et pas dans une balise ```<style>``` comme c'est le cas par défaut avec le ```style-loader```.
+J'ai envie que le CSS final soit extrait dans un fichier ```app.css``` à part, et pas dans une balise ```<style>``` comme c'est le cas par défaut avec le ```style-loader```.
 
 Pour cela, il faut utiliser le plugin [Extract Text Plugin](https://github.com/webpack-contrib/extract-text-webpack-plugin). Il va nous permettre d'extraire le résultat dans un fichier séparé s'il le peut, sinon il va utiliser le loader par défaut ```style-loader```. Couplé à ```vue-loader```, il va permettre d'extraire le CSS écrit dans les fichiers ```.vue``` dans le CSS principal directement avec l'option ```extractCSS: true```.
 

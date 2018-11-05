@@ -146,7 +146,7 @@ On pourrait avoir un dossier qui ressemblerait à ceci :
 │   └── Controller.php
 ```
 
-**L'avantage est important, car il nous permettra d'assurer aux clients de notre API que le comportement ne changera pas pour une url donnée.**
+**Versionner est important, car il nous permettra d'assurer aux clients de notre API que le comportement ne changera pas pour une url donnée.**
 
 En effet, si dans la seconde version, le JSON renvoyé pour la liste des tâches n'est plus le même que dans la première version, les clients ne s'attendraient pas à recevoir ce format et les applications ne marcheraient plus.
 

@@ -13,7 +13,7 @@ On arrive au coeur de l'application, la gestion des tâches. C'est la partie cen
 
 Pour gérer les tâches, je vais utiliser trois composants qui auront chacun un rôle particulier.
 
-Un composant pour [gérer une tâche](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/Task.vue), une autre pour [lister l'ensemble des tâches](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/TaskList.vue) et un dernier pour créer [un formulaire de création](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/TaskForm.vue).
+Un composant pour [gérer une tâche](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/Task.vue), un autre pour [lister l'ensemble des tâches](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/TaskList.vue) et un dernier pour créer [un formulaire de création](https://github.com/guillaumebriday/todolist-frontend-vuejs/blob/master/src/js/components/Tasks/TaskForm.vue).
 
 L'avantage d'utiliser Vuex dans notre application, c'est qu'il n'y aura qu'une seule `source de vérité` pour la gestion de nos tâches. Cela veut dire que les trois composants vont communiquer avec Vuex pour toutes les actions dont ils sont responsables.
 
@@ -290,7 +290,7 @@ const actions = {
 }
 ```
 
-On remarque qu'en premier paramètre, on utilise la déstructuration pour récupérer uniquement la méthode commit. En effet, dans une action, Vuex nous passe automatiquement le contexte de l'instance, mais on ne va utiliser que les commits. Ce nous évite de faire `context.commit` à chaque fois.
+On remarque qu'en premier paramètre, on utilise la déstructuration pour récupérer uniquement la méthode commit. En effet, dans une action, Vuex nous passe automatiquement le contexte de l'instance, mais on ne va utiliser que les commits. Cela nous évite de faire `context.commit` à chaque fois.
 
 On peut également passer des paramètres optionnels comme par exemple les données d'un formulaire
 
@@ -298,7 +298,7 @@ Dans notre action, on va directement retourner l'appelle axios, car il nous renv
 
 Premièrement, en fonction du code HTTP retourné on va pouvoir `commit` différentes actions, mais également envoyer des informations aux composants tout en gardant le comportement d'une promise.
 
-Pour cela, lors d'une erreur nos allons rejeter la promise avec `return Promise.reject(error)` et en cas de succès nous allons simplement retourner les données envoyées par l'API. Ainsi, lors de l'appel d'une action on pourra utiliser les méthodes `then` ou `catch` comme si l'appel avait été fait sans action, mais depuis le composant directement avec Axios.
+Pour cela, à la détéction d'une erreur nous allons rejeter la promise avec `return Promise.reject(error)` et en cas de succès nous allons simplement retourner les données envoyées par l'API. Ainsi, lors de l'appel d'une action on pourra utiliser les méthodes `then` ou `catch` comme si l'appel avait été fait sans action, mais depuis le composant directement avec Axios.
 
 Pour appeler une action, il faut utiliser la méthode `this.$store.dispatch` avec le nom de la méthode à utiliser et d'éventuels paramètres.
 
